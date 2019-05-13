@@ -1,0 +1,110 @@
+.hidden-block
+  height 0
+
+.popup
+  pos absolute
+  z-index 1
+  width 90%
+  max-width 640px
+  bgc white
+  box-shadow 0 3px 43px rgba(0, 0, 0, 0.08)
+  padding 55px 68px 70px
+  opacity 0
+  visibility hidden
+  transform scale(.9)
+  will-change transform
+  transition .7s .7s transform, .7s .7s opacity
+  &.show
+    pos relative
+    opacity 1
+    visibility visible
+    transform scale(1)
+  &__over
+    dfv(center, center)
+    padding 30px 0
+    t 0
+    l 0
+    r 0
+    b 0
+    pos fixed
+    overflow hidden
+    z-index -1
+  &__bg
+    pos fixed
+    z-index 0
+    l 0
+    r 0
+    b 0
+    h 0
+    bgc white
+    opacity 0
+    transition .7s opacity, .7s height
+  &-show
+    oh()
+    & ^[0]__bg
+      h 100%
+      opacity .9
+    & ^[0]__over
+      overflow-y scroll
+      z-index 1000
+  &__title
+    pos relative
+    z-index 1
+    font-family $lf
+    c black
+    fontify 48px 700 48px
+    mb 5px
+    &:before
+      content attr(data-text)
+      pos absolute
+      z-index -1
+      color $shadow
+      w calc(100% + 10px)
+      l 10px
+      t 10px
+      transition .7s 1s left, .7s 1s top
+  &__subtitle
+    color black
+    fontify 16px 400 26px
+    mt 32px
+  &__close
+    pos absolute
+    t 30px
+    r 30px
+    size 17px 17px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcMCxxSRfn6AAAAZ0lEQVQoz43S3Q3AIAhG0buDnQc6lO5swhDtQ2PjD9j6xucxEhQgEa8EcFCRAAj1QSfmIsHQVnhoAAA6oQXMyAU9CkFDeQcAMhd5BxSjBCMYetEI9RsumsMFeaeGLLr7zX+99Md/uQFaaijMO9DVBwAAAABJRU5ErkJggg==') no-repeat center
+    transition .7s background
+    &:hover
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARBAMAAADJQ1rJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEXxFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3///8vT7RgAAAACnRSTlMAExToPkDrP3R1DaXSPAAAAAFiS0dECx/XxMAAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcMDAQOaPdrAAAAV0lEQVQI12NgZAADIKXsAGY5CzCwpoAYLOlAIgwk6FYAJNhToEIMDGUOECGQIFQIKNhWAGVxrGCAiU2DmAlUx57CANNb5sAANQ8iCOaDCAgXRCLcAncfABrWD2vPIIGkAAAAAElFTkSuQmCC') no-repeat center
+  &__form
+    mt 15px
+    &_search
+      pos relative
+  &__search
+    &-input
+      w 100%
+      h 40px
+      padding 0 60px 0 20px
+      border 1px solid $grey
+      bgc transparent
+      color black
+      font-family $os
+      font-size 16px
+      line-height 400
+      transition .7s border
+      &:focus
+        border-color black
+    &-sbm
+      pos absolute
+      z-index 1
+      t 0
+      r 0
+      size 40px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAQAAAB+puRPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcNGBwyaNJfAAAA30lEQVQoz32QPU4CcRBHH2TPQNDELNnGzhtgbSI2HoBGQ8P2FhyB1hL1EtYUhoRiEztsSIhgAa4HMFbPgvyB1c3+ppnJvPmsCQAJN5zTIOeFBxbsVAcgJSNiwBUDIjLSPYCYOrMlO4ud2Q8Rxn4V0lskN976dXo88U5RSx7phRFT23/qEdtOQ4cmH/zXJ81wxYaTEqDBJgBjOiXAJeOww8HGZVeEP8SF9JtpiCLgHnhlxDNrjuhwyw/Z4ScRE4dOnDtxaOKFuWf7EWV27drTKgC7rmxVAdh37nFNKnTH9y9AkMAQtzyvuQAAAABJRU5ErkJggg==') no-repeat center $red
+      transition .7s background-color
+      &:hover
+        bgc $red
+
+
+.no-touchevents .popup-show
+  mr 17px

@@ -1,0 +1,17 @@
+.btn
+  pos relative
+  z-index 1
+  ib()
+  color white
+  padding 0 29px
+  fontify 18px 400 47px
+  &:before
+    content ""
+    pos absolute
+    z-index -1
+    full()
+    bgc $green
+    border-radius 24px
+    transition .7s background-color
+  &:hover:before
+    bgc $brown

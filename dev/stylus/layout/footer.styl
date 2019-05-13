@@ -1,0 +1,161 @@
+.footer
+  bgc $dark
+  c white
+  &__list
+    df()
+    ml -30px
+    mr -30px
+    padding 57px 0 39px
+    @media $lDesktopSmall
+      ml -20px
+      mr -20px
+    @media $LandscapeMedium
+      flex-wrap wrap
+      pb 0
+      mb -20px
+    @media $LandscapeMin
+      mb 0
+    @media $LandscapeMin
+      pt 44px
+  &__col
+    w calc(100% / 6)
+    padding 0 30px
+    @media $lDesktopSmall
+      padding 0 20px
+      w 20%
+    @media $LandscapeMedium
+      w calc(100% / 3)
+      mb 40px
+    @media $LandscapeMin
+      &:not(&_right)
+        dn()
+    &.col2
+      w calc(100% / 3)
+      @media $lDesktopSmall
+        w 40%
+      @media $LandscapeMedium
+        w calc(200% / 3)
+    &_right
+      dfv(flex-end, flex-start)
+      padding 0 27px
+      @media $lDesktopSmall
+        padding 0 20px
+      @media $LandscapeMedium
+        w calc(200% / 3)
+      @media $LandscapeMin
+        w 100%
+        align-items flex-start
+    &_spacer
+      @media $lDesktopSmall
+        dn()
+  &__nav
+    &-row
+      mb 6px
+      &_main
+        mb 14px
+      &_group
+        pos relative
+        z-index 1
+        &:before
+          content ""
+          pos absolute
+          z-index -1
+          h 1px
+          bgc #313131
+          l 103px
+          r 0
+          t 50%
+    &-href
+      c inherit
+      fontify 18px 400 24px
+      transition .7s color
+      &:hover,
+      &.active
+        c $green
+      &_small
+        fontify 14px 400 24px
+        c #aaa
+        &:hover,
+        &.active
+          c white
+      &_group
+        bgc $dark
+    &-list
+      columns 2
+      column-gap 60px
+    &-item
+      mb 6px
+  &__addr
+    w 100%
+    fontify 14px 400 24px
+    mr 0
+    ml auto
+    text-align right
+    @media $LandscapeMedium
+      max-width 220px
+    @media $LandscapeMin
+      text-align left
+      ml 0
+  &__phone
+    mt 17px
+    c white
+    fontify 14px 400 16px
+  &__mail
+    mt 20px
+    c white
+    fontify 14px 400 16px
+    bb(1px, solid, alpha(white, .15))
+  &__bottom
+    padding 20px 0
+    border-top 1px solid #313131
+    @media $PortraitMedium
+      padding 20px 0 18px
+    .container
+      df(flex-start, space-between)
+      @media $LandscapeMin
+        flex-direction column
+  &__copy
+    c white
+    fontify 14px 400 16px
+    mt 7px
+    df()
+    @media $LandscapeMin
+      mt 0
+      mb 12px
+    i 
+      pos relative
+      t 3px
+      ib()
+      font-size 24px
+      font-style normal
+    .socials
+      ml 39px
+  &__dextra
+    pos relative
+    r -5px
+    color silver
+    font-family Verdana, Geneva, sans-serif
+    fontify 9px 400 14px
+    text-transform uppercase
+    letter-spacing 0.18em
+    @media $lDesktopSmall
+      r -2px
+    @media $PortraitMedium
+      l 84px
+    span
+      pos absolute
+      t 3px
+      r calc(100% + 10px)
+      bgc $green
+      color white
+      font-family Arial
+      fontify 12px 900 21px
+      text-transform uppercase
+      letter-spacing 0.1em
+      border-radius 3px
+      padding 0 6px
+      transition 0.7s background
+      @media $LandscapeMin
+        w 74px
+    &:hover span
+      background-color $brown

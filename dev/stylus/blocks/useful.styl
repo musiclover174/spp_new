@@ -1,0 +1,266 @@
+.useful
+  pos relative
+  z-index 1
+  bgc $bgrey
+  background-position top -145px center
+  background-repeat no-repeat
+  h 980px
+  df(center, center)
+  oh()
+  &[data-type="useful"]
+    background-position top 30px center
+  @media $LandscapeMedium
+    background-image none !important
+  &__inner
+    pos relative
+    l -83px
+    t -21px
+    max-width 560px
+    @media $lDesktopSmall
+      l 0
+      t 0
+      text-align center
+      max-width 470px
+      padding 0 20px
+    &.animation
+      animation usefulChanger .5s ease-in-out forwards
+      @media $lDesktopSmall
+        animation usefulChangerDesk .5s ease-in-out forwards
+  &__title
+    fontify 60px 400 64px
+    @media $lDesktopSmall
+      fontify 48px 400 52px
+    @media $desktopMedium
+      fontify 38px 400 42px
+    @media $desktopTablet
+      fontify 30px 400 34px
+  &__text
+    fontify 18px 400 28px
+    mt 30px
+    @media $desktopMedium
+      mt 20px
+    &.changed + ^[0]__toproduct
+      opacity 0
+  &__toproduct
+    ib()
+    c black
+    fontify 18px 400 22px
+    mt 25px
+    bb(1px, solid, alpha(black, .15))
+    transition .15s opacity, .7s border-color
+  &__info
+    dfv(center, center)
+    pos absolute
+    t 80px
+    r 169px
+    z-index 1
+    c white
+    bgc $green
+    border-radius 50%
+    size 222px
+    padding 5px 30px 0
+    @media $lDesktopSmall
+      t 16%
+      r 11%
+      size 184px
+      padding 0 29px
+    @media $desktopMedium
+      t 7%
+      r 7%
+    @media $LandscapeMedium
+      dn()
+    &-title
+      font-family $bold
+      fontify 30px 400 30px
+      text-align center
+      @media $lDesktopSmall
+        fontify 24px 400 24px
+    &-text
+      fontify 18px 400 22px
+      mt 8px
+      text-align center
+      @media $lDesktopSmall
+        fontify 14px 400 18px
+  &__item
+    pos absolute
+    cursor pointer
+    transition .4s transform
+    &.item1
+      t -137px
+      r 14%
+      transform rotate(39deg)
+      @media $lDesktopSmall
+        t 4%
+        r -1%
+      @media $desktopTablet
+        t -2%
+        r -13%
+      @media $LandscapeMedium
+        t -22%
+        r -7%
+      @media $PortraitMax
+        dn()
+      &:hover
+        transform scale(1.02) rotate(39deg)
+    &.item2
+      b -62px
+      l 4%
+      transform rotate(-16deg)
+      @media $lDesktopSmall
+        l -3%
+      @media $desktopTablet
+        dn()
+      &:hover
+        transform scale(1.02) rotate(-16deg)
+    &.item3
+      t 25%
+      r -7%
+      transform rotate(60deg)
+      @media $lDesktopSmall
+        dn()
+      &:hover
+        transform scale(1.02) rotate(60deg)
+    &.item4
+      b -10%
+      r 20%
+      transform rotate(40deg)
+      @media $lDesktopSmall
+        r -10%
+      @media $LandscapeMedium
+        r 25%
+        b -19%
+      @media $PortraitMedium
+        r 17%
+      &:hover
+        transform scale(1.02) rotate(40deg)
+    &.item5
+      t -3%
+      l -4%
+      transform rotate(39deg)
+      @media $lDesktopSmall
+        t 1%
+        l -20%
+      @media $desktopTablet
+        t -6%
+        l -23%
+      @media $LandscapeMedium
+        t -13%
+        l -20%
+      @media $PortraitMax
+        l 10%
+      @media $PortraitMedium
+        l -4%
+      &:hover
+        transform scale(1.02) rotate(39deg)
+    &.item6
+      b -13%
+      l 23%
+      transform rotate(-11deg)
+      @media $lDesktopSmall
+        l 26%
+        b -21%
+      @media $desktopTablet
+        l -19%
+        b -10%
+      @media $LandscapeMedium
+        dn()
+      &:hover
+        transform scale(1.02) rotate(-11deg)
+    &.item7
+      b -7%
+      l 52%
+      transform rotate(27deg)
+      @media $lDesktopSmall
+        b -9%
+        l 39%
+      @media $desktopTablet
+        dn()
+      @media $LandscapeMedium
+        db()
+        l 11%
+      @media $PortraitMax
+        l 3%
+      @media $PortraitMedium
+        dn()
+      &:hover
+        transform scale(1.02) rotate(27deg)
+    &.item8
+      t -11%
+      l 41%
+      transform rotate(-114deg)
+      @media $lDesktopSmall
+        l 38%
+      @media $desktopTablet
+        dn()
+      &:hover
+        transform scale(1.02) rotate(-114deg)
+    &.item9
+      b -10%
+      l 4%
+      transform rotate(-21deg)
+      @media $lDesktopSmall
+        b -10%
+        l -11%
+      @media $desktopTablet
+        b -14%
+      @media $LandscapeMedium
+        dn()
+      &:hover
+        transform scale(1.02) rotate(-21deg)
+    &.item10
+      b 2%
+      r 4%
+      transform rotate(-41deg)
+      @media $lDesktopSmall
+        r 1%
+      @media $desktopTablet
+        r -5%
+        b -16%
+      @media $LandscapeMedium
+        r 5%
+        b -18%
+      @media $PortraitMax
+        r -1%
+      @media $PortraitMedium
+        r 29%
+      @media $PortraitMedium
+        r 25%
+      &:hover
+        transform scale(1.02) rotate(-41deg)
+    &.item11
+      t -2%
+      l -4%
+      transform rotate(-27deg)
+      @media $lDesktopSmall
+        l -13%
+        t 7%
+      @media $desktopTablet
+        l -16%
+        t -11%
+      @media $LandscapeMedium
+        l -16%
+        t -19%
+      @media $PortraitMax
+        l 16%
+      @media $PortraitMedium
+        l 3%
+        t -21%
+      &:hover
+        transform scale(1.02) rotate(-27deg)
+    &.item12
+      t -4%
+      r 15%
+      transform rotate(41deg)
+      @media $lDesktopSmall
+        t -8%
+        r -4%
+      @media $desktopTablet
+        t -6%
+        r -10%
+      @media $LandscapeMedium
+        t -14%
+        r -10%
+      @media $PortraitMax
+        dn()
+      &:hover
+        transform scale(1.02) rotate(41deg)

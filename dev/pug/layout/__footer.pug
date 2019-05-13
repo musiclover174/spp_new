@@ -1,0 +1,77 @@
+include ../bemto/bemto.pug
+
++b('footer').footer
+  .container
+    +e('ul').list
+      +e.col
+        +e('nav').nav
+          +e.nav-row._main
+            +e.nav-href(href="#") О компании
+          +e.nav-row
+            +e.nav-href._small(href="#") Новости
+          +e.nav-row
+            +e.nav-href._small(href="#") Награды
+          +e.nav-row
+            +e.nav-href._small(href="#") Сертификаты
+      +e.col.col2
+        +e('nav').nav
+          +e.nav-row._main._group
+            +e.nav-href._group(href="#") Продукция 
+          +e.nav-row
+            +e('ul').nav-list
+              +e.nav-item
+                +e.nav-href._small(href="#") Крупы
+              +e.nav-item
+                +e.nav-href._small(href="#") Каши
+              +e.nav-item
+                +e.nav-href._small(href="#") Макаронные изделия
+              +e.nav-item
+                +e.nav-href._small(href="#") Готовые завтраки
+              +e.nav-item
+                +e.nav-href._small(href="#") Снэки
+              +e.nav-item
+                +e.nav-href._small(href="#") Мука
+              +e.nav-item
+                +e.nav-href._small(href="#") Масло
+              +e.nav-item
+                +e.nav-href._small(href="#") Тесто и полуфабрикаты
+              +e.nav-item
+                +e.nav-href._small(href="#") Хлебобулочные изделия
+              +e.nav-item
+                +e.nav-href._small(href="#") Комбикорм
+              +e.nav-item
+                +e.nav-href._small(href="#") Растительные напитки
+      +e.col
+        +e('nav').nav
+          +e.nav-row._main
+            +e.nav-href(href="#") Акции
+          +e.nav-row._main
+            +e.nav-href(href="#") Партнерам
+          +e.nav-row._main
+            +e.nav-href(href="#") Корпоративная культура
+          +e.nav-row._main
+            +e.nav-href(href="#") Интересная информация
+          +e.nav-row._main
+            +e.nav-href(href="#") Тендерная площадка
+          +e.nav-row._main
+            +e.nav-href(href="#") Контакты
+      +e.col._spacer
+      +e.col._right
+        +e('p').addr РФ, 454080, г. Челябинск, поселок Мелькомбинат-2, участок 1, дом 37
+        +e.phone(href="tel:+73517421660") (351) 742-16-60
+        +e.mail(href="mailto:director@spp.ru") director@spp.ru
+  +e('section').bottom
+    .container
+      +e('p').copy 
+        span
+          i © 
+          |  ООО «Союзпищепром», 2019
+        +b.socials
+          +e.href(href="#", data-type="fb")
+          +e.href(href="#", data-type="tw")
+          +e.href(href="#", data-type="yt")
+          +e.href(href="#", data-type="od")
+          +e.href(href="#", data-type="vk")
+      +e.dextra(href="https://www.dextra.ru/", target="_blank")
+        span dextra
+        | Разработка<br>сайта

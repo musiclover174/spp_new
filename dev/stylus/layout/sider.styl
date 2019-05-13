@@ -1,0 +1,99 @@
+.side
+  dfv(stretch, flex-start)
+  pos fixed
+  t 0
+  l 0
+  bgc white
+  size 220px 100%
+  z-index 4
+  @media $desktopTablet
+    w 180px
+  @media $LandscapeMin
+    l -180px
+  &__logo
+    &-wrapper
+      padding 35px 20px
+      text-align center
+      mb 5px
+      @media $LandscapeMin
+        pos absolute
+        t 0
+        l 180px
+        size 97.5px
+        bgc white
+        padding 5px
+      @media $PortraitMax
+        size 84.5px
+    &-img
+      max-width 100%
+      @media $LandscapeMin
+        max-height 90%
+        mt 5%
+      & + &
+        mt 17px
+        @media $LandscapeMin
+          dn()
+  &__tabs
+    df(center, center)
+    padding 0 15px
+    mb 22px
+    pos relative
+    l -8px
+    &-elem
+      ib()
+      c black
+      fontify 14px 400 14px
+      bb(1px, dotted, #0d832a)
+      transition .7s border
+      & + &
+        ml 14px
+      &.active
+        c white
+        bgc #0d832a
+        border-radius 15px
+        border-color transparent
+        padding 7px 13px 4px
+  &__blocks
+    pos relative
+    flex-grow 1
+    overflow-y scroll
+  &__block
+    w 100%
+    dn()
+    pb 20px
+    &.show
+      db()
+    &-item
+      &:not(&_products)
+        text-align center
+        & + &
+          mt 20px
+      &_products
+        pos relative
+        pl 87px
+        pr 31px
+        min-height 63px
+        df(center, flex-start)
+    &-img
+      opacity .5
+      filter grayscale(100%)
+      transition .7s filter, .7s opacity
+      ^[-1]-item:hover &
+        opacity 1
+        filter none
+    &-icon
+      pos absolute
+      l 37px
+      t 50%
+      filter grayscale(100%)
+      transform translateY(-50%)
+      transition .7s filter
+      ^[-1]-href:hover &
+        filter none
+    &-name
+      c black
+      fontify 14px 400 18px
+      text-align left
+      transition .7s color
+      ^[-1]-href:hover &
+        c $green

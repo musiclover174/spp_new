@@ -1,0 +1,84 @@
+.menu
+  position fixed
+  z-index 6
+  h 100%
+  w 100%
+  t -30px
+  l 0
+  df(center, flex-start)
+  padding 0 92px
+  visibility hidden
+  pointer-events none
+  opacity 0
+  transition .7s top, .7s opacity, .7s visibility
+  @media $lDesktopSmall
+    padding 120px 60px 60px
+    align-items flex-start
+    overflow hidden
+  @media $LandscapeMedium
+    padding 100px 30px 50px
+  @media $PortraitMax
+    padding 80px 20px 40px
+  /body.burgeropen .menu
+    t 0
+    opacity 1
+    visibility visible
+    pointer-events all
+    @media $lDesktopSmall
+      overflow auto
+  &__cols
+    w calc(100% + 60px)
+    ml -60px
+    df()
+    @media $lDesktopSmall
+      w calc(100% + 45px)
+      ml -45px
+    @media $PortraitMax
+      flex-direction column
+  &__col
+    w calc(100% / 3 - 60px)
+    ml 60px
+    @media $lDesktopSmall
+      w calc(100% / 3 - 45px)
+      ml 45px
+    @media $PortraitMax
+      w calc(100% - 45px)
+      & + &
+        mt 20px
+  &__item
+    @media $PortraitMax
+      text-align center
+    & + &
+      mt 70px
+      @media $desktopMedium
+        mt 45px
+      @media $PortraitMax
+        mt 20px
+  &__href
+    c white
+    fontify 48px 500 52px
+    font-family $bold
+    transition .7s color
+    @media $lDesktopSmall
+      fontify 30px 500 34px
+    @media $desktopMedium
+      fontify 24px 500 28px
+    &:hover,
+    &.active
+      c $brown
+  &__sublist
+    mt 44px
+    @media $desktopMedium
+      mt 24px
+  &__subitem
+    & + &
+      mt 18px
+  &__subhref
+    c white
+    fontify 24px 400 28px
+    transition .7s color
+    @media $lDesktopSmall
+      fontify 20px 400 24px
+    &:hover,
+    &.active
+      c $brown

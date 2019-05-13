@@ -6764,3 +6764,140 @@ div[class^="table-scroller"] {
 .feed__href {
   margin-top: 40px;
 }
+.page404 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: -106px;
+  margin-bottom: -85px;
+}
+@media (max-width: 1050px) {
+  .page404 {
+    height: auto;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 1000px) {
+  .page404 {
+    margin-top: -120px;
+  }
+}
+.page404__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.65;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.page404__video-wrapper {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-color: #262626;
+  width: calc(100% - 220px);
+  height: 100%;
+}
+@media (max-width: 1050px) {
+  .page404__video-wrapper {
+    width: calc(100% - 180px);
+  }
+}
+@media (max-width: 767px) {
+  .page404__video-wrapper {
+    width: 100%;
+  }
+}
+.page404__inner {
+  max-width: 645px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 1270px) {
+  .page404__inner {
+    max-width: 440px;
+    padding: 0 20px;
+  }
+}
+.page404__digits {
+  font-size: 350px;
+  font-weight: 400;
+  line-height: 235px;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 1600px) {
+  .page404__digits {
+    font-size: 310px;
+    font-weight: 400;
+    line-height: 215px;
+  }
+}
+@media (max-width: 1270px) {
+  .page404__digits {
+    font-size: 250px;
+    font-weight: 400;
+    line-height: 175px;
+  }
+}
+@media (max-width: 1050px) {
+  .page404__digits {
+    font-size: 200px;
+    font-weight: 400;
+    line-height: 135px;
+  }
+}
+.page404__notfound {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 64px;
+  margin-top: 60px;
+}
+@media (max-width: 1600px) {
+  .page404__notfound {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 52px;
+  }
+}
+@media (max-width: 1270px) {
+  .page404__notfound {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 42px;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 1050px) {
+  .page404__notfound {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
+  }
+}
+.page404__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 30px;
+}
+.page404__text a:not([class]) {
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}

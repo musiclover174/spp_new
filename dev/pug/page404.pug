@@ -1,0 +1,27 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    include layout/__side
+  
+    +b('main').main
+      +b('section').page404
+        +e.video-wrapper
+          +e('video').video(preload, autoplay, loop, poster="img/video-poster.jpg")
+            source(src="video/video.mp4", type="video/mp4")
+        +e.inner
+          +e('p').digits 404
+          +e('p').notfound Страница не найдена
+          +e.text 
+            p Вы неправильно набрали адрес. Возможно такой страницы больше не существует. Проверьте адрес или воспользуйтесь главным меню.
+            p Вы также можете вернуться на 
+              a(href="#") главную страницу
+              | .
+       
+      include layout/__footer
+    include layout/__scripts

@@ -3267,7 +3267,7 @@ body {
 body {
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: #fff;
+  background-color: #f8f8f8;
 }
 .common__title {
   color: #000;
@@ -4337,6 +4337,9 @@ body.burgeropen .menu {
   background-color: #262626;
   color: #fff;
 }
+body:not(.index) .footer {
+  margin-top: 85px;
+}
 .footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4876,6 +4879,30 @@ body.burgeropen .menu {
 .fakecheckbox__truecheck.warning + .fakecheckbox__label:before {
   border-color: #f1151d;
 }
+.text {
+  max-width: 988px;
+  margin: 0 auto;
+  padding-top: 149px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #000;
+}
+@media (max-width: 1600px) {
+  .text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-top: 0;
+  }
+}
+@media (max-width: 1270px) {
+  .text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
 .main {
   overflow: hidden;
 }
@@ -4889,94 +4916,118 @@ body:not(.index) .main {
   }
 }
 .main h1:not([class]) {
-  color: #262626;
   font-size: 60px;
   font-weight: 500;
   line-height: 64px;
   margin-top: 63px;
-  margin-bottom: 48px;
+  margin-bottom: 29px;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
   .main h1:not([class]) {
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 52px;
   }
 }
-@media (max-width: 670px) {
+@media (max-width: 1270px) {
   .main h1:not([class]) {
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 40px;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 42px;
+  }
+}
+@media (max-width: 1050px) {
+  .main h1:not([class]) {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
   }
 }
 .main h2:not([class]) {
-  color: #262626;
   font-size: 48px;
   font-weight: 500;
   line-height: 52px;
-  margin: 54px 0 -3px;
+  margin: 82px 0 32px;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
   .main h2:not([class]) {
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 40px;
-    margin: 57px 0 1px;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 42px;
   }
 }
-@media (max-width: 670px) {
+@media (max-width: 1270px) {
   .main h2:not([class]) {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 34px;
+  }
+}
+@media (max-width: 1050px) {
+  .main h2:not([class]) {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
   }
 }
 .main h3:not([class]),
 .main h4:not([class]) {
-  color: #262626;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 500;
-  line-height: 38px;
-  margin: 56px 0 -2px;
+  line-height: 40px;
+  margin: 83px 0 34px;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
   .main h3:not([class]),
   .main h4:not([class]) {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 28px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+}
+@media (max-width: 1270px) {
+  .main h3:not([class]),
+  .main h4:not([class]) {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1050px) {
+  .main h3:not([class]),
+  .main h4:not([class]) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
   }
 }
 .main iframe:not([class]),
 .main img:not([class]) {
-  margin: 4px 0;
+  margin: 1px 0;
   max-width: 100%;
 }
 .main ul:not([class]) {
   list-style: none;
-  margin: -18px 0 20px;
 }
 .main ul:not([class]) li {
-  padding-left: 25px;
+  padding-left: 30px;
   position: relative;
 }
 .main ul:not([class]) > li:before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 14px;
-  width: 15px;
-  height: 2px;
-  background-color: #f1151d;
+  left: 2px;
+  top: 15px;
+  width: 20px;
+  height: 1px;
+  background-color: #0d832a;
 }
 .main ol:not([class]) {
   list-style: none;
-  margin: -11px 0 20px;
   counter-reset: myCounter;
 }
 .main ol:not([class]) li {
-  padding-left: 25px;
+  padding-left: 30px;
   position: relative;
 }
 .main ol:not([class]) > li:before {
@@ -4987,14 +5038,14 @@ body:not(.index) .main {
   top: 0;
   width: 32px;
   padding-right: 9px;
-  color: #f1151d;
+  color: #0d832a;
 }
 .main p:not([class]) {
-  margin: 26px 0;
+  margin: 25px 0;
 }
 .main a:not([class]) {
-  color: #f1151d;
-  border-bottom: 1px solid rgba(241,21,29,0.4);
+  color: #0d832a;
+  border-bottom: 1px solid rgba(13,131,42,0.4);
   -webkit-transition: 0.5s border;
   transition: 0.5s border;
 }
@@ -5011,21 +5062,20 @@ body:not(.index) .main {
   border-top: 0;
 }
 .main table th {
-  background-color: #f1151d;
-  color: #fff;
-  font-size: 16px;
+  font-family: "OfficinaSerifBoldC";
+  font-size: 20px;
   font-weight: 400;
-  line-height: 24px;
-  padding: 14px 29px;
+  line-height: 26px;
+  padding: 18px 26px;
   text-align: left;
+  border: 1px solid #f2f2f2;
 }
 .main table td {
-  color: #262626;
-  padding: 14px 29px;
+  padding: 18px 26px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
-  border: 1px solid #efefef;
+  line-height: 25px;
+  border: 1px solid #f2f2f2;
 }
 div[class^="table-scroller"] {
   overflow: auto;
@@ -5039,14 +5089,14 @@ div[class^="table-scroller"] {
   }
 }
 .breadcrumbs {
-  color: #000;
+  color: #bfbfbf;
   margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 .breadcrumbs__href {
   color: inherit;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
   border-bottom: 1px solid;
   -webkit-transition: 0.7s border;
   transition: 0.7s border;
@@ -5060,10 +5110,7 @@ div[class^="table-scroller"] {
 .breadcrumbs__delim {
   display: inline-block;
   vertical-align: top;
-  margin: 9px 9px 11px;
-  width: 15px;
-  height: 2px;
-  background-color: #f1151d;
+  margin: 2px 12px 0px;
 }
 .breadcrumbs + h1:not([class]) {
   margin-top: 0;

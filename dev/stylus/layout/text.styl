@@ -1,3 +1,15 @@
+.text
+  max-width 988px
+  margin 0 auto
+  pt 149px
+  fontify 22px 400 32px
+  c black
+  @media $lDesktopSmall
+    fontify 20px 400 30px
+    pt 0
+  @media $desktopMedium
+    fontify 18px 400 28px
+
 .main
   oh()
   /body:not(.index) &
@@ -6,53 +18,55 @@
     @media $LandscapeMax
       pt 120px
   h1:not([class])
-    color $dark
     fontify 60px 500 64px
     mt 63px 
-    mb 48px
-    @media $desktopMax
-      fontify 48px 500 52px
-    @media $PortraitMax
-      fontify 36px 500 40px
+    mb 29px
+    @media $lDesktopSmall
+      fontify 48px 400 52px
+    @media $desktopMedium
+      fontify 38px 400 42px
+    @media $desktopTablet
+      fontify 30px 400 34px
   h2:not([class])
-    color $dark
     fontify 48px 500 52px
-    margin 54px 0 -3px
-    @media $desktopMax
-      fontify 36px 500 40px
-      margin 57px 0 1px
-    @media $PortraitMax
-      fontify 30px 500 34px
+    margin 82px 0 32px
+    @media $lDesktopSmall
+      fontify 38px 400 42px
+    @media $desktopMedium
+      fontify 30px 400 34px
+    @media $desktopTablet
+      fontify 26px 400 30px
   h3:not([class]),
   h4:not([class])
-    color $dark
-    fontify 30px 500 38px
-    margin 56px 0 -2px
-    @media $desktopMax
-      fontify 24px 500 28px
+    fontify 36px 500 40px
+    margin 83px 0 34px
+    @media $lDesktopSmall
+      fontify 32px 400 36px
+    @media $desktopMedium
+      fontify 26px 400 30px
+    @media $desktopTablet
+      fontify 22px 400 26px
   iframe:not([class]),
   img:not([class])
-    margin 4px 0
+    margin 1px 0
     max-width 100%
   ul:not([class])
     list-style  none
-    margin -18px 0 20px
   ul:not([class]) li
-    pl 25px
+    pl 30px
     pos relative
   ul:not([class]) > li:before
     content ""
     pos absolute
-    l 0
-    t 14px
-    size 15px 2px
-    bgc $red
+    l 2px
+    t 15px
+    size 20px 1px
+    bgc $green
   ol:not([class])
     list-style none
-    margin -11px 0 20px
     counter-reset myCounter
   ol:not([class]) li
-    pl 25px
+    pl 30px
     pos relative
   ol:not([class]) > li:before
     counter-increment myCounter
@@ -62,12 +76,12 @@
     t 0
     w 32px
     pr 9px
-    color $red
+    color $green
   p:not([class])
-    margin 26px 0
+    margin 25px 0
   a:not([class])
-    c $red
-    border-bottom 1px solid alpha($red, .4)
+    c $green
+    border-bottom 1px solid alpha($green, .4)
     transition .5s border
     &:hover
       border-color transparent
@@ -81,16 +95,15 @@
     tbody
       border-top 0
     th
-      bgc $red
-      c white
-      fontify 16px 400 24px
-      padding 14px 29px
+      font-family $bold
+      fontify 20px 400 26px
+      padding 18px 26px
       text-align left
+      border 1px solid #f2f2f2
     td
-      c $dark
-      padding 14px 29px
-      fontify 16px 400 24px
-      border 1px solid #efefef
+      padding 18px 26px
+      fontify 16px 400 25px
+      border 1px solid #f2f2f2
 
 div[class\^="table-scroller"]
   overflow auto

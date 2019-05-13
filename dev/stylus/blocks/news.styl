@@ -1,28 +1,33 @@
 .news
-  pos relative
-  z-index 1
-  bgc $bgrey
-  padding 70px 0 105px
-  @media $lDesktopSmall
-    padding 53px 0 76px
-  @media $LandscapeMin
-    pb 56px
-  &:before
-    content ""
-    pos absolute
-    l 14px
-    r 14px
-    t 0
-    b 14px
-    bgc white
+  &_list
+    mb -99px
     @media $desktopTablet
-      l 7px
-      b 7px
-      r 7px
+      mb -92px
+  &:not(&_list)
+    pos relative
+    z-index 1
+    bgc $bgrey
+    padding 70px 0 105px
+    @media $lDesktopSmall
+      padding 53px 0 76px
     @media $LandscapeMin
-      l 0
-      b 0
-      r 0
+      pb 56px
+    &:before
+      content ""
+      pos absolute
+      l 14px
+      r 14px
+      t 0
+      b 14px
+      bgc white
+      @media $desktopTablet
+        l 7px
+        b 7px
+        r 7px
+      @media $LandscapeMin
+        l 0
+        b 0
+        r 0
   &__title
     c black
     fontify 60px 400 64px
@@ -43,7 +48,7 @@
       w calc(100% + 45px)
     @media $LandscapeMedium
       flex-direction column
-  &__item
+  &__col
     pos relative
     w calc(100% / 3 - 60px)
     ml 60px
@@ -58,6 +63,16 @@
       w calc(100% - 45px)
       & + &
         mt 40px
+  &__item
+    &-img
+      pos absolute
+      z-index -1
+      t 0
+      l 0
+      size 100%
+      opacity .5
+      object-fit cover
+      transition .4s opacity
     &-date
       c $grey
       fontify 16px 400 26px
@@ -65,7 +80,11 @@
     &-href
       c black
       fontify 30px 400 38px
-      bb(1px, solid, alpha(black, .15))
+      border-bottom 1px solid alpha(black, .15)
+      transition .7s border-color, .7s color
+      &:hover
+        border-color transparent
+        c $green
       @media $lDesktopSmall
         fontify 24px 400 32px
       @media $desktopTablet
@@ -91,3 +110,118 @@
       ib()
       pos static
       mt 40px
+  &__top
+    text-align center
+    mb 19px
+    padding 0 20px
+  &__tabs
+    df(center, center)
+    flex-wrap wrap
+    pos relative
+    padding 0 15px
+    w calc(100% + 40px)
+    ml -40px
+    mb 23px
+    @media $LandscapeMedium
+      ml -20px
+      w calc(100% + 20px)
+    &-button
+      ib()
+      fontify 18px 400 18px
+      border-bottom 1px dotted alpha(black, .15)
+      mb 10px
+      transition .7s border-color
+      ml 40px
+      @media $LandscapeMedium
+        ml 20px
+      &:hover
+        border-color transparent
+      &.active
+        color white
+        bgc $green
+        border-radius 24px
+        border-color transparent
+        padding 15px 27px 12px
+        mt 0
+  &__blocks
+    pos relative
+    padding 0 14px 14px
+    &:after
+      content ""
+      clear both
+      display table
+    @media $desktopTablet
+      padding 0 7px 7px
+    @media $LandscapeMin
+      padding 0
+  &__block
+    dn()
+    font-size 0
+    ml -14px
+    w calc(100% + 14px)
+    @media $desktopTablet
+      ml -7px
+      w calc(100% + 7px)
+    @media $LandscapeMedium
+      ml 0
+      w 100%
+    &.show
+      db()
+  &__grid
+    ib()
+    oh()
+    bgc white
+    w calc(50% - 14px)
+    padding 73px 78px
+    h 348px
+    ml 14px
+    mb 14px
+    transition .7s box-shadow
+    @media $lDesktopSmall
+      padding 41px 49px
+    @media $desktopMax
+      h 300px
+    @media $desktopTablet
+      w calc(50% - 7px)
+      ml 7px
+      mb 7px
+    @media $LandscapeMedium
+      w 100%
+      ml 0
+    @media $PortraitMax
+      padding 25px 20px
+      h auto
+    &:hover
+      box-shadow 0 0 35px rgba(0, 0, 0, 0.2)
+    &.height2
+      h 710px
+      pos relative
+      z-index 1
+      oh()
+      bgc $dark
+      float left
+      df(flex-end, flex-start)
+      c white
+      @media $desktopMax
+        float none
+        w calc(100% - 14px)
+        h 600px
+      @media $desktopTablet
+        w calc(100% - 7px)
+      @media $LandscapeMedium
+        w 100%
+      @media $PortraitMax
+        h auto
+        pt 200px
+      &:hover ^[0]__item-img
+        opacity .45
+      & ^[0]__item-content
+        @media $desktopMax
+          max-width 600px
+      & ^[0]__item-date
+        c white
+      & ^[0]__item-href
+        c white
+        border-bottom 1px solid alpha(white, .15)
+        &:hover
+          border-color transparent

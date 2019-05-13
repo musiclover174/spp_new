@@ -152,20 +152,117 @@
       </section>
     </aside>
     <main class="main" role="main">
-      <div class="container">
-        <section class="text">
+      <section class="news news_list">
+        <section class="news__top">
           <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">/ </span>
           </section>
-          <h1>Разводящая</h1>
-          <ul>
-            <li><a href="index">Главная</a></li>
-            <li><a href="text">Типовая текстовая</a></li>
-            <li><a href="page404">404. Страница не найдена.</a></li>
-            <li><a href="news">Новости</a></li>
-            <li><a href="news-one">Одна новость</a></li>
+          <h1>Интересная информация</h1>
+        </section>
+        <section class="news__tabs">
+          <button class="news__tabs-button js-tab active" type="button" data-group="news" data-tab="smi">СМИ о нас
+          </button>
+          <button class="news__tabs-button js-tab" type="button" data-group="news" data-tab="news">Новости компании
+          </button>
+          <button class="news__tabs-button js-tab" type="button" data-group="news" data-tab="news_prof">Новости профсоюза
+          </button>
+        </section>
+        <section class="news__blocks">
+          <ul class="news__block js-block show" data-tab="smi" data-group="news">
+            <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation"/>
+              <div class="news__item-content">
+                <p class="news__item-date">25 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
+                <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017». 
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">18 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие продукты в России</a>
+                <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8 золотых медалей! 
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">11 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Александр Берестов награжден Орденом дружбы</a>
+                <p class="news__item-text js-shave" data-height="84">Указом Президента РФ Владимира Путина Президент объединения ООО «СоюзПищепром»,  Александр Берестов награжден Орденом дружбы за заслуги в развитии агропромышленного комплекса России.
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">08 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Участники фитнес-конвенции выбирают для себя «Здоровое меню»</a>
+                <p class="news__item-text js-shave" data-height="84">7-8 октября в легкоатлетическом комплексе имени Елены Елесиной прошла XVII Международная фитнес-конвенция Fitural.
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">19 / 09 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Молоко в 3D: завод растительного молока "оживет" на «Золотой осени»</a>
+                <p class="news__item-text js-shave" data-height="84">В Москве на ВДНХ с 4 по 7 октября пройдет крупнейшая в стране агропромышленная выставка «Золотая осень-2017». Челябинская область на экспозиции будет представлена отдельным стендом. Одним из южноуральских участников сельскохозяйственной выставки станет челябинское «Объединение «СоюзПищепром».
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">08 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Участники фитнес-конвенции выбирают для себя «Здоровое меню»</a>
+                <p class="news__item-text js-shave" data-height="84">7-8 октября в легкоатлетическом комплексе имени Елены Елесиной прошла XVII Международная фитнес-конвенция Fitural.
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">19 / 09 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Молоко в 3D: завод растительного молока "оживет" на «Золотой осени»</a>
+                <p class="news__item-text js-shave" data-height="84">В Москве на ВДНХ с 4 по 7 октября пройдет крупнейшая в стране агропромышленная выставка «Золотая осень-2017». Челябинская область на экспозиции будет представлена отдельным стендом. Одним из южноуральских участников сельскохозяйственной выставки станет челябинское «Объединение «СоюзПищепром».
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul class="news__block js-block" data-tab="news" data-group="news">
+            <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation"/>
+              <div class="news__item-content">
+                <p class="news__item-date">25 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
+                <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017». 
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">18 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие продукты в России</a>
+                <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8 золотых медалей! 
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul class="news__block js-block" data-tab="news_prof" data-group="news">
+            <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation"/>
+              <div class="news__item-content">
+                <p class="news__item-date">25 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
+                <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017». 
+                </p>
+              </div>
+            </li>
+            <li class="news__grid">
+              <div class="news__item-content">
+                <p class="news__item-date">18 / 10 / 2017
+                </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие продукты в России</a>
+                <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8 золотых медалей! 
+                </p>
+              </div>
+            </li>
           </ul>
         </section>
-      </div>
+      </section>
       <footer class="footer">
         <div class="container">
           <ul class="footer__list">

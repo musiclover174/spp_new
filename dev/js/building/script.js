@@ -9,6 +9,7 @@ import Popup from './modules/popup';
 import Forms from './modules/forms';
 import Burger from './modules/burger';
 import Side from './modules/side';
+import Tabs from './modules/tabs';
 import Categories from './modules/categories';
 import Useful from './modules/useful';
 // import Contacts from './modules/contacts';
@@ -31,7 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (qs('.js-side-scroll')) {
-    const side = new Side('.js-side-scroll', '.js-side-tab', '.js-side-block');
+    const side = new Side('.js-side-scroll');
+  }
+
+  if (qs('.js-tab')) {
+    const tabs = new Tabs('.js-tab', '.js-block');
   }
 
   if (qs('.js-cat-slider')) {
@@ -42,6 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const useful = new Useful('.js-useful-hover', '.js-useful-title', '.js-useful-text', '.js-useful-inner');
   }
 
+  if (qsAll('.js-shave')) {
+    window.addEventListener('resize', () => {
+      qsAll('.js-shave[data-height]').forEach((sh) => {
+        shave(sh, sh.getAttribute('data-height'));
+      });
+    });
+  }
+
   // if (document.querySelector('.js-contacts-map')) {
   //   const contacts = new Contacts('contacts-map');
   //   contacts.init();
@@ -50,12 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // if (document.querySelector('.js-sticky')) {
   //   Sticky(20, 0);
   // }
-
-  // if (document.querySelectorAll('.js-shave').length) {
-  //   document.querySelectorAll('.js-shave').forEach((sh) => {
-  //     shave(sh, sh.getAttribute('data-height'));
-  //   });
-  // }}
 
   // resize and scroll
   resizeWatcher();

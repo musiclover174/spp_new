@@ -225,3 +225,28 @@
         border-bottom 1px solid alpha(white, .15)
         &:hover
           border-color transparent
+  &__elem
+    &-info
+      df(center, space-between)
+      mt 40px
+    &-date
+      c $grey
+      fontify 16px 400 26px
+    &-prev,
+    &-next
+      pos fixed
+      t 50%
+      size 27px
+      mt -13px
+      z-index 10
+      background-repeat no-repeat
+      background-position 0 -756px
+      transition 0.5s background
+      &:hover
+        animation arrAnimation 1s steps(28)
+    &-prev
+      background-image url("../i/arleft_black.png")
+      l 285px
+    &-next
+      background-image url("../i/arright_black.png")
+      r 65px

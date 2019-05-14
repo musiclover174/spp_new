@@ -1,0 +1,118 @@
+.card
+  pos relative
+  z-index 1
+  mt -106px
+  mb -71px
+  df(flex-start, space-between)
+  @media $desktopMedium
+    mt -106px
+    flex-direction column
+    justify-content flex-start
+  @media $LandscapeMax
+    mt -120px
+  &__side
+    size calc(50% + 20px) 100vh
+    @media $desktopMedium
+      w 100%
+      height 65vh !important
+      min-height 400px
+    &-wrapper
+      df(center, center)
+      size 100%
+      @media $desktopMedium
+        position static !important
+        width 100% !important
+        transform none !important
+    &-img
+      max-width 85%
+      max-height 85%
+  &__content
+    w calc(50% - 20px)
+    pt 14px
+    @media $desktopMedium
+      w 100%
+  &__top,
+  &__form
+    mr 0
+    ml auto
+    bgc white
+    padding 75px 80px 80px
+    mb 14px
+    mr 14px
+    @media $lDesktopSmall
+      padding 51px 49px 60px
+    @media $desktopMedium
+      w 100%
+      mb 0
+      mr 0
+      ml 0
+    @media $desktopTablet
+      pl 35px
+      pr 35px
+    @media $PortraitMax
+      pl 20px
+      pr 20px
+  &__type
+    c $grey
+    fontify 16px 400 24px
+    mb 6px
+  &__text
+    fontify 18px 400 28px
+    pb 16px
+    border-bottom 1px solid #efefef
+    @media $PortraitMin
+      pb 0
+      border-bottom 0
+  &__form
+    @media $desktopMedium
+      pt 0
+      pb 40px
+    &-title
+      fontify 48px 400 52px
+      mb 30px
+      @media $lDesktopSmall
+        fontify 38px 400 42px
+      @media $desktopMedium
+        fontify 30px 400 34px
+      @media $desktopTablet
+        fontify 26px 400 30px
+    &-subtitle
+      fontify 18px 400 28px
+      mb 29px
+  &__info
+    fontify 18px 400 28px
+    max-width 570px
+    mb 57px
+  &__chars
+    df()
+    flex-wrap wrap
+    ml -42px
+    w calc(100% + 42px)
+    mb -35px
+    @media $PortraitMin
+      mb -20px
+    &-title
+      fontify 30px 500 34px
+      mb 25px
+      @media $lDesktopSmall
+        fontify 28px 500 32px
+      @media $desktopMedium
+        fontify 26px 400 30px
+      @media $desktopTablet
+        fontify 22px 400 26px
+  &__char
+    w calc(50% - 42px)
+    ml 42px
+    mb 35px
+    @media $desktopMax
+      w calc(100% - 42px)
+    @media $desktopMedium
+      w calc(50% - 42px)
+    @media $PortraitMin
+      w calc(100% - 42px)
+      & + &
+        mb 20px
+  &__block
+    fontify 18px 400 28px
+    & + &
+      mt 64px

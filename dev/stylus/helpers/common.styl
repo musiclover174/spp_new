@@ -76,10 +76,20 @@ body
   &__col
     ib()
     w calc(50% - 21px)
+    @media $desktopMax
+      w 100%
+    @media $desktopMedium
+      w calc(50% - 21px)
     @media $PortraitMin
-      w calc(100%)
+      w 100%
     & + &
       ml 42px
+      @media $desktopMax
+        ml 0
+        mt 20px
+      @media $desktopMedium
+        mt 0
+        ml 42px
       @media $PortraitMin
         ml 0
         mt 20px

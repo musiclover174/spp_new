@@ -1,5 +1,5 @@
 export default class Sticky {
-  constructor(topSpacing, bottomSpacing) {
+  constructor(topSpacing = 0, bottomSpacing = 0) {
     this.ts = topSpacing;
     this.bs = bottomSpacing;
     this.init();

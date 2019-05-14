@@ -13,7 +13,7 @@ import Tabs from './modules/tabs';
 import Categories from './modules/categories';
 import Useful from './modules/useful';
 import Contacts from './modules/contacts';
-// import Sticky from './modules/sticky';
+import Sticky from './modules/sticky';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger('.js-burger');
@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     contacts.init();
   }
 
-  // if (document.querySelector('.js-sticky')) {
-  //   Sticky(20, 0);
-  // }
+  if (qs('.js-sticky')) {
+    const sticky = new Sticky();
+  }
 
   // resize and scroll
   resizeWatcher();

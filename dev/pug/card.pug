@@ -1,0 +1,163 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    include layout/__side
+  
+    +b('main').main
+      +b('section').card.js-sticky-parent
+        +e('aside').side.js-sticky
+          +e.side-wrapper.js-sticky-inner
+            +e.side-img(src="img/card.png")
+        +e.content
+          +e('section').top
+            +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim / 
+              +e.href(href="#") Каталог
+              +e('span').delim / 
+            h1 Молоко овсяное
+            +e('p').info Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.
+            +e.block
+              +e('ul').chars
+                +e.char
+                  +e('p').type Формы выпуска
+                  +e('p').text 0.75 л / TetraPak, 1.5 л / TetraPak
+                +e.char
+                  +e('p').type Минимальный срок годности
+                  +e('p').text 12 мес / 7 суток после вскрытия
+                +e.char
+                  +e('p').type Стандарт
+                  +e('p').text ГОСТ 28188-2014
+            +e.block
+              +e('p').chars-title Особенности продукта
+              ul
+                li Тонкий, сладковатый вкус с низким содержанием сахара.
+                li На 100% растительной основе.
+                li Питательный напиток, источник высококачественного соевого белка.
+                li Легко усваивается, так как не содержит лактозы и глютена.
+                li Низкое содержание насыщенных жиров.
+            +e.block
+              +e('p').chars-title Пищевая ценность (100ml)
+              +e('ul').chars
+                +e.char
+                  +e('p').type Энергия
+                  +e('p').text 163kJ / 39 kcal
+                +e.char
+                  +e('p').type Жиры
+                  +e('p').text 1.8 g
+                +e.char
+                  +e('p').type Насыщенные углеводороды
+                  +e('p').text 0.3 g
+                +e.char
+                  +e('p').type Углеводы
+                  +e('p').text 2.5 g
+                +e.char
+                  +e('p').type Сахара
+                  +e('p').text 2.5 g
+                +e.char
+                  +e('p').type Пищевые волокна
+                  +e('p').text 0.5 g
+                +e.char
+                  +e('p').type Белки
+                  +e('p').text 3.0 g
+                +e.char
+                  +e('p').type Соли
+                  +e('p').text 0.11 g
+            +e.block
+              +e('p').chars-title Витамины и минералы
+              +e('ul').chars
+                +e.char
+                  +e('p').type Витамин D
+                  +e('p').text 0.75 mg
+                +e.char
+                  +e('p').type Витамин B2
+                  +e('p').text 0.21 mg
+                +e.char
+                  +e('p').type Витамин B12
+                  +e('p').text 0.38 mg
+                +e.char
+                  +e('p').type Кальций
+                  +e('p').text 120 mg
+            +e.block
+              +e('p').chars-title RI таблица (200ml)
+              +e('ul').chars
+                +e.char
+                  +e('p').type Энергия
+                  +e('p').text 78 kcal
+                +e.char
+                  +e('p').type Жиры
+                  +e('p').text 3.6 g
+                +e.char
+                  +e('p').type Насыщенные углеводороды
+                  +e('p').text 0.6 g
+                +e.char
+                  +e('p').type Сахара
+                  +e('p').text 5 g
+                +e.char
+                  +e('p').type Соли
+                  +e('p').text 0.22 g
+            +e.block
+              +e('ul').chars
+                +e.char
+                  +e('p').chars-title Ингредиенты
+                  p Вода, очищенные соевые бобы (5,9%), сахар, три-кальциум фосфат, регулятоp кислотности (фосфат монокалия), морская соль, ароматизатор идентичный натуральному, стабилизатор (геллановая камедь), витамины (рибофлавин (B2), B12, D2).
+                +e.char
+                  +e('p').chars-title Противопоказания (аллергия)
+                  p Содержит сою. Не содержит лактозу. Не относится к группе молочных продуктов. Не содержит глютен.
+                +e.char
+                  +e('p').chars-title Способ употребления, рекомендации и/или ограничения по использованию
+                  p Перед применением взболтать.
+                +e.char
+                  +e('p').chars-title Условия хранения
+                  p Хранить в сухом прохладном месте. Открытую упаковку хранить в холодильнике и употребить в течение 3-4 дней.
+            
+          +e('form').form
+            +e('p').form-title Заказать оптом
+            +e('p').form-subtitle Обратите внимание, поля со звездочкой
+              span *
+              |  – обязательны для заполнения.
+            .common__row
+              .common__col
+                label.common__label Имя
+                  span *
+                input(type="text", data-req="req").common__input
+              .common__col
+                label.common__label E-mail
+                  span *
+                input(type="text", data-req="req", data-type="email").common__input
+            .common__row
+              .common__col
+                label.common__label Телефон
+                  span *
+                input(type="text", data-req="req", data-type="tel").common__input.js-phone
+              .common__col
+                label.common__label Организация
+                input(type="text").common__input
+            .common__row
+              .common__col
+                label.common__label Страна
+                  span *
+                input(type="text", data-req="req").common__input
+              .common__col
+                label.common__label Город
+                  span *
+                input(type="text", data-req="req").common__input
+            .common__row
+              label.common__label Сообщение
+              textarea.common__textarea
+            .common__row
+              .fakecheckbox
+                input(type="checkbox", value="", name="agreement", checked, data-req="req", data-type="checkbox")#agreement.fakecheckbox__truecheck
+                label(for="agreement").fakecheckbox__label Даю согласие на обработку 
+                  a(href="#") персональных&nbsp;данных
+            .common__row
+              button(type="submit").common__submit.btn Отправить
+
+      include layout/__footer
+    include layout/__scripts

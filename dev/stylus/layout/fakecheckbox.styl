@@ -4,26 +4,29 @@
   c black
   &__label
     ib()
-    fontify 16px 400 24px
+    fontify 18px 400 28px
     pos relative
-    pl 27px
-    pt 2px
+    pl 37px
+    mt 20px
+    mb 8px
     @media $lDesktopSmall
       fontify 14px 400 21px
     &:before 
       content ""
       pos absolute
       l 0px
-      t 3px
-      size 19px
-      border 1px solid $grey
+      t 0
+      size 26px
+      border 1px solid $bgrey
+      border-radius 2px
+      bgc $bgrey
       cursor pointer
-      transition .7s border
+      transition .7s border, .7s background-color
     &:after
       content ""
       pos absolute
-      size 11px 9px
-      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJCAMAAADTuiYfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEXxFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3///+/okeeAAAAFHRSTlMAILwd37veHgiSFpPUNhXT3dwcuUr5jKcAAAABYktHRBXl2PmjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wEXDCAG2Vf96QAAADVJREFUCNdjYIACRiZmOJNFhBXBZGNHYXJwcsFFuUV4eGEK+PhFREQEoGr5BOFMBgYhYSgTAFSJAfXKQ3X+AAAAAElFTkSuQmCC') no-repeat center
+      size 14px 10px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAKCAQAAAAu0KdMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBQ4JBTO5TZUTAAAAjElEQVQY023OsQqBARTF8SulmK1KGZTN4B08gslmMpqMNpPRajKZTFImDyBPoJRNyQPgZ+CLj++e4d7b/3buyYnMysU09iFLeTNMstEcY/GPChYYCRHKGim0xPC1hbWz5hsVrTwMktNQd3LREko2HvofnxBqjq7atu563/9freqAm246XDJU7HR+kz8BjP+aQ34wtbIAAAAASUVORK5CYII=') no-repeat center
       l 6px
       t 9px
       opacity 0
@@ -43,6 +46,9 @@
     h 0
     border 0
     opacity 0
+    &:checked + ^[0]__label:before
+      bgc $green
+      border-color $green
     &:checked + ^[0]__label:after
       opacity 1
     &.warning + ^[0]__label:before 

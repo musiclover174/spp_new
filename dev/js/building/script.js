@@ -12,7 +12,7 @@ import Side from './modules/side';
 import Tabs from './modules/tabs';
 import Categories from './modules/categories';
 import Useful from './modules/useful';
-// import Contacts from './modules/contacts';
+import Contacts from './modules/contacts';
 // import Sticky from './modules/sticky';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (qsAll('.h-anim').length) elemVisCheck();
 
   // popup initialization
-  if (qs('[data-popup]')) { 
+  if (qs('[data-popup]')) {
     window.popup = new Popup('[data-popup]');
   }
 
@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // if (document.querySelector('.js-contacts-map')) {
-  //   const contacts = new Contacts('contacts-map');
-  //   contacts.init();
-  // }
+  if (qs('.js-contacts-map')) {
+    const contacts = new Contacts('contacts-map');
+    contacts.init();
+  }
 
   // if (document.querySelector('.js-sticky')) {
   //   Sticky(20, 0);

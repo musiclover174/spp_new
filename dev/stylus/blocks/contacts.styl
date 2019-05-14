@@ -1,0 +1,120 @@
+.contacts
+  pos relative
+  z-index 1
+  mt -92px
+  mb -71px
+  @media $desktopMedium
+    mt -106px
+  @media $LandscapeMax
+    mt -120px
+  &__map
+    pos absolute
+    z-index -1
+    t -14px
+    b -14px
+    l 0
+    r 0
+    @media $desktopMedium
+      pos relative
+      z-index 0
+      w 100%
+      h 65vh
+      t 0
+      b 0
+      min-height 400px
+  &__top,
+  &__form
+    w calc(50% - 20px)
+    mr 0
+    ml auto
+    bgc white
+    padding 75px 80px 80px
+    mb 14px
+    mr 14px
+    @media $lDesktopSmall
+      padding 51px 49px 60px
+    @media $desktopMedium
+      w 100%
+      mb 0
+      mr 0
+      ml 0
+    @media $desktopTablet
+      pl 35px
+      pr 35px
+    @media $PortraitMax
+      pl 20px
+      pr 20px
+  &__tabs
+    df(center, flex-start)
+    flex-wrap wrap
+    pos relative
+    w calc(100% + 40px)
+    ml -40px
+    mb 38px
+    mt -10px
+    @media $LandscapeMedium
+      ml -20px
+      w calc(100% + 20px)
+    &-button
+      ib()
+      fontify 18px 400 18px
+      border-bottom 1px dotted alpha(black, .15)
+      mb 22px
+      transition .7s border-color
+      ml 40px
+      @media $LandscapeMedium
+        ml 20px
+      &:hover
+        border-color transparent
+      &.active
+        color white
+        bgc $green
+        border-radius 24px
+        border-color transparent
+        padding 15px 27px 12px
+        mt 0
+  &__block
+    dn()
+    &.show
+      db()
+    &-title
+      fontify 30px 400 34px
+      mb 27px
+  &__type
+    c $grey
+    fontify 16px 400 24px
+    mb 6px
+  &__text
+    fontify 18px 400 28px
+    pb 16px
+    border-bottom 1px solid #efefef
+    @media $PortraitMin
+      pb 0
+      border-bottom 0
+  &__mail
+    c black
+    fontify 18px 400 18px
+    bb(1px, solid, alpha(black, .15))
+  &__tel
+    c black
+    fontify 18px 400 18px
+  &__form
+    @media $desktopMedium
+      pt 0
+      pb 40px
+    &-title
+      fontify 48px 400 52px
+      mb 30px
+      @media $lDesktopSmall
+        fontify 38px 400 42px
+      @media $desktopMedium
+        fontify 30px 400 34px
+      @media $desktopTablet
+        fontify 26px 400 30px
+    &-subtitle
+      fontify 18px 400 28px
+      mb 29px
+
+ymaps.ymaps-2-1-73-map-copyrights-promo,
+ymaps.ymaps-2-1-73-copyright
+  dn()

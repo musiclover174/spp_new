@@ -152,21 +152,231 @@
       </section>
     </aside>
     <main class="main" role="main">
-      <div class="container">
-        <section class="text">
+      <section class="contacts">
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+        <div class="contacts__map js-contacts-map" id="contacts-map" data-coords="55.169596, 61.344954" data-center="55.168669, 61.348011" data-pin="/static/i/pin.png">
+        </div>
+        <section class="contacts__top">
           <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">/ </span>
           </section>
-          <h1>Разводящая</h1>
-          <ul>
-            <li><a href="index">Главная</a></li>
-            <li><a href="text">Типовая текстовая</a></li>
-            <li><a href="page404">404. Страница не найдена.</a></li>
-            <li><a href="news">Новости</a></li>
-            <li><a href="news-one">Одна новость</a></li>
-            <li><a href="contacts">Контакты</a></li>
-          </ul>
+          <h1>Контактная информация</h1>
+          <section class="contacts__tabs">
+            <button class="contacts__tabs-button js-tab active" type="button" data-group="contacts" data-tab="c1">Приемная
+            </button>
+            <button class="contacts__tabs-button js-tab" type="button" data-group="contacts" data-tab="c2">Управление продаж
+            </button>
+            <button class="contacts__tabs-button js-tab" type="button" data-group="contacts" data-tab="c3">Отдел маркетинга и рекламы
+            </button>
+            <button class="contacts__tabs-button js-tab" type="button" data-group="contacts" data-tab="c4">Отдел закупок
+            </button>
+            <button class="contacts__tabs-button js-tab" type="button" data-group="contacts" data-tab="c5">Торговые представительства
+            </button>
+            <button class="contacts__tabs-button js-tab" type="button" data-group="contacts" data-tab="c6">Технический отдел
+            </button>
+            <button class="contacts__tabs-button js-tab" type="button" data-group="contacts" data-tab="c7">Управление грузоперевозок
+            </button>
+          </section>
+          <section class="contacts__blocks">
+            <div class="contacts__block js-block show" data-tab="c1" data-group="contacts">
+              <p class="contacts__block-title">Приемная
+              </p>
+              <div class="common__row common__row_margined">
+                <p class="contacts__type">Адрес
+                </p>
+                <p class="contacts__text">РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+                </p>
+              </div>
+              <div class="common__row common__row_margined">
+                <div class="common__col">
+                  <p class="contacts__type">E-mail
+                  </p>
+                  <p class="contacts__text"><a class="contacts__mail" href="mailto:director@spp.ru">director@spp.ru</a>
+                  </p>
+                </div>
+                <div class="common__col">
+                  <p class="contacts__type">Телефон
+                  </p>
+                  <p class="contacts__text"><a class="contacts__tel" href="tel:+73517421660">+7 (351) 742-16-60</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__block js-block" data-tab="c2" data-group="contacts">
+              <p class="contacts__block-title">Управление продаж
+              </p>
+              <div class="common__row common__row_margined">
+                <p class="contacts__type">Адрес
+                </p>
+                <p class="contacts__text">РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+                </p>
+              </div>
+              <div class="common__row common__row_margined">
+                <div class="common__col">
+                  <p class="contacts__type">E-mail
+                  </p>
+                  <p class="contacts__text"><a class="contacts__mail" href="mailto:director@spp.ru">director@spp.ru</a>
+                  </p>
+                </div>
+                <div class="common__col">
+                  <p class="contacts__type">Телефон
+                  </p>
+                  <p class="contacts__text"><a class="contacts__tel" href="tel:+73517421660">+7 (351) 742-16-60</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__block js-block" data-tab="c3" data-group="contacts">
+              <p class="contacts__block-title">Отдел маркетинга и рекламы
+              </p>
+              <div class="common__row common__row_margined">
+                <p class="contacts__type">Адрес
+                </p>
+                <p class="contacts__text">РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+                </p>
+              </div>
+              <div class="common__row common__row_margined">
+                <div class="common__col">
+                  <p class="contacts__type">E-mail
+                  </p>
+                  <p class="contacts__text"><a class="contacts__mail" href="mailto:director@spp.ru">director@spp.ru</a>
+                  </p>
+                </div>
+                <div class="common__col">
+                  <p class="contacts__type">Телефон
+                  </p>
+                  <p class="contacts__text"><a class="contacts__tel" href="tel:+73517421660">+7 (351) 742-16-60</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__block js-block" data-tab="c4" data-group="contacts">
+              <p class="contacts__block-title">Отдел закупок
+              </p>
+              <div class="common__row common__row_margined">
+                <p class="contacts__type">Адрес
+                </p>
+                <p class="contacts__text">РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+                </p>
+              </div>
+              <div class="common__row common__row_margined">
+                <div class="common__col">
+                  <p class="contacts__type">E-mail
+                  </p>
+                  <p class="contacts__text"><a class="contacts__mail" href="mailto:director@spp.ru">director@spp.ru</a>
+                  </p>
+                </div>
+                <div class="common__col">
+                  <p class="contacts__type">Телефон
+                  </p>
+                  <p class="contacts__text"><a class="contacts__tel" href="tel:+73517421660">+7 (351) 742-16-60</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__block js-block" data-tab="c5" data-group="contacts">
+              <p class="contacts__block-title">Торговые представительства
+              </p>
+              <div class="common__row common__row_margined">
+                <p class="contacts__type">Адрес
+                </p>
+                <p class="contacts__text">РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+                </p>
+              </div>
+              <div class="common__row common__row_margined">
+                <div class="common__col">
+                  <p class="contacts__type">E-mail
+                  </p>
+                  <p class="contacts__text"><a class="contacts__mail" href="mailto:director@spp.ru">director@spp.ru</a>
+                  </p>
+                </div>
+                <div class="common__col">
+                  <p class="contacts__type">Телефон
+                  </p>
+                  <p class="contacts__text"><a class="contacts__tel" href="tel:+73517421660">+7 (351) 742-16-60</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__block js-block" data-tab="c6" data-group="contacts">
+              <p class="contacts__block-title">Технический отдел
+              </p>
+              <div class="common__row common__row_margined">
+                <p class="contacts__type">Адрес
+                </p>
+                <p class="contacts__text">РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+                </p>
+              </div>
+              <div class="common__row common__row_margined">
+                <div class="common__col">
+                  <p class="contacts__type">E-mail
+                  </p>
+                  <p class="contacts__text"><a class="contacts__mail" href="mailto:director@spp.ru">director@spp.ru</a>
+                  </p>
+                </div>
+                <div class="common__col">
+                  <p class="contacts__type">Телефон
+                  </p>
+                  <p class="contacts__text"><a class="contacts__tel" href="tel:+73517421660">+7 (351) 742-16-60</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__block js-block" data-tab="c7" data-group="contacts">
+              <p class="contacts__block-title">Управление грузоперевозок
+              </p>
+              <div class="common__row common__row_margined">
+                <p class="contacts__type">Адрес
+                </p>
+                <p class="contacts__text">РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+                </p>
+              </div>
+              <div class="common__row common__row_margined">
+                <div class="common__col">
+                  <p class="contacts__type">E-mail
+                  </p>
+                  <p class="contacts__text"><a class="contacts__mail" href="mailto:director@spp.ru">director@spp.ru</a>
+                  </p>
+                </div>
+                <div class="common__col">
+                  <p class="contacts__type">Телефон
+                  </p>
+                  <p class="contacts__text"><a class="contacts__tel" href="tel:+73517421660">+7 (351) 742-16-60</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
-      </div>
+        <form class="contacts__form">
+          <p class="contacts__form-title">Обратная связь
+          </p>
+          <p class="contacts__form-subtitle">Обратите внимание, все поля обязательны для заполнения.
+          </p>
+          <div class="common__row">
+            <div class="common__col">
+              <label class="common__label">Имя</label>
+              <input class="common__input" type="text" data-req="req">
+            </div>
+            <div class="common__col">
+              <label class="common__label">E-mail</label>
+              <input class="common__input" type="text" data-req="req" data-type="email">
+            </div>
+          </div>
+          <div class="common__row">
+            <label class="common__label">Сообщение</label>
+            <textarea class="common__textarea" type="text" data-req="req"></textarea>
+          </div>
+          <div class="common__row">
+            <div class="fakecheckbox">
+              <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked data-req="req" data-type="checkbox" id="agreement">
+              <label class="fakecheckbox__label" for="agreement">Даю согласие на обработку <a href="#">персональных&nbsp;данных</a></label>
+            </div>
+          </div>
+          <div class="common__row">
+            <button class="common__submit btn" type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
       <footer class="footer">
         <div class="container">
           <ul class="footer__list">

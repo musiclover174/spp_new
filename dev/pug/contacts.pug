@@ -1,0 +1,150 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    include layout/__side
+  
+    +b('main').main
+      +b('section').contacts
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        +e.map#contacts-map.js-contacts-map(data-coords="55.169596, 61.344954", data-center="55.168669, 61.348011",data-pin="/static/i/pin.png")
+        +e('section').top
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+          h1 Контактная информация
+          +e('section').tabs
+            +e.tabs-button.js-tab.active(type="button", data-group="contacts", data-tab="c1") Приемная
+            +e.tabs-button.js-tab(type="button", data-group="contacts", data-tab="c2") Управление продаж
+            +e.tabs-button.js-tab(type="button", data-group="contacts", data-tab="c3") Отдел маркетинга и рекламы
+            +e.tabs-button.js-tab(type="button", data-group="contacts", data-tab="c4") Отдел закупок
+            +e.tabs-button.js-tab(type="button", data-group="contacts", data-tab="c5") Торговые представительства
+            +e.tabs-button.js-tab(type="button", data-group="contacts", data-tab="c6") Технический отдел
+            +e.tabs-button.js-tab(type="button", data-group="contacts", data-tab="c7") Управление грузоперевозок
+          +e('section').blocks
+            +e.block.js-block.show(data-tab="c1", data-group="contacts")
+              +e('p').block-title Приемная
+              .common__row.common__row_margined
+                +e('p').type Адрес
+                +e('p').text РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+              .common__row.common__row_margined
+                .common__col
+                  +e('p').type E-mail
+                  +e('p').text
+                    +e.mail(href="mailto:director@spp.ru") director@spp.ru
+                .common__col
+                  +e('p').type Телефон
+                  +e('p').text
+                    +e.tel(href="tel:+73517421660") +7 (351) 742-16-60
+            +e.block.js-block(data-tab="c2", data-group="contacts")
+              +e('p').block-title Управление продаж
+              .common__row.common__row_margined
+                +e('p').type Адрес
+                +e('p').text РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+              .common__row.common__row_margined
+                .common__col
+                  +e('p').type E-mail
+                  +e('p').text
+                    +e.mail(href="mailto:director@spp.ru") director@spp.ru
+                .common__col
+                  +e('p').type Телефон
+                  +e('p').text
+                    +e.tel(href="tel:+73517421660") +7 (351) 742-16-60
+            +e.block.js-block(data-tab="c3", data-group="contacts")
+              +e('p').block-title Отдел маркетинга и рекламы
+              .common__row.common__row_margined
+                +e('p').type Адрес
+                +e('p').text РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+              .common__row.common__row_margined
+                .common__col
+                  +e('p').type E-mail
+                  +e('p').text
+                    +e.mail(href="mailto:director@spp.ru") director@spp.ru
+                .common__col
+                  +e('p').type Телефон
+                  +e('p').text
+                    +e.tel(href="tel:+73517421660") +7 (351) 742-16-60
+            +e.block.js-block(data-tab="c4", data-group="contacts")
+              +e('p').block-title Отдел закупок
+              .common__row.common__row_margined
+                +e('p').type Адрес
+                +e('p').text РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+              .common__row.common__row_margined
+                .common__col
+                  +e('p').type E-mail
+                  +e('p').text
+                    +e.mail(href="mailto:director@spp.ru") director@spp.ru
+                .common__col
+                  +e('p').type Телефон
+                  +e('p').text
+                    +e.tel(href="tel:+73517421660") +7 (351) 742-16-60
+            +e.block.js-block(data-tab="c5", data-group="contacts")
+              +e('p').block-title Торговые представительства
+              .common__row.common__row_margined
+                +e('p').type Адрес
+                +e('p').text РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+              .common__row.common__row_margined
+                .common__col
+                  +e('p').type E-mail
+                  +e('p').text
+                    +e.mail(href="mailto:director@spp.ru") director@spp.ru
+                .common__col
+                  +e('p').type Телефон
+                  +e('p').text
+                    +e.tel(href="tel:+73517421660") +7 (351) 742-16-60
+            +e.block.js-block(data-tab="c6", data-group="contacts")
+              +e('p').block-title Технический отдел
+              .common__row.common__row_margined
+                +e('p').type Адрес
+                +e('p').text РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+              .common__row.common__row_margined
+                .common__col
+                  +e('p').type E-mail
+                  +e('p').text
+                    +e.mail(href="mailto:director@spp.ru") director@spp.ru
+                .common__col
+                  +e('p').type Телефон
+                  +e('p').text
+                    +e.tel(href="tel:+73517421660") +7 (351) 742-16-60
+            +e.block.js-block(data-tab="c7", data-group="contacts")
+              +e('p').block-title Управление грузоперевозок
+              .common__row.common__row_margined
+                +e('p').type Адрес
+                +e('p').text РФ, 454080, г. Челябинск, п. Мелькомбинат-2, участок 1, дом 37
+              .common__row.common__row_margined
+                .common__col
+                  +e('p').type E-mail
+                  +e('p').text
+                    +e.mail(href="mailto:director@spp.ru") director@spp.ru
+                .common__col
+                  +e('p').type Телефон
+                  +e('p').text
+                    +e.tel(href="tel:+73517421660") +7 (351) 742-16-60
+        +e('form').form
+          +e('p').form-title Обратная связь
+          +e('p').form-subtitle Обратите внимание, все поля обязательны для заполнения.
+          .common__row
+            .common__col
+              label.common__label Имя
+              input(type="text", data-req="req").common__input
+            .common__col
+              label.common__label E-mail
+              input(type="text", data-req="req", data-type="email").common__input
+          .common__row
+            label.common__label Сообщение
+            textarea(type="text", data-req="req").common__textarea
+          .common__row
+            .fakecheckbox
+              input(type="checkbox", value="", name="agreement", checked, data-req="req", data-type="checkbox")#agreement.fakecheckbox__truecheck
+              label(for="agreement").fakecheckbox__label Даю согласие на обработку 
+                a(href="#") персональных&nbsp;данных
+          .common__row
+            button(type="submit").common__submit.btn Отправить
+
+      include layout/__footer
+    include layout/__scripts

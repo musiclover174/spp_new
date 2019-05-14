@@ -7640,3 +7640,139 @@ ymaps.ymaps-2-1-73-copyright {
   left: -3px;
   top: -15px;
 }
+.horeca {
+  margin-top: -106px;
+}
+@media (max-width: 1000px) {
+  .horeca {
+    margin-top: -120px;
+  }
+}
+.horeca .container {
+  position: relative;
+  z-index: 1;
+}
+.horeca .text {
+  text-align: center;
+}
+.horeca__top {
+  position: relative;
+  z-index: 1;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  padding-top: 106px;
+  padding-bottom: 158px;
+}
+@media (max-width: 1600px) {
+  .horeca__top {
+    padding-bottom: 116px;
+  }
+}
+@media (max-width: 670px) {
+  .horeca__top {
+    padding-bottom: 80px;
+  }
+}
+.horeca__img {
+  position: absolute;
+  z-index: -1;
+}
+.horeca__img_one {
+  left: -5%;
+  top: -12%;
+  -webkit-transform: rotate(-11deg);
+  transform: rotate(-11deg);
+}
+.horeca__img_two {
+  right: -6%;
+  bottom: -6%;
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+.horeca__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.65;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.horeca__video-wrapper {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-color: #262626;
+  width: calc(100% - 220px);
+  height: 100%;
+}
+@media (max-width: 1050px) {
+  .horeca__video-wrapper {
+    width: calc(100% - 180px);
+  }
+}
+@media (max-width: 767px) {
+  .horeca__video-wrapper {
+    width: 100%;
+  }
+}
+.horeca__bottom {
+  padding: 182px 0 101px;
+}
+@media (max-width: 1270px) {
+  .horeca__bottom {
+    padding: 102px 0 22px;
+  }
+}
+.horeca__list {
+  text-align: center;
+}
+.horeca__item {
+  max-width: 580px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.horeca__item + .horeca__item {
+  margin-top: 35px;
+}
+@media (max-width: 1270px) {
+  .horeca__item + .horeca__item {
+    margin-top: 25px;
+  }
+}
+.horeca__item-href {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  -webkit-transition: 0.7s border-color;
+  transition: 0.7s border-color;
+}
+.horeca__item-href:hover {
+  border-color: transparent;
+}
+@media (max-width: 1600px) {
+  .horeca__item-href {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+}
+@media (max-width: 1270px) {
+  .horeca__item-href {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1050px) {
+  .horeca__item-href {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}

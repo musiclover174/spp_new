@@ -1,0 +1,75 @@
+.horeca
+  mt -106px
+  @media $LandscapeMax
+    mt -120px
+  .container
+    pos relative
+    z-index 1
+  .text
+    text-align center
+  &__top
+    pos relative
+    z-index 1
+    bgc $bgrey
+    oh()
+    pt 106px
+    pb 158px
+    @media $lDesktopSmall
+      pb 116px
+    @media $PortraitMax
+      pb 80px
+  &__img
+    pos absolute
+    z-index -1
+    &_one
+      l -5%
+      t -12%
+      transform rotate(-11deg)
+    &_two
+      r -6%
+      b -6%
+      transform rotate(40deg)
+  &__video
+    pos absolute
+    t 50%
+    l 50%
+    min-width 100%
+    min-height 100%
+    opacity .65
+    transform translate(-50%, -50%)
+    &-wrapper
+      pos fixed
+      z-index -1
+      t 0
+      r 0
+      bgc $dark
+      size calc(100% - 220px) 100%
+      @media $desktopTablet
+        w calc(100% - 180px)
+      @media $LandscapeMin
+        w 100%
+  &__bottom
+    padding 182px 0 101px
+    @media $desktopMedium
+      padding 102px 0 22px
+  &__list
+    text-align center
+  &__item
+    max-width 580px
+    padding 0 20px
+    ml auto
+    mr auto
+    & + &
+      mt 35px
+      @media $desktopMedium
+        mt 25px
+    &-href
+      c white
+      fontify 36px 400 40px
+      bb(1px, solid, alpha(white, .15))
+      @media $lDesktopSmall
+        fontify 32px 400 36px
+      @media $desktopMedium
+        fontify 26px 400 30px
+      @media $desktopTablet
+        fontify 22px 400 26px

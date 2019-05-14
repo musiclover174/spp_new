@@ -1,0 +1,53 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    include layout/__side
+  
+    +b('main').main
+      +b('section').horeca
+        +e('section').top
+          //- +e.img._one(src="img/pasta6.png")
+          //- +e.img._two(src="img/pasta5.png")
+          .container
+            +b('section').text
+              +b('section').breadcrumbs
+                +e.href(href="#") Главная
+                +e('span').delim / 
+              h1 HoReCa – настоящее готовое тесто, для знатоков своего дела
+              p У нас собственное производство слоеного теста и полуфабрикатов из него по новейшей технологии на оборудовании марки FRITSCH с 2014 года. Мы занимаем 1 место в УрФО по производственной мощности оборудования.
+              p Тесто изготавливается по уникальной рецептуре, с использованием ингредиентов только высокого качества. Пшеничная мука собственного производства обеспечивает выпечке нежность, а маргарин придает текстуру и вкус.
+              p Технология шоковой заморозки позволяет повысить срок хранения замороженных полуфабрикатов.
+              p Мы соблюдаем стандарты пищевой безопасности ГОСТ Р ИСО 22000, включающие принципы ХАССП. Мы гарантируем стабильность поставок и маркетинговую поддержку
+              p(style="text-align: center;")
+                a(href="#") 5 причин иметь в своем ассортименте продукцию глубокой заморозки
+              p(style="text-align: center;")
+                a(href="#") Условия хранения
+        +e('section').bottom
+          +e.video-wrapper
+            +e('video').video(preload, autoplay, loop, poster="img/video-poster.jpg")
+              source(src="video/video.mp4", type="video/mp4")
+          +e('ul').list
+            +e.item
+              +e.item-href(href="#") Тесто слоеное дрожжевое
+            +e.item
+              +e.item-href(href="#") Тесто слоеное бездрожжевое
+            +e.item
+              +e.item-href(href="#") Круассаны из слоеного дрожжевого теста
+            +e.item
+              +e.item-href(href="#") Полуфабрикаты со сладкой начинкой
+            +e.item
+              +e.item-href(href="#") Полуфабрикаты с гастрономической начинкой
+            +e.item
+              +e.item-href(href="#") Кулинарные полуфабрикаты
+            +e.item
+              +e.item-href(href="#") Изделия из теста
+      
+       
+      include layout/__footer
+    include layout/__scripts

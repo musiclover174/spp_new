@@ -1,0 +1,301 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    include layout/__side
+  
+    +b('main').main
+      +b('section').awards
+        .container
+          +e('section').top
+            +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim / 
+              +e.href(href="#") О компании
+              +e('span').delim / 
+            h1 Награды
+          +e('section').top-text
+            p Продукты питания «Царь», «Союзпищепром» и «Чебаркульская птица» – победители федеральной программы-конкурса «100 лучших товаров РОССИИ». Продукция «Царь» неоднократно побеждала в телевизионном проекте Первого канала «Контрольная закупка».
+            p ООО «Чебаркульская птица» входит в престижный клуб самых эффективно развивающихся агропредприятий страны – «АГРО-300». В 2011 году на предприятии была проведена самоооценка по системе менеджмента в соответствии с требованиями ГОСТ Р ИСО 22000, а в октябре 2012 был пройден сертификационный аудит третьей стороной на соответствие требованиям данного стандарта. Получен сертификат соответствия требованиям стандарта ГОСТ Р ИСО 22000-2007, включающий принципы ХАССП.
+            p В 2013 году «Чебаркульская птица» признана лучшей птицефабрикой Челябинской области, а в 2014 году уже «Союзпищепром» получил «Истринский кубок качества» от компании «ИстраНутриция» ГК DANONE.
+        +e('ul').list
+          +e.item
+            +e('p').item-year 2018
+            +e.row
+              +e('aside').item-competition АГРО 2018, Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award1.png") 
+                  | Макаронные изделия «Многозерновые» марки «Здоровое меню», овсяное молоко «Здоровое меню», овсяный кисель с облепихой «Здоровое меню»
+            +e.row
+              +e('aside').item-competition ПродЭкспо 2018, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award2.png") 
+                  | Кисель овсяный с облепихой «Здоровое меню» в номинации «Лучший инновационный продукт»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award3.png") 
+                  | В номинации «Лучший продукт импортозамещения»: молоко овсяное «Здоровое меню», молоко рисовое «Здоровое меню»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award4.png") 
+                  | Макаронные изделия многозерновые «Царь» в номинации «Лучший продукт импортозамещения»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award5.png") 
+                  | Масло подсолнечное нерафинированное «Здоровое меню», масло льняное нерафинированное «Здоровое меню» в номинации «Лучший инновационный продукт»
+          +e.item
+            +e('p').item-year 2017
+            +e.row
+              +e('aside').item-competition Золотая осень 2017, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award6.png") 
+                  | Кисель овсяный с черной смородиной «Здоровое меню», кисель овсяный с яблоком «Здоровое меню», йогурт овсяный с черникой «Здоровое меню», комбикорм-концентрат КК-60-3 для высокопродуктивных коров 
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award7.png") 
+                  | Комбикорм ПК-1-2 для кур-несушек 
+            +e.row
+              +e('aside').item-competition Агропромышленная выставка УФО 2017, Тюмень
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award8.png") 
+                  | Овсяный кисель яблочный «Здоровое меню», овсяный кисель с малиной «Здоровое меню», йогурт овсяный с черникой «Здоровое меню», крупа гречневая быстрого приготовления «Царь», макаронные изделия «Неаполитанские», хлопья 6 злаков не требующие варки «Царь» 
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award9.png") 
+                  | Масло льняное нерафинированное «Здоровое меню»
+            +e.row
+              +e('aside').item-competition АгроПродЭкспо 2017, Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award10.png") 
+                  | Круассан французский с шоколадом, слойка с грушей, хлебцы ржаные с отрубями «Здоровое меню», кукурузные палочки «Солнышко» 
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award11.png") 
+                  | Круассан французский с шоколадом 
+          +e.item
+            +e('p').item-year 2016
+            +e.row
+              +e('aside').item-competition World Food 2016, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award12.png") 
+                  | Хлопья кукурузно-пшеничные из проросшего зерна с протеином Dr.Naturi «Здоровое меню»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award13.png") 
+                  | Масло льняное нерафинированное Dr.Naturi «Здоровое меню», масло горчичное нерафинированное Dr.Naturi «Здоровое меню»
+            +e.row
+              +e('aside').item-competition АгроПродЭкспо 2016, Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award14.png") 
+                  | Масло льняное нерафинированное Dr.Naturi «Здоровое меню»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award15.png") 
+                  | Хлеб «Английский завтрак» Dr.Naturi «Здоровое меню, хлеб «Бородинский» «Союзпищепром»
+            +e.row
+              +e('aside').item-competition Золотая осень 2016, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award16.png") 
+                  | Масло льняное нерафинированное Dr.Naturi «Здоровое меню», кукурузные хлопья с добавками Dr.Naturi «Здоровое меню», комбикорм полнорационный для откорма свиней 1 периода
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award17.png") 
+                  | Комбикорм-концентрат для телт в возрасте 10-75 дней, комбикорм полнорационный для молодняка кур
+            +e.row
+              +e('aside').item-competition Областная Агропромышленная выставка «Агро-2016», Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award18.png") 
+                  | Овсяный БИО-кисель Dr.Naturi «Здоровое меню», хлопья овсяные с отрубями и топинамбуром Dr.Naturi «Здоровое меню», масло льняное нерафинированное Dr.Naturi «Здоровое меню»
+          +e.item
+            +e('p').item-year 2015
+            +e.row
+              +e('aside').item-competition АгроПродЭкспо 2015, Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award19.png") 
+                  | Хлеб «5 злаков», хлеб с зародышем пшеницы, хлеб кукурузный, хлеб ржаной кукурузный
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award20.png") 
+                  | Metro Quality Award 2015
+            +e.row
+              +e('aside').item-competition Inter Food Ural 2015, Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award21.png") 
+                  | Основа для царского пирога дрожжевая «Царь», основа для выпечки 10*10 см бездрожжевая «Царь», колечки кукурузные с укропом «Союзпищепром», хлопья кукурузные с топинмбуром «Стройность. Легкость. Красота.»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award22.png") 
+                  | UFD Interregional agro-industrial exposition
+            +e.row
+              +e('aside').item-competition Областная Агропромышленная выставка «Агро-2015», Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award23.png") 
+                  | Масло льняное нарафинированное холодный отжим «Царь», масло подсолнечное нерафинированное холодный отжим «Царь», масло горчичное нерафинированное холодный отжим «Царь», вода питьевая артезианская «Исток»
+          +e.item
+            +e('p').item-year 2014
+            +e.row
+              +e('aside').item-competition World Food 2014, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award24.png") 
+                  | Тесто слоёное замороженное бездрожжевое и дрожжевое «Царь»
+            +e.row
+              +e('aside').item-competition Агро Форум 2014, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award25.png") 
+                  | Кукурузные палочки «Союзпищепром», основа для царского пирога «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award26.png") 
+                  | Знак качества Челбинской области
+            +e.row
+              +e('aside').item-competition Областная Агропромышленная выставка «Агро-2014», Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award27.png") 
+                  | Основа для царского пирога «Царь», крупа гречневая «Царь», масло «Царь», мука пшеничная хлебопекарная «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award28.png") 
+                  | Каша с бананом и клубникой «Царь», хлеб «Венский» «Союзпищепром»
+          +e.item
+            +e('p').item-year 2013
+            +e.row
+              +e('aside').item-competition 100 лучших производителей товаров
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award29.png") 
+                  | Кукурузные палочки «Союзпищепром», хлебцы ячменные «Союзпищепром»
+          +e.item
+            +e('p').item-year 2010
+            +e.row
+              +e('aside').item-competition World Food 2010, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award30.png") 
+                  | Каша пшеная с тыквой «Царь», каша овсяная с вишней, яблоком и корицей моментальная «Царь», мюсли c ягодами «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award31.png") 
+                  | Лапша с содержанием зародыша пшеницы «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award32.png") 
+                  | Кукурузные шарики «Шоколадные» «Союзпищепром»
+            +e.row
+              +e('aside').item-competition Продэкспо 2010, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award33.png") 
+                  | Лапша с содержанием зародыша пшеницы «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award34.png") 
+                  | Макаронные изделия (ригатоны)
+          +e.item
+            +e('p').item-year 2009
+            +e.row
+              +e('aside').item-competition Продэкспо 2009, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award35.png") 
+                  | Мука пшеничная хлебопекарная «Царь», каша с фруктами «Царь», каша с ягодами «Царь», макаронные изделия (спагетти) «Царь», сухие завтраки «Завтрак Супершпиона» (с клубникой, шоколадные, медовые) «Царь»
+            +e.row
+              +e('aside').item-competition Покупайте Российское 2009, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award36.png") 
+                  | Лапша Волна «Царь», лапша с содержанием зародыша пшеницы «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award37.png") 
+                  | Мюсли с фруктами «Царь»
+          +e.item
+            +e('p').item-year 2007
+            +e.row
+              +e('aside').item-competition XIV Универсальная выставка-ярмарка «Агро 2007» Челябинск
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award38.png") 
+                  | Мюсли «Хрустящая коллекция» ТМ «Царь»
+          +e.item
+            +e('p').item-year 2006
+            +e.row
+              +e('aside').item-competition Продэкспо 2009, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award39.png") 
+                  | Мука пшеничная хлебопекарная «Царь», хлопья «Экстра», каша с фруктами «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award40.png") 
+                  | Макаронные изделия (ракушка, гребешки) «Царь»
+          +e.item
+            +e('p').item-year 2005
+            +e.row
+              +e('aside').item-competition World Food 2005, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award41.png") 
+                  | Макаронные изделия (перья) «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award42.png") 
+                  | Кукурузные палочки «Друми», хлопья «Геркулес» «Царь», хлопья «Экстра» «Царь», каша с фруктами «Царь»
+            +e.row
+              +e('aside').item-competition Золотая осень 2005, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award43.png") 
+                  | Макаронные изделия (рожки) «Царь»
+          +e.item
+            +e('p').item-year 2004
+            +e.row
+              +e('aside').item-competition World Food 2004, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award44.png") 
+                  | Макаронные изделия (рожок прямой) «Царь»
+          +e.item
+            +e('p').item-year 2002
+            +e.row
+              +e('aside').item-competition Продэкспо 2002, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award45.png") 
+                  | Мука пшеничная хлебопекарная в/с «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award46.png") 
+                  | Подушечки с молочно-ореховой начинкой «Союзпищепром»
+            +e.row
+              +e('aside').item-competition Золотая осень 2005, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award47.png") 
+                  | Крекер «Веселые друзья» «Союзпищепром», макаронные изделия (виток) «Царь», каша фруктовая «Царь»
+          +e.item
+            +e('p').item-year 1999
+            +e.row
+              +e('aside').item-competition Покупайте Российское 1999, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award48.png") 
+                  | Овсяные хлопья «Геркулес» «Царь»
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award49.png") 
+                  | Сухие завтраки «Колечко» «Союзпищепром», макаронные изделия в ассортименте «Союзпищепром»
+            +e.row
+              +e('aside').item-competition Продэкспо 1999, Москва
+              +e('ul').winners
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award50.png") 
+                  | Кукурузные хлопья
+                +e.winners-item
+                  +e.winners-img(src="img/awards/award51.png") 
+                  | «Подушечки со смородиновой начинкой»
+
+        .container
+          +e('section').bottom-text
+            p Современные технологии мощного пищевого производства позволяют создавать линейки продуктов функционального питания для здоровья и профилактики болезней. Для наших покупателей это сейчас очень важно. Сегодня ценятся натуральность, вкус и польза. Все это заложено в емкое понятие Национальный Российский Продукт. Этот бренд стоит на каждой пачке ассортимента торговых марок «Царь» и «СоюзПищепром». Для производителя это высокий статус и большая ответственность.
+       
+      include layout/__footer
+    include layout/__scripts

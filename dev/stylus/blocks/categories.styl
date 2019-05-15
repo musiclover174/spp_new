@@ -1,167 +1,123 @@
 .categories
-  bgc $bgrey
-  h 980px
-  pos relative
-  z-index 2
-  @media $lDesktopSmall
-    h 700px
-  @media $PortraitMax
-    h auto
-  @media $PortraitMedium
-    dn()
-  &__slider
-    &.swiper-container
-      overflow visible
-  &__elem
-    pos relative
-    dfv(flex-start, center)
-    w 54vw
-    h 980px
-    pt 16px
-    pr 200px
-    @media $lDesktopSmall
-      h 700px
-      pr 100px
-    @media $PortraitMax
-      justify-content flex-start
-      pt 270px
-      h auto
-      pb 120px
-    @media $PortraitMedium
-      pr 0
-    &.swiper-slide-active
-      & ^[-1]-name
-        cursor default
-        c $green
-        border-color transparent
-      & ^[-1]-hint
-        opacity 1
-      & ^[-1]-about,
-      & ^[-1]-topage
-        b 0
-        opacity 1
-      & ^[-1]-decors
-        opacity 1
-        transition .7s 1.5s left, .7s 1.5s opacity
-    &-decors
-      pos absolute
+  &__video
+    pos absolute
+    t 50%
+    l 50%
+    min-width 100%
+    min-height 100%
+    opacity .65
+    transform translate(-50%, -50%)
+    &-wrapper
+      pos fixed
       z-index -1
-      pointer-events none
+      t 0
+      r 0
+      bgc $dark
+      size calc(100% - 220px) 100%
+      @media $desktopTablet
+        w calc(100% - 180px)
+      @media $LandscapeMin
+        w 100%
+  &__top
+    max-width 580px
+    text-align center
+    c white
+    padding 0 20px
+    margin 0 auto
+    pt 149px
+    @media $lDesktopSmall
+      pt 0
+    .breadcrumbs
+      c white
+      pl 29px
+  &__list
+    mt 80px
+    mb 80px
+    @media $PortraitMax
+      mt 45px
+      mb 45px
+  &__item
+    & + &
+      mt 35px
+      @media $desktopMedium
+        mt 25px
+    &-href
+      c white
+      fontify 36px 400 40px
+      bb(1px, solid, alpha(white, .15))
+      @media $lDesktopSmall
+        fontify 32px 400 36px
+      @media $desktopMedium
+        fontify 26px 400 30px
+      @media $desktopTablet
+        fontify 22px 400 26px
+  &__catalog
+    bgc $bgrey
+    padding 72px 14px 14px
+    mb -85px
+    @media $desktopTablet
+      padding 72px 7px 7px
+    &-title
+      text-align center
+      fontify 48px 500 52px
+      mb 32px
+      @media $lDesktopSmall
+        fontify 38px 400 42px
+      @media $desktopMedium
+        fontify 30px 400 34px
+      @media $desktopTablet
+        fontify 26px 400 30px
+    &-list
+      df(stretch, flex-start)
+      flex-wrap wrap
+      pl 1px
+      pb 1px
+      ml -1px
+      mb -1px
+      w calc(100% + 1px)
+    &-item
+      pos relative
+      df(center, center)
+      w calc(20% - 1px)
+      pt calc(20% - 1px)
+      bgc white
+      ml 1px
+      mb 1px
+      @media $desktopMax
+        w calc(25% - 1px)
+        pt calc(25% - 1px)
+      @media $dekstop1142
+        w calc(100% / 3 - 1px)
+        pt calc(100% / 3 - 1px)
+      @media $PortraitMax
+        w calc(50% - 1px)
+        pt calc(50% - 1px)
+      &:before
+        content ""
+        pos absolute
+        size 1px 100%
+        bgc $bgrey
+        l -1px
+        t 0
+      &:after
+        content ""
+        pos absolute
+        size 100% 1px
+        bgc $bgrey
+        b -1px
+        l 0
+    &-href
+      df(center, center)
+      pos absolute
       t 0
       l 0
       size 100%
-      opacity 1
-      transition .7s left, .7s opacity
-    &-decor
-      pos absolute
-      @media $lDesktopSmall
-        transform scale(.5)
-      &.decor1
-        t -24px
-        l 22%
-        @media $PortraitMedium
-          t 14px
-          l 4%
-      &.decor2
-        t 16%
-        l 0%
-        @media $PortraitMax
-          b 12%
-          r 10%
-          t auto
-          l auto
-        @media $PortraitMedium
-          b 3%
-          r 3%
-      &.decor3
-        t 22%
-        l 85%
-        @media $desktopTablet
-          dn()
-      &.decor4
-        dn()
-        t 73%
-        l 7%
-      &.decor5
-        t 81%
-        l 17%
-        @media $desktopTablet
-          dn()
-      &.decor6
-        t 51%
-        l 62%
-        @media $lDesktopSmall
-          t auto
-          b -15%
-        @media $desktopTablet
-          b -5%
-        @media $PortraitMax
-          dn()
-    &-name
-      ib()
-      cursor pointer
-      pos relative
-      c $grey
-      font-family $medium
-      fontify 90px 400 84px
-      ml -5px
-      transition .7s color
-      bb(1px, dotted, $grey)
-      @media $lDesktopSmall
-        fontify 68px 400 72px
-      @media $desktopMedium
-        fontify 50px 400 54px
-        ml -2px
-    &-about
-      position relative
-      b -20px
-      opacity 0
-      mt 50px
-      max-width 600px
-      fontify 18px 400 28px
-      transition .7s bottom, .7s opacity
-      @media $lDesktopSmall
-        mt 39px
-      @media $desktopMedium
-        mt 25px
-      @media $desktopTablet
-        max-width 440px
-    &-topage
-      position relative
-      b -20px
-      opacity 0
-      mt 41px
-      transition .7s bottom, .7s opacity
-      @media $desktopMedium
-        mt 25px
-    &-hint
-      pos absolute
-      size 110px
-      df(center, center)
-      r -98px
-      t -57px
-      font-family $os
-      bgc $green
-      border-radius 50%
-      c white
-      fontify 18px 400 22px
-      padding 0 15px
-      text-align center
-      opacity 0
-      transform rotate(-15deg)
-      transition .7s opacity
-      @media $desktopMedium
-        transform none
-        db()
-        pos relative
-        size auto
-        r auto
-        t auto
-        bgc transparent
-        border-radius 0
-        c $grey
-        text-align left
-        padding 0
-        font-family $bold
-        mt 10px
-        ml 2px
+    &-img
+      max-width 80%
+      max-height 80%
+      opacity .5
+      filter grayscale(100%)
+      transition .7s filter, .7s opacity
+      ^[-1]-href:hover &
+        opacity 1
+        filter none

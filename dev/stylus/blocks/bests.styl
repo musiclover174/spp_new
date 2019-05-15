@@ -1,0 +1,167 @@
+.bests
+  bgc $bgrey
+  h 980px
+  pos relative
+  z-index 2
+  @media $lDesktopSmall
+    h 700px
+  @media $PortraitMax
+    h auto
+  @media $PortraitMedium
+    dn()
+  &__slider
+    &.swiper-container
+      overflow visible
+  &__elem
+    pos relative
+    dfv(flex-start, center)
+    w 54vw
+    h 980px
+    pt 16px
+    pr 200px
+    @media $lDesktopSmall
+      h 700px
+      pr 100px
+    @media $PortraitMax
+      justify-content flex-start
+      pt 270px
+      h auto
+      pb 120px
+    @media $PortraitMedium
+      pr 0
+    &.swiper-slide-active
+      & ^[-1]-name
+        cursor default
+        c $green
+        border-color transparent
+      & ^[-1]-hint
+        opacity 1
+      & ^[-1]-about,
+      & ^[-1]-topage
+        b 0
+        opacity 1
+      & ^[-1]-decors
+        opacity 1
+        transition .7s 1.5s left, .7s 1.5s opacity
+    &-decors
+      pos absolute
+      z-index -1
+      pointer-events none
+      t 0
+      l 0
+      size 100%
+      opacity 1
+      transition .7s left, .7s opacity
+    &-decor
+      pos absolute
+      @media $lDesktopSmall
+        transform scale(.5)
+      &.decor1
+        t -24px
+        l 22%
+        @media $PortraitMedium
+          t 14px
+          l 4%
+      &.decor2
+        t 16%
+        l 0%
+        @media $PortraitMax
+          b 12%
+          r 10%
+          t auto
+          l auto
+        @media $PortraitMedium
+          b 3%
+          r 3%
+      &.decor3
+        t 22%
+        l 85%
+        @media $desktopTablet
+          dn()
+      &.decor4
+        dn()
+        t 73%
+        l 7%
+      &.decor5
+        t 81%
+        l 17%
+        @media $desktopTablet
+          dn()
+      &.decor6
+        t 51%
+        l 62%
+        @media $lDesktopSmall
+          t auto
+          b -15%
+        @media $desktopTablet
+          b -5%
+        @media $PortraitMax
+          dn()
+    &-name
+      ib()
+      cursor pointer
+      pos relative
+      c $grey
+      font-family $medium
+      fontify 90px 400 84px
+      ml -5px
+      transition .7s color
+      bb(1px, dotted, $grey)
+      @media $lDesktopSmall
+        fontify 68px 400 72px
+      @media $desktopMedium
+        fontify 50px 400 54px
+        ml -2px
+    &-about
+      position relative
+      b -20px
+      opacity 0
+      mt 50px
+      max-width 600px
+      fontify 18px 400 28px
+      transition .7s bottom, .7s opacity
+      @media $lDesktopSmall
+        mt 39px
+      @media $desktopMedium
+        mt 25px
+      @media $desktopTablet
+        max-width 440px
+    &-topage
+      position relative
+      b -20px
+      opacity 0
+      mt 41px
+      transition .7s bottom, .7s opacity
+      @media $desktopMedium
+        mt 25px
+    &-hint
+      pos absolute
+      size 110px
+      df(center, center)
+      r -98px
+      t -57px
+      font-family $os
+      bgc $green
+      border-radius 50%
+      c white
+      fontify 18px 400 22px
+      padding 0 15px
+      text-align center
+      opacity 0
+      transform rotate(-15deg)
+      transition .7s opacity
+      @media $desktopMedium
+        transform none
+        db()
+        pos relative
+        size auto
+        r auto
+        t auto
+        bgc transparent
+        border-radius 0
+        c $grey
+        text-align left
+        padding 0
+        font-family $bold
+        mt 10px
+        ml 2px

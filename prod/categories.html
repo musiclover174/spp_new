@@ -12,7 +12,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="static/css/style.css">
   </head>
-  <body class="index">
+  <body>
     <header class="header">
       <button class="burger js-burger" type="button" aria-label="открыть меню"><span class="burger__meat"></span>
       </button><span class="header__shadow"></span>
@@ -152,139 +152,79 @@
       </section>
     </aside>
     <main class="main" role="main">
-      <section class="banner">
-        <div class="banner__video-wrapper">
-          <video class="banner__video" preload="preload" autoplay="autoplay" loop="loop" poster="img/video-poster.jpg">
+      <section class="categories">
+        <div class="categories__video-wrapper">
+          <video class="categories__video" preload="preload" autoplay="autoplay" loop="loop" poster="img/video-poster.jpg">
             <source src="video/video.mp4" type="video/mp4">
           </video>
         </div>
-        <button class="banner__scroll" type="button" data-text="Крутите вниз">Крутите вниз
-        </button>
-        <div class="container">
-          <p class="banner__title">Возродим традиции Русского питания для&nbsp;здоровья будущих поколений
-          </p>
-          <p class="banner__subtitle">ООО «Объединение Союзпищепром» - крупнейший в России производитель продуктов питания!
-          </p>
-        </div>
-      </section>
-      <section class="bests">
-        <div class="container">
-          <div class="bests__slider swiper-container js-cat-slider">
-            <div class="swiper-wrapper">
-              <div class="bests__elem swiper-slide">
-                <div class="bests__elem-decors"><img class="bests__elem-decor decor1" src="img/decor1.png" data-swiper-parallax="-100" alt="" role="presentation"/><img class="bests__elem-decor decor2" src="img/decor2.png" data-swiper-parallax="-800" alt="" role="presentation"/><img class="bests__elem-decor decor3" src="img/decor3.png" data-swiper-parallax="-1200" alt="" role="presentation"/><img class="bests__elem-decor decor5" src="img/decor5.png" data-swiper-parallax="-600" alt="" role="presentation"/><img class="bests__elem-decor decor6" src="img/decor6.png" data-swiper-parallax="-100" alt="" role="presentation"/>
-                </div>
-                <div class="bests__elem-name-wrapper"><span class="bests__elem-name js-cat-name">Овсяный BIO-кисель
-                  <q class="bests__elem-hint">Продукт дня
-                  </q></span>
-                </div>
-                <p class="bests__elem-about">Овсяный БИО-Кисель – это уникальный напиток, благодаря своему простому и здоровому составу: в нём только вода и овсяная крупа!
-                </p><a class="bests__elem-topage btn" href="#">Подробнее о продукте</a>
-              </div>
-              <div class="bests__elem swiper-slide">
-                <div class="bests__elem-decors"><img class="bests__elem-decor decor1" src="img/decor1.png" data-swiper-parallax="-100" alt="" role="presentation"/><img class="bests__elem-decor decor2" src="img/decor2.png" data-swiper-parallax="-800" alt="" role="presentation"/><img class="bests__elem-decor decor3" src="img/decor3.png" data-swiper-parallax="-1200" alt="" role="presentation"/><img class="bests__elem-decor decor5" src="img/decor5.png" data-swiper-parallax="-400" alt="" role="presentation"/><img class="bests__elem-decor decor6" src="img/decor6.png" data-swiper-parallax="-100" alt="" role="presentation"/>
-                </div>
-                <div class="bests__elem-name-wrapper"><span class="bests__elem-name js-cat-name">Молоко овсяное</span>
-                </div>
-                <p class="bests__elem-about">Молоко овсяное – это уникальный напиток, благодаря своему простому и здоровому составу: в нём только вода и овсяная крупа!
-                </p><a class="bests__elem-topage btn" href="#">Подробнее о продукте</a>
-              </div>
-              <div class="bests__elem swiper-slide">
-                <div class="bests__elem-decors"><img class="bests__elem-decor decor1" src="img/decor1.png" data-swiper-parallax="-100" alt="" role="presentation"/><img class="bests__elem-decor decor2" src="img/decor2.png" data-swiper-parallax="-800" alt="" role="presentation"/><img class="bests__elem-decor decor3" src="img/decor3.png" data-swiper-parallax="-1200" alt="" role="presentation"/><img class="bests__elem-decor decor5" src="img/decor5.png" data-swiper-parallax="-400" alt="" role="presentation"/><img class="bests__elem-decor decor6" src="img/decor6.png" data-swiper-parallax="-100" alt="" role="presentation"/>
-                </div>
-                <div class="bests__elem-name-wrapper"><span class="bests__elem-name js-cat-name">Печенье из печенегов
-                  <q class="bests__elem-hint">Новинка
-                  </q></span>
-                </div>
-                <p class="bests__elem-about">Печенье из печенегов – это уникальный напиток, благодаря своему простому и здоровому составу: в нём только вода и овсяная крупа!
-                </p><a class="bests__elem-topage btn" href="#">Подробнее о продукте</a>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <section class="news">
-        <div class="container container_rel">
-          <p class="news__title">Новости
-          </p>
-          <ul class="news__list">
-            <li class="news__col">
-              <p class="news__item-date">25 / 10 / 2017
-              </p><a class="news__item-href" href="#">Приятные цены на продукцию «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
-              <p class="news__item-text">С 20 по 23 октября в ледовой арене «Трактор» пройдет Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017». 
-              </p>
+        <section class="categories__top">
+          <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">/ </span>
+          </section>
+          <h1>Продукция</h1>
+          <ul class="categories__list">
+            <li class="categories__item"><a class="categories__item-href" href="#">Весовые макаронные изделия</a>
             </li>
-            <li class="news__col">
-              <p class="news__item-date">18 / 10 / 2017
-              </p><a class="news__item-href" href="#">«Союзпищепром» производит лучшие продукты в России</a>
-              <p class="news__item-text">Завершилась крупнейшая в стране агропромышленная выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8 золотых медалей! 
-              </p>
+            <li class="categories__item"><a class="categories__item-href" href="#">Готовые завтраки</a>
             </li>
-            <li class="news__col">
-              <p class="news__item-date">11 / 10 / 2017
-              </p><a class="news__item-href" href="#">Александр Берестов награжден Орденом дружбы</a>
-              <p class="news__item-text">Указом Президента РФ Владимира Путина Президент объединения ООО «СоюзПищепром»,  Александр Берестов награжден Орденом дружбы за заслуги в развитии агропромышленного комплекса России.
-              </p>
+            <li class="categories__item"><a class="categories__item-href" href="#">Зерновые хлопья</a>
             </li>
-          </ul><a class="news__toall" href="#">Все новости</a>
-        </div>
-      </section>
-      <section class="h-spacer js-spacer">
-      </section>
-      <section class="useful" style="background-image: url('img/useful-bg1.png')">
-        <div class="useful__hrefs"><img class="useful__item item1 js-useful-hover" src="img/pasta1.png" data-type="pasta" data-title="Заголовок" data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3." alt="" role="presentation"/><img class="useful__item item2 js-useful-hover" src="img/pasta2.png" data-type="pasta" data-title="Заголовок" data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3." alt="" role="presentation"/><img class="useful__item item3 js-useful-hover" src="img/pasta3.png" data-type="pasta" data-title="Заголовок" data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3." alt="" role="presentation"/><img class="useful__item item4 js-useful-hover" src="img/pasta4.png" data-type="pasta" data-title="Заголовок" data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3." alt="" role="presentation"/><img class="useful__item item5 js-useful-hover" src="img/pasta5.png" data-type="pasta" data-title="Заголовок" data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3." alt="" role="presentation"/><img class="useful__item item6 js-useful-hover" src="img/pasta6.png" data-type="pasta" data-title="Заголовок" data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3." alt="" role="presentation"/>
-        </div>
-        <div class="useful__inner js-useful-inner" data-type="pasta">
-          <p class="useful__title js-useful-title" data-type="pasta">Лучшие макаронные и&nbsp;мучные изделия
+            <li class="categories__item"><a class="categories__item-href" href="#">Каши</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Комбикорм</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Крупы</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Макаронные изделия</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Масло</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Мука</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Тесто и полуфабрикаты</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Растительные напитки</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Снэки и чипсы</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Хлеб и хлебобулочные изделия</a>
+            </li>
+            <li class="categories__item"><a class="categories__item-href" href="#">Хлопья быстрого приготовления</a>
+            </li>
+          </ul>
+        </section>
+        <section class="categories__catalog">
+          <p class="categories__catalog-title">Каталог по брендам
           </p>
-          <p class="useful__text js-useful-text" data-type="pasta">«Союзпищепром» – это мощный технологический комплекс новейшего оборудования ведущих мировых марок. Торговые марки «Царь», «Союзпищепром», «Здоровое меню» знают не только во всех уголках России. Продукция экспортируется в страны СНГ и дальнего зарубежья: США, Германия, ОАЭ, КНР, Израиль, Турция и др..
-          </p><a class="useful__toproduct" href="#">Подробнее о продукции</a>
-        </div>
-        <aside class="useful__info">
-          <p class="useful__info-title">117 000 тонн
-          </p>
-          <p class="useful__info-text">макаронных изделий мы произвели за этот год
-          </p>
-        </aside>
-      </section>
-      <section class="h-spacer js-spacer">
-      </section>
-      <section class="useful" style="background-image: url('img/useful-bg2.png')" data-type="useful">
-        <div class="useful__hrefs"><img class="useful__item item7 js-useful-hover" src="img/useful1.png" data-type="useful" data-title="Молоко овсяное" data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку." alt="" role="presentation"/><img class="useful__item item8 js-useful-hover" src="img/useful2.png" data-type="useful" data-title="Молоко овсяное" data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку." alt="" role="presentation"/><img class="useful__item item9 js-useful-hover" src="img/useful3.png" data-type="useful" data-title="Молоко овсяное" data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку." alt="" role="presentation"/><img class="useful__item item10 js-useful-hover" src="img/useful4.png" data-type="useful" data-title="Молоко овсяное" data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку." alt="" role="presentation"/><img class="useful__item item11 js-useful-hover" src="img/useful5.png" data-type="useful" data-title="Молоко овсяное" data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку." alt="" role="presentation"/><img class="useful__item item12 js-useful-hover" src="img/useful6.png" data-type="useful" data-title="Молоко овсяное" data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку." alt="" role="presentation"/>
-        </div>
-        <div class="useful__inner js-useful-inner" data-type="useful">
-          <p class="useful__title js-useful-title" data-type="useful">Полезные завтраки и&nbsp;обеды
-          </p>
-          <p class="useful__text js-useful-text" data-type="useful">«Союзпищепром» – это мощный технологический комплекс новейшего оборудования ведущих мировых марок. Торговые марки «Царь», «Союзпищепром», «Здоровое меню» знают не только во всех уголках России. Продукция экспортируется в страны СНГ и дальнего зарубежья: США, Германия, ОАЭ, КНР, Израиль, Турция и др..
-          </p><a class="useful__toproduct" href="#">Подробнее о продукции</a>
-        </div>
-        <aside class="useful__info">
-          <p class="useful__info-title">6 000 тонн
-          </p>
-          <p class="useful__info-text">готовых завтраков мы произвели за этот год
-          </p>
-        </aside>
-      </section>
-      <ul class="feats">
-        <li class="feats__item"><a class="feats__item-title" href="#">Тендерные закупки</a>
-          <p class="feats__item-text">Наши предприятия на постоянной основе закупают пшеницу продовольственную (мягких, твердых сортов), пшеницу фуражную, ячмень, кукурузу, овес, соевые бобы, рожь, гречиху, подсолнечник, рапс.
-          </p>
-        </li>
-        <li class="feats__item"><a class="feats__item-title" href="#">Цены на зерно</a>
-          <p class="feats__item-text">Ознакомиться с прейскурантом цен на закупаемое зерновое сырье с 16.05.2018 г.
-          </p>
-        </li>
-      </ul>
-      <section class="feed">
-        <div class="container">
-          <p class="feed__title">Третий век мы&nbsp;кормим Россию!
-          </p>
-          <div class="feed__text"> 
-            <p>«Союзпищепром» – это группа компаний, выпускающих полезные и вкусные продукты питания для всей семьи.</p>
-            <p>Торговые марки «Царь», «Союзпищепром», «Здоровое меню» знают не только во всех уголках России. Продукция экспортируется в страны СНГ и дальнего зарубежья: США, Германия, ОАЭ, КНР, Израиль, Турция и др. </p>
-          </div><a class="feed__href btn" href="#">Подробнее о компании</a>
-        </div>
+          <ul class="categories__catalog-list">
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand2.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand3.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand12.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand10.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand1.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand11.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand4.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand5.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand8.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand13.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand6.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand7.png" alt="" role="presentation"/></a>
+            </li>
+            <li class="categories__catalog-item"><a class="categories__catalog-href" href="#"><img class="categories__catalog-img" src="img/brand9.png" alt="" role="presentation"/></a>
+            </li>
+          </ul>
+        </section>
       </section>
       <footer class="footer">
         <div class="container">

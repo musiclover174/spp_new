@@ -6,17 +6,20 @@ import { qs, qsAll } from './helpers';
 */
 
 export default class Popup {
-  constructor(sel, callback = null) {
-    this.els = sel;
-    this.callback = callback;
+  constructor(sel = null, callback = null) {
     this.open = this.popupOpen;
-    this.popupHide = this.popupHide;
+    this.hide = this.popupHide;
     this.openFlag = false;
 
-    this.addListener();
+    this.closeListener();
+    if (qs(sel)) {
+      this.els = sel;
+      this.callback = callback;
+      this.hrefsListener();
+    }
   }
 
-  addListener() {
+  hrefsListener() {
     const that = this;
 
     qsAll(this.els).forEach((el) => {
@@ -25,6 +28,10 @@ export default class Popup {
         if (that.callback) that.callback();
       });
     });
+  }
+
+  closeListener() {
+    const that = this;
 
     qsAll('.js-popclose').forEach((el) => {
       el.addEventListener('click', () => {

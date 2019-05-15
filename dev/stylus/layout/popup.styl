@@ -7,13 +7,23 @@
   width 90%
   max-width 640px
   bgc white
-  box-shadow 0 3px 43px rgba(0, 0, 0, 0.08)
-  padding 55px 68px 70px
   opacity 0
   visibility hidden
   transform scale(.9)
   will-change transform
+  padding 75px 80px 80px
   transition .7s .7s transform, .7s .7s opacity
+  @media $lDesktopSmall
+    padding 51px 49px 60px
+  @media $desktopTablet
+    pl 35px
+    pr 35px
+  @media $PortraitMax
+    pt 80px
+    pl 20px
+    pr 20px
+    w 100%
+    h 100%
   &.show
     pos relative
     opacity 1
@@ -29,6 +39,8 @@
     pos fixed
     overflow hidden
     z-index -1
+    @media $PortraitMax
+      padding 0
   &__bg
     pos fixed
     z-index 0
@@ -36,7 +48,7 @@
     r 0
     b 0
     h 0
-    bgc white
+    bgc rgba(0, 0, 0, 0.4)
     opacity 0
     transition .7s opacity, .7s height
   &-show
@@ -50,10 +62,14 @@
   &__title
     pos relative
     z-index 1
-    font-family $lf
     c black
-    fontify 48px 700 48px
-    mb 5px
+    fontify 60px 500 64px
+    @media $lDesktopSmall
+      fontify 48px 400 52px
+    @media $desktopMedium
+      fontify 38px 400 42px
+    @media $desktopTablet
+      fontify 30px 400 34px
     &:before
       content attr(data-text)
       pos absolute
@@ -64,46 +80,19 @@
       t 10px
       transition .7s 1s left, .7s 1s top
   &__subtitle
-    color black
-    fontify 16px 400 26px
+    fontify 18px 400 28px
     mt 32px
   &__close
     pos absolute
     t 30px
     r 30px
-    size 17px 17px
-    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcMCxxSRfn6AAAAZ0lEQVQoz43S3Q3AIAhG0buDnQc6lO5swhDtQ2PjD9j6xucxEhQgEa8EcFCRAAj1QSfmIsHQVnhoAAA6oQXMyAU9CkFDeQcAMhd5BxSjBCMYetEI9RsumsMFeaeGLLr7zX+99Md/uQFaaijMO9DVBwAAAABJRU5ErkJggg==') no-repeat center
+    size 25px 25px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAQAAABu4E3oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBQ8MICkSqxkAAAAAvUlEQVQ4y5XUsQ3CQAyF4T+PsW6P0DIAoo7EFEB2QBexA9UVzJEx0lAQQi7nSw6Xtr7CfpKr552WQGk5jqLF44qBpxWBfSFyePYEQSEaAQiK0AS+ZAvNwI+soQjMSQ4tQEwslIAl+aBuQgZICQTqEZkAdod03Z4XHQMXC9gEegaunHlYQ1lNHA0nGjsnmaCj5kZt56QMCGTDVQL8CMghJSC+koG0CkykDWAgbYIEqQAskIpAhFQIZqj6/4+9AX+6YCAbdqrhAAAAAElFTkSuQmCC') no-repeat center
     transition .7s background
     &:hover
-      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARBAMAAADJQ1rJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEXxFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3///8vT7RgAAAACnRSTlMAExToPkDrP3R1DaXSPAAAAAFiS0dECx/XxMAAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcMDAQOaPdrAAAAV0lEQVQI12NgZAADIKXsAGY5CzCwpoAYLOlAIgwk6FYAJNhToEIMDGUOECGQIFQIKNhWAGVxrGCAiU2DmAlUx57CANNb5sAANQ8iCOaDCAgXRCLcAncfABrWD2vPIIGkAAAAAElFTkSuQmCC') no-repeat center
-  &__form
-    mt 15px
-    &_search
-      pos relative
-  &__search
-    &-input
-      w 100%
-      h 40px
-      padding 0 60px 0 20px
-      border 1px solid $grey
-      bgc transparent
-      color black
-      font-family $os
-      font-size 16px
-      line-height 400
-      transition .7s border
-      &:focus
-        border-color black
-    &-sbm
-      pos absolute
-      z-index 1
-      t 0
-      r 0
-      size 40px
-      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAQAAAB+puRPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcNGBwyaNJfAAAA30lEQVQoz32QPU4CcRBHH2TPQNDELNnGzhtgbSI2HoBGQ8P2FhyB1hL1EtYUhoRiEztsSIhgAa4HMFbPgvyB1c3+ppnJvPmsCQAJN5zTIOeFBxbsVAcgJSNiwBUDIjLSPYCYOrMlO4ud2Q8Rxn4V0lskN976dXo88U5RSx7phRFT23/qEdtOQ4cmH/zXJ81wxYaTEqDBJgBjOiXAJeOww8HGZVeEP8SF9JtpiCLgHnhlxDNrjuhwyw/Z4ScRE4dOnDtxaOKFuWf7EWV27drTKgC7rmxVAdh37nFNKnTH9y9AkMAQtzyvuQAAAABJRU5ErkJggg==') no-repeat center $red
-      transition .7s background-color
-      &:hover
-        bgc $red
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZBAMAAAA2x5hQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUNgyoNgyoNgyoNgyoNgyoNgyoNgyr///+g/DoWAAAABnRSTlMApzvk5W01almHAAAAAWJLR0QHFmGI6wAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MFDwwgNHGtddkAAABfSURBVBjTYxBigAMmAQZlBTgPyGQygksZQUTgUgxwSSgNlYRSEEG4frAoXDtIGGE0g4oCsrVMTkhSQMkQBSQeayoDLjlUfShmotqH4hZUd6L4AdV/KH5HDRfUMEMJTwC98gtRtyipIQAAAABJRU5ErkJggg==') no-repeat center
+    &-btn
+      mt 40px
 
 
 .no-touchevents .popup-show

@@ -22,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (qsAll('.h-anim').length) elemVisCheck();
 
   // popup initialization
-  if (qs('[data-popup]')) {
-    window.popup = new Popup('[data-popup]');
-  }
+  window.popup = new Popup('[data-popup]');
 
   // form waitier
   if (qs('form')) {

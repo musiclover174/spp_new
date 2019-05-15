@@ -1,3 +1,77 @@
+@media $LandscapeMaxFrom
+  body.index
+    .side
+      l -220px
+    .header,
+    .banner,
+    .banner__scroll
+      opacity 0
+    .banner__title
+      span
+        db()
+        oh()
+      i
+        pos relative
+        t 100%
+    .banner__subtitle
+      pos relative
+      opacity 0
+      b -20px
+    .bests__slider
+      opacity 0
+
+    &.load
+      .banner
+        opacity 1
+        transition .7s opacity
+        .banner__title
+          span:nth-child(1) i
+            t 0
+            transition .7s 1.4s top
+          span:nth-child(2) i
+            t 0
+            transition .7s 1.5s top
+          span:nth-child(3) i
+            t 0
+            transition .7s 1.6s top
+          span:nth-child(4) i
+            t 0
+            transition .7s 1.7s top
+        &__subtitle
+          b 0
+          opacity 1
+          transition .7s 2.1s opacity , .7s 2.1s bottom
+        &__scroll
+          opacity 1
+          transition .7s 2.8s opacity
+      .side
+        l 0
+        transition .7s .7s left
+      .header
+        opacity 1
+        transition .7s 2.8s opacity
+      .bests__slider[visible]
+        opacity 1
+        transition .7s opacity
+
+@media $lDesktopSmallFrom
+  body.index
+    .banner__title
+      span
+        h 94px
+
+@media $largeIndex
+  body.index
+    .banner__title
+      span
+        h 72px
+
+@media $middleIndex
+  body.index
+    .banner__title
+      span
+        h 54px
+
 @media $PortraitMaxFrom
   .h-anim:not([data-type="custom"])
     pos relative

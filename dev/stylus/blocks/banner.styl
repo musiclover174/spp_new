@@ -24,11 +24,7 @@
       t 0
       r 0
       bgc $dark
-      size calc(100% - 220px) 100%
-      @media $desktopTablet
-        w calc(100% - 180px)
-      @media $LandscapeMin
-        w 100%
+      size 100%
   &__scroll
     pos absolute
     r -32px
@@ -75,12 +71,14 @@
     fontify 90px 400 94px
     max-width 930px
     ml -2px
+    i
+      font-style normal
     @media $lDesktopSmall
       fontify 68px 400 72px
       max-width 700px
     @media $desktopMedium
       fontify 50px 400 54px
-      max-width 510px
+      max-width 540px
     @media $PortraitMax
       fontify 38px 400 42px
     @media $PortraitMin

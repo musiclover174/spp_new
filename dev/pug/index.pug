@@ -16,12 +16,20 @@ html
             source(src="video/video.mp4", type="video/mp4")
         +e('button').scroll(type="button", data-text="Крутите вниз") Крутите вниз
         .container
-          +e('p').title Возродим традиции Русского питания для&nbsp;здоровья будущих поколений
+          +e('p').title 
+            span 
+              i Возродим традиции 
+            span 
+              i Русского питания 
+            span 
+              i для&nbsp;здоровья будущих 
+            span 
+              i поколений
           +e('p').subtitle ООО «Объединение Союзпищепром» - крупнейший в России производитель продуктов питания!
 
       +b('section').bests
         .container
-          +e.slider.swiper-container.js-cat-slider
+          +e.slider.swiper-container.js-cat-slider.h-anim(data-type="custom")
             .swiper-wrapper
               +e.elem.swiper-slide
                 +e.elem-decors

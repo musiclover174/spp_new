@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.onload = () => {
+  document.body.classList.add('load');
+
   if (qsAll('.js-shave')) {
     window.addEventListener('resize', () => {
       qsAll('.js-shave[data-height]').forEach((sh) => {

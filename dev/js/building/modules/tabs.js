@@ -3,6 +3,7 @@ import {
   qsAll,
   fadeOut,
   fadeIn,
+  eventsDispatcher,
 } from './helpers';
 
 export default class Tabs {
@@ -16,6 +17,7 @@ export default class Tabs {
   tabsInit() {
     qsAll(this.tabClass).forEach((tab) => {
       tab.addEventListener('click', () => {
+        if (tab.dataset.hash) window.history.pushState('', '', `?category=${tab.dataset.tab}`);
         if (!tab.classList.contains('active')) this.toTab(tab);
       });
     });
@@ -30,6 +32,7 @@ export default class Tabs {
       qs(`${this.blockClass}.show[data-group="${group}"]`).classList.remove('show');
       fadeIn(qs(`${this.blockClass}[data-tab="${tab}"][data-group="${group}"]`), 200, () => {
         qs(`${this.blockClass}[data-tab="${tab}"][data-group="${group}"]`).classList.add('show');
+        eventsDispatcher();
       });
     });
   }

@@ -1,0 +1,140 @@
+.catalog
+  &__top
+    text-align center
+    mb 19px
+    padding 0 20px
+    .breadcrumbs
+      pl 29px
+  &__tabs
+    df(center, center)
+    flex-wrap wrap
+    pos relative
+    padding 0 15px
+    w calc(100% + 40px)
+    ml -40px
+    mb 23px
+    @media $LandscapeMedium
+      ml -20px
+      w calc(100% + 20px)
+    &-button
+      ib()
+      fontify 18px 400 18px
+      border-bottom 1px dotted alpha(black, .15)
+      mb 10px
+      transition .7s border-color
+      ml 40px
+      @media $LandscapeMedium
+        ml 20px
+      &:hover
+        border-color transparent
+      &.active
+        color white
+        bgc $green
+        border-radius 24px
+        border-color transparent
+        padding 15px 27px 12px
+        mt 0
+  &__blocks
+    pos relative
+    padding 0 14px 14px
+    @media $desktopTablet
+      padding 0 7px 7px
+  &__block
+    dn()
+    ml -14px
+    w calc(100% + 14px)
+    @media $desktopTablet
+      ml -7px
+      w calc(100% + 7px)
+    &.show
+      db()
+  &__grid
+    df(stretch, flex-start)
+    flex-wrap wrap
+    mb -85px
+  &__item
+    pos relative
+    c black
+    bgc white
+    w calc(25% - 14px)
+    ml 14px
+    mb 14px
+    padding 41px 49px
+    text-align center
+    transition .7s box-shadow
+    opacity 0
+    transition .7s opacity, 1s left, 1s right, 1s bottom, .7s box-shadow
+    @media $desktopMax
+      w calc(100% / 3 - 14px)
+    @media $desktopMin
+      w calc(50% - 14px)
+    @media $desktopTablet
+      w calc(50% - 7px)
+      ml 7px
+      mb 7px
+    @media $PortraitMax
+      opacity 1
+    @media $PortraitMedium
+      w calc(100% - 7px)
+    &:hover
+      box-shadow 0 0 35px rgba(0, 0, 0, 0.2)
+    @media $desktopMaxFrom
+      &:nth-child(4n + 1),
+      &:nth-child(4n + 2)
+        l -60px
+        &[visible]
+          l 0
+          opacity 1
+      &:nth-child(4n + 3),
+      &:nth-child(4n + 4)
+        r -60px
+        &[visible]
+          r 0
+          opacity 1
+      &:nth-child(4n + 1),
+      &:nth-child(4n + 4)
+        transition-delay .35s
+    @media $largeCatalog
+      &:nth-child(3n + 1)
+        l -60px
+        &[visible]
+          l 0
+          opacity 1
+      &:nth-child(3n + 2)
+        b -30px
+        &[visible]
+          b 0
+          opacity 1
+      &:nth-child(3n + 3)
+        r -60px
+        &[visible]
+          r 0
+          opacity 1
+      &:nth-child(3n + 1),
+      &:nth-child(3n + 3)
+        transition-delay .35s
+    @media $middleCatalog
+      &:nth-child(2n + 1)
+        l -40px
+        &[visible]
+          l 0
+          opacity 1
+      &:nth-child(2n)
+        r -40px
+        &[visible]
+          r 0
+          opacity 1
+    &-imgover
+      h 301px
+      mb 45px
+      pb 10px
+      df(flex-end, center)
+    &-img
+      max-width 85%
+      max-height 85%
+    &-title
+      fontify 18px 400 28px
+    &-weight
+      opacity .35
+      fontify 18px 400 28px
+      mt 13px

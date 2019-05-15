@@ -101,7 +101,7 @@ function resizeWatcher() {
 function elemVisCheck() {
   window.addEventListener('scroll', () => {
     qsAll('.h-anim').forEach((elem) => {
-      if (visChecker(elem)) elem.setAttribute('visible', true);
+      if (elem.offsetParent !== null && visChecker(elem)) elem.setAttribute('visible', true);
     });
   });
 }

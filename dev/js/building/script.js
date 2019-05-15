@@ -47,17 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const useful = new Useful('.js-useful-hover', '.js-useful-title', '.js-useful-text', '.js-useful-inner');
   }
 
-  if (qsAll('.js-shave')) {
-    window.addEventListener('resize', () => {
-      qsAll('.js-shave[data-height]').forEach((sh) => {
-        shave(sh, sh.getAttribute('data-height'));
-      });
-    });
-  }
-
   if (qs('.js-contacts-map')) {
     const contacts = new Contacts('contacts-map');
     contacts.init();
+  }
+});
+
+window.onload = () => {
+  if (qsAll('.js-shave')) {
+    window.addEventListener('resize', () => {
+      qsAll('.js-shave[data-height]').forEach((sh) => {
+        if (sh.offsetParent !== null) shave(sh, sh.getAttribute('data-height'));
+      });
+    });
   }
 
   if (qs('.js-sticky')) {
@@ -67,4 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // resize and scroll
   resizeWatcher();
   eventsDispatcher();
-});
+};

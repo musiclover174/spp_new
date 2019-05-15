@@ -1,0 +1,146 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    include layout/__side
+  
+    +b('main').main
+      +b('section').catalog
+        +e('section').top
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim / 
+            +e.href(href="#") Продукция
+            +e('span').delim / 
+          h1 Готовые завтраки
+        +e('section').tabs
+          +e.tabs-button.js-tab.active(type="button", data-hash="true", data-group="catalog" data-tab="all") Все
+          +e.tabs-button.js-tab(type="button", data-hash="true", data-group="catalog" data-tab="spp") «СОЮЗПИЩЕПРОМ»
+          +e.tabs-button.js-tab(type="button", data-hash="true", data-group="catalog" data-tab="all") Здоровое МЕНЮ 
+          +e.tabs-button.js-tab(type="button", data-hash="true", data-group="catalog" data-tab="spp") Хлебцы 
+          +e.tabs-button.js-tab(type="button", data-hash="true", data-group="catalog" data-tab="all") Честный продукт 
+          +e.tabs-button.js-tab(type="button", data-hash="true", data-group="catalog" data-tab="spp") Dr.Naturi 
+          +e.tabs-button.js-tab(type="button", data-hash="true", data-group="catalog" data-tab="all") Хру Смайлики
+        +e('ul').blocks
+          +e.block.js-block.show(data-tab="all", data-group="catalog")
+            +e('section').grid
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat1.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Хлопья кукурузно- пшеничные из пророщенного зерна с отрубями и протеином/Wholegrain cereals with sprouted grains, bran and protein
+                +e('p').item-weight 400 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat2.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Каша овсяная моментального приготовления
+                +e('p').item-weight 40 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat3.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Гречневая крупа
+                +e('p').item-weight 800 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat4.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Макаронные изделия
+                +e('p').item-weight 450 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat1.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Гречневая крупа
+                +e('p').item-weight 400 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat2.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Макаронные изделия
+                +e('p').item-weight 40 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat3.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Овсяные хлопья «3 злака»
+                +e('p').item-weight 800 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat4.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Каша овсяная моментального приготовления
+                +e('p').item-weight 450 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat2.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Овсяные хлопья «3 злака»
+                +e('p').item-weight 40 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat3.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Каша овсяная моментального приготовления
+                +e('p').item-weight 800 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat4.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Гречневая крупа
+                +e('p').item-weight 450 г.
+          +e.block.js-block(data-tab="spp", data-group="catalog")
+            +e('section').grid
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat1.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Овсяные хлопья «3 злака»
+                +e('p').item-weight 400 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat2.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Каша овсяная моментального приготовления
+                +e('p').item-weight 40 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat3.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Гречневая крупа
+                +e('p').item-weight 800 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat4.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Макаронные изделия
+                +e('p').item-weight 450 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat1.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Гречневая крупа
+                +e('p').item-weight 400 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat2.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Макаронные изделия
+                +e('p').item-weight 40 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat3.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Овсяные хлопья «3 злака»
+                +e('p').item-weight 800 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat4.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Каша овсяная моментального приготовления
+                +e('p').item-weight 450 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat2.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Овсяные хлопья «3 злака»
+                +e('p').item-weight 40 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat3.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Каша овсяная моментального приготовления
+                +e('p').item-weight 800 г.
+              +e.item.h-anim(data-type="custom", href="#")
+                +e.item-imgover
+                  +e.item-img(src="img/cat4.png", alt="", loading="lazy")
+                +e('p').item-title.js-shave(data-height="84") Гречневая крупа
+                +e('p').item-weight 450 г.
+
+      include layout/__footer
+    include layout/__scripts

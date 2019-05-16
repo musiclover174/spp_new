@@ -1,0 +1,409 @@
+.about
+  mt -106px
+  fontify 22px 400 32px
+  @media $lDesktopSmall
+    fontify 20px 400 30px
+  @media $desktopMax
+    fontify 18px 400 28px
+  @media $LandscapeMax
+    mt -120px
+  &__top
+    pos relative
+    z-index 1
+    pt 106px
+    pb 208px
+    text-align center
+    background-repeat no-repeat
+    background-position center 70px
+    @media $lDesktopSmall
+      pb 136px
+    @media $LandscapeMax
+      pb 76px
+    @media $desktopMin
+      background-image none !important
+    .breadcrumbs
+      pl 29px
+  &__info
+    max-width 930px
+    margin 0 auto
+    @media $lDesktopSmall
+      max-width 680px
+  &__decor
+    pos absolute
+    pointer-events none
+    z-index -1
+    @media $desktopMedium
+      dn()
+    &_img1
+      t -26%
+      r 25%
+      transform rotate(-79deg)
+      @media $lDesktopSmall
+        dn()
+    &_img2
+      l -3%
+      b -6%
+      transform rotate(40deg)
+      @media $lDesktopSmall
+        dn()
+    &_img3
+      r 24%
+      t -17%
+      transform rotate(18deg)
+      @media $lDesktopSmall
+        r -4%
+        t 0
+    &_img4
+      r 4%
+      b 9%
+      transform rotate(43deg)
+      @media $lDesktopSmall
+        r -4%
+        b -13%
+    &_img5
+      l 10%
+      b 20%
+      transform rotate(-17deg)
+      @media $lDesktopSmall
+        l -4%
+        b 10%
+  &__section
+    pos relative
+    z-index 2
+    .container
+      df()
+      @media $LandscapeMax
+        flex-direction column
+    &_top
+      mt 80px
+      @media $lDesktopSmall
+        mt 0
+      & ^[0]__imgs
+        r 0
+      .container
+        @media $LandscapeMax
+          flex-direction column-reverse
+    &_middle
+      & ^[0]__imgs
+        l 0
+    &_top,
+    &_middle
+      & ^[0]__imgs
+        h 1341px
+        w 50%
+        @media $lDesktopSmall
+          h 1034px
+        @media $LandscapeMax
+          pos relative
+          w calc(100% + 70px)
+          h 60vh
+          max-height 805px
+          ml -35px
+        @media $PortraitMax
+          ml -20px
+          w calc(100% + 40px)
+  &__col
+    w calc(50% - 30px)
+    @media $LandscapeMax
+      w 100%
+    & + &
+      ml 60px
+      @media $LandscapeMax
+        ml 0
+  &__text
+    dfv(flex-start, center)
+    &_text1
+      h 767px
+      w 79%
+      @media $lDesktopSmall
+        h 663px 
+      @media $desktopMax
+        w 82%
+      @media $LandscapeMax
+        h auto
+        w 100%
+        text-align center
+        pt 60px
+        transition none !important
+        opacity 1 !important
+        bottom 0 !important
+    &_text2
+      h 571px
+      pb 60px
+      w 50%
+      @media $lDesktopSmall
+        h 366px
+        pb 0
+      @media $desktopMax
+        w 60%
+      @media $LandscapeMax
+        dn()
+    &_text3
+      h 767px
+      pl 60px
+      pr 7%
+      mr auto
+      ml auto
+      @media $lDesktopSmall
+        h 663px 
+      @media $desktopMax
+        pr 0
+        pl 28px
+      @media $desktopMin
+        h 725px
+      @media $LandscapeMax
+        h auto
+        w 100%
+        text-align center
+        pt 60px
+        transition none !important
+        opacity 1 !important
+        bottom 0 !important
+    &_text4
+      h 571px
+      w 50%
+      pb 60px
+      mr 71px
+      ml auto
+      @media $lDesktopSmall
+        h 366px
+        pb 0
+      @media $desktopMax
+        w 60%
+      @media $desktopMin
+        dn()
+    &_text5
+      h 1080px
+      pl 60px
+      @media $lDesktopSmall
+        h 908px
+      @media $desktopMax
+        pl 30px
+      @media $desktopMin
+        pl 0
+        h auto 
+        pb 85px
+  &__imgs
+    pos absolute
+    t 0
+  &__img
+    pos absolute
+    background-size auto 100%
+    &_img1
+      pos absolute
+      background-image url('../i/about1.jpg')
+      background-repeat no-repeat
+      background-position right top
+      background-attachment fixed
+      r 0
+      t 0
+      w 0
+      size 100% 1080px
+      transition .7s width
+      @media $ios
+        background-attachment scroll
+      @media $lDesktopSmall
+        h 725px
+      @media $LandscapeMax
+        size 100%
+        background-size cover
+    &_img2
+      pos absolute
+      background-image url('../i/about2.jpg')
+      background-repeat no-repeat
+      background-position right top
+      r 42%
+      b 0
+      w 0
+      h 572px
+      transition .7s width
+      @media $lDesktopSmall
+        h 366px  
+        r 54%
+      @media $LandscapeMax
+        dn()
+      &[visible]
+        w 85%
+        @media $lDesktopSmall
+          w 69%
+    &_img3
+      pos absolute
+      background-image url('../i/about3.jpg')
+      background-repeat no-repeat
+      background-position left top
+      background-attachment fixed
+      l 0
+      t 0
+      w 0
+      size 100% 1080px
+      transition .7s width
+      @media $ios
+        background-attachment scroll
+      @media $lDesktopSmall
+        h 725px
+      @media $LandscapeMax
+        size 100%
+        background-size cover
+    &_img4
+      pos absolute
+      background-image url('../i/about4.jpg')
+      background-repeat no-repeat
+      background-position left top
+      l 42%
+      b 0
+      w 0
+      h 572px
+      transition .7s width
+      @media $lDesktopSmall
+        h 366px
+        l 48%
+      @media $desktopMin
+        dn()
+      &[visible]
+        w 85%
+        @media $lDesktopSmall
+          w 69%
+    &_img5
+      pos absolute
+      background-image url('../i/about5.jpg')
+      background-repeat no-repeat
+      background-position left top
+      background-attachment fixed
+      l 0
+      t 0
+      w 0
+      size 100% 1080px
+      transition .7s width
+      @media $ios
+        background-attachment scroll
+      @media $lDesktopSmall
+        h 908px
+      @media $desktopMin
+        dn()
+  &__clients
+    margin 256px 0
+    @media $lDesktopSmall
+      margin 206px 0
+    @media $desktopMax
+      margin 166px 0
+    @media $LandscapeMax
+      margin 25px 0 100px
+    &-inner
+      max-width 870px
+      margin 0 auto
+      text-align center
+      @media $desktopMedium
+        max-width 720px
+    &-list
+      df(stretch, flex-start)
+      flex-wrap wrap
+      mt 80px
+      mb -61px
+    &-item
+      df(center, center)
+      w 25%
+      mb 66px
+      @media $PortraitMax 
+        w 50%
+    &-img
+      max-width 80%
+      opacity .35
+  &__spacer
+    pos relative
+    z-index 2
+    h 80vh
+    max-height 805px
+    background-repeat no-repeat
+    background-position top center
+    background-size cover
+    background-attachment fixed
+    @media $ios
+      background-attachment scroll
+    @media $LandscapeMax
+      h 60vh
+  &__born
+    pos relative
+    z-index 1
+    pt 296px
+    pb 288px
+    text-align center
+    background-repeat no-repeat
+    background-position center 120px
+    @media $PortraitMax
+      pb 80px
+    @media $desktopMax
+      pt 257px
+      pb 240px
+    @media $desktopMedium
+      pt 147px
+      pb 130px
+      background-image none !important
+    @media $LandscapeMax
+      pt 57px
+      pb 60px
+    &-inner
+      max-width 740px
+      margin 0 auto
+      @media $lDesktopSmall
+        max-width 600px
+  &__consist
+    margin 253px 0 250px
+    @media $lDesktopSmall
+      margin 186px 0
+    @media $desktopMax
+      margin 114px 0
+    @media $LandscapeMax
+      mt 64px
+    &-title
+      fontify 48px 500 52px
+      mb 32px
+      @media $lDesktopSmall
+        fontify 38px 400 42px
+      @media $desktopMedium
+        fontify 30px 400 34px
+      @media $desktopTablet
+        fontify 26px 400 30px
+    &-list
+      df()
+      flex-wrap wrap
+      ml -60px
+      w calc(100% + 60px)
+      mb -60px
+      @media $lDesktopSmall
+        ml -45px
+        w calc(100% + 45px)
+        mb -45px
+      @media $LandscapeMax
+        mb -25px
+    &-item
+      w calc(100% / 3 - 60px)
+      ml 60px
+      mb 60px
+      @media $lDesktopSmall
+        pr 15px
+        mb 45px
+        ml 45px
+        w calc(100% / 3 - 45px)
+      @media $LandscapeMax
+        w calc(100% - 45px)
+        mb 25px
+      span
+        c $grey
+  &__bottom
+    pos relative
+    mb -85px
+    & ^[0]__imgs
+      h 1080px
+      w 50%
+      l 0
+      @media $lDesktopSmall
+        h 908px
+    .container
+      df()
+    @media $desktopMin
+      & ^[0]__col
+        &:first-child
+          w 0
+        &:last-child
+          w 100%
+          ml 0

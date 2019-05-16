@@ -1,0 +1,115 @@
+include bemto/bemto
+include mixins/index
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    include layout/__side
+  
+    +b('main').main
+      +b('section').about
+        +e('section').top(style="background-image: url('img/about-bg1.png')")
+          +e.decor._img1(src="img/pasta1.png")
+          +e.decor._img2(src="img/pasta5.png")
+          .container
+            +b('section').text
+              +b('section').breadcrumbs
+                +e.href(href="#") Главная
+                +e('span').delim / 
+              h1 О компании
+              section.about__info
+                p «Союзпищепром» – это группа компаний, выпускающих полезные и вкусные продукты питания для всей семьи.
+                p Торговые марки «Царь», «Союзпищепром», «Здоровое меню» знают не только во всех уголках России. Продукция экспортируется в страны СНГ и дальнего зарубежья: США, Германия, ОАЭ, КНР, Израиль, Турция и др. 
+        +e('section').section._top
+          .container
+            +e.col
+              +e.text._text1.h-anim
+                +e.text-inner
+                  h2 Европейские технологии на службе наших традиций!
+                  p Cоюзпищепром - это мощный технологический комплекс новейшего оборудования ведущих мировых марок: Buhler AG, Fava, Mill servis, Hartmann, Linko, Zucami, Big Datchmen, Muyang и др.
+                  p Можно смело утверждать, что особая ценность продуктов этих марок состоит в выстроенной системе управления сервисом для клиентов, в снижении рисков, связанных с&nbsp;качеством исвоевременностью доставки. 
+              +e.text._text2.h-anim
+                +e.text-inner
+                  p Компания «Союзпищепром» всегда готова найти общий язык со своими партнерами, найти индивидуальный подход для большого, среднего или малого семейного бизнеса!
+            +e.col
+              +e.imgs
+                +e.img._img1
+                +e.img._img2.h-anim(data-type="custom")
+        +e('section').clients
+          .container
+            +e.clients-inner
+              +e('p').clients-text «Союзпищепром» успешно сотрудничает с крупнейшими федеральными и региональными сетями: SPAR, Дикси, Ашан, Магнит, Мetro, Монетка, Лента, Пятерочка. 
+              +e('ul').clients-list
+                +e.clients-item
+                  +e.clients-img(src="img/client1.png")
+                +e.clients-item
+                  +e.clients-img(src="img/client2.png")
+                +e.clients-item
+                  +e.clients-img(src="img/client3.png")
+                +e.clients-item
+                  +e.clients-img(src="img/client4.png")
+                +e.clients-item
+                  +e.clients-img(src="img/client5.png")
+                +e.clients-item
+                  +e.clients-img(src="img/client6.png")
+                +e.clients-item
+                  +e.clients-img(src="img/client7.png")
+                +e.clients-item
+                  +e.clients-img(src="img/client8.png")
+        +e('section').section._middle
+          .container
+            +e.col
+              +e.imgs
+                +e.img._img3
+                +e.img._img4.h-anim(data-type="custom")
+            +e.col
+              +e.text._text3.h-anim
+                +e.text-inner
+                  h2 Главное конкурентное отличие «Союзпищепрома» заключается в объединении крупных пищевых предприятий Южного Урала.
+                  p Это позволяет придерживаться единой политики качества, общей производственной и инвестиционной стратегии, а также комплексной профессиональной поддержки. 
+              +e.text._text4.h-anim
+                +e.text-inner
+                  p Поскольку все циклы бизнес-процесса идут внутри одного предприятия, холдинг обеспечивает контроль за каждой стадией производства, обеспечивая постоянство качества. 
+        +e('section').born(style="background-image: url('img/about-bg1.png')")
+          +e.decor._img3(src="img/useful6.png")
+          +e.decor._img4(src="img/pasta3.png")
+          +e.decor._img5(src="img/pasta1.png")
+          .container
+            +e.born-inner
+              h2 Так рождаются гарантированно безопасные и здоровые продукты питания для семейного стола в&nbsp;любом доме!
+              p Подтверждением качества нашего продукта являются многочисленные экологические сертификаты, медаль Международного экологического фонда и другие награды престижных российских и международных продовольственных выставок»: «Золотая осень», «ПродЭкспо», WorldFood Moscow!
+        +e('section').spacer(style="background-image: url('img/about-bg2.jpg')")
+        +e('section').consist
+          .container
+            +e('p').consist-title Состав производственного объединения
+            +e('ul').consist-list
+              +e.consist-item
+                | ООО «Объединение «Союзпищепром» 
+                span (мука, хлебобулочные изделия, макаронные изделия, крупы, многозерновые хлопья, каши, готовые гарниры, готовые за­втраки, комбикорма, слоёное тесто, растительные напитки)
+              +e.consist-item
+                | ООО «Чебаркульская птица» 
+                span (яйцо, яичный меланж, мясо цыплят-бройлеров, варено-копченые изделия из мяса цыплят-бройлеров, сельскохозяйственные культуры, комбикорма, семена) 
+              +e.consist-item
+                | ООО Агрофирма «Павловское» 
+                span (выращивание сельскохозяйственных культур)
+        +e('section').bottom
+          .container
+            +e.col
+              +e.imgs
+                +e.img._img5
+            +e.col
+              +e.text._text5.h-anim
+                +e.text-inner
+                  h3 «Я искренне горжусь, что за предприятиями «Союзпищепрома» прочно закрепилась репутация производителя высококачественной и&nbsp;экологически чистой продукции». 
+                  p 
+                    i «Еда не должна быть просто модной, еда должна быть безопасной и не разрушать, а повышать качество жизни. Сегодня одна из важных задач, которую должны решить производители продуктов питания, это честное и искреннее желание превратить здоровый образ жизни в систему ценностей.
+                  p 
+                    i Наша задача не просто вывести на рынок качественный продукт, но сформировать культуру потребления, резко расширить спрос, увеличив сегмент людей, которые заботятся о здоровье через питание. И еда здесь не просто еда, а часть общей культуры и&nbsp;философии. Мы даем возможность жить дольше, лучше, качественнее всем жителям нашей необъятной Родины».
+                  p(style="color: #bfbfbf;")
+                    i Президент ООО «Объединение Союзпищепром»<br>Александр Берестов 
+       
+      include layout/__footer
+    include layout/__scripts

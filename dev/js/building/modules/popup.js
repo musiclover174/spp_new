@@ -1,7 +1,7 @@
 import { qs, qsAll } from './helpers';
 
 /*
-  window.popup.popupHide() - close popup
+  window.popup.hide() - close popup
   window.popup.open('#id') - open popup by id
 */
 
@@ -23,9 +23,10 @@ export default class Popup {
     const that = this;
 
     qsAll(this.els).forEach((el) => {
-      el.addEventListener('click', () => {
+      el.addEventListener('click', (e) => {
         that.popupOpen(el.getAttribute('data-src'));
         if (that.callback) that.callback();
+        e.preventDefault();
       });
     });
   }
@@ -39,9 +40,9 @@ export default class Popup {
       });
     });
 
-    qs('.js-popbg').addEventListener('click', () => {
-      that.popupHide();
-    });
+    // qs('.js-popbg').addEventListener('click', () => {
+    //   that.popupHide();
+    // });
   }
 
   popupHide() {

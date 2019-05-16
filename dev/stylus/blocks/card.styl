@@ -1,15 +1,17 @@
 .card
   pos relative
   z-index 1
-  mt -106px
-  mb -71px
   df(flex-start, space-between)
   @media $desktopMedium
-    mt -106px
     flex-direction column
     justify-content flex-start
-  @media $LandscapeMax
-    mt -120px
+  &:not(&_popup)
+    mt -106px
+    mb -71px
+    @media $desktopMedium
+      mt -106px
+    @media $LandscapeMax
+      mt -120px
   &__side
     size calc(50% + 20px) 100vh
     @media $desktopMedium

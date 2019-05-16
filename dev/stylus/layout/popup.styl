@@ -4,34 +4,72 @@
 .popup
   pos absolute
   z-index 1
-  width 90%
-  max-width 640px
+  width 0
+  h 100%
+  oh()
   bgc white
-  opacity 0
   visibility hidden
-  transform scale(.9)
   will-change transform
-  padding 75px 80px 80px
-  transition .7s .7s transform, .7s .7s opacity
-  @media $lDesktopSmall
-    padding 51px 49px 60px
-  @media $desktopTablet
-    pl 35px
-    pr 35px
-  @media $PortraitMax
-    pt 80px
-    pl 20px
-    pr 20px
-    w 100%
-    h 100%
+  transition .4s .2s opacity, .4s .2s width ease-in-out
+  &:not(&_card)
+    max-width calc(50% - 110px)
+    @media $desktopTablet
+      max-width calc(50% - 90px)
+    @media $LandscapeMedium
+      max-width calc(100% - 180px)
+    @media $LandscapeMin
+      max-width 100%
+  &_card
+    max-width calc(100% - 220px)
+    bgc $bgrey
+    padding 0
+    @media $desktopTablet
+      max-width calc(100% - 180px)
+    @media $LandscapeMin
+      max-width 100%
+    .card
+      &__side
+        position sticky
+        t 0
+        bgc $bgrey
+        @media $desktopMedium
+          position static
+      &__side,
+      &__content-inner
+        opacity 0
+      &__content
+        bgc white
+        padding 75px 45px 60px
+      &__chars
+        mt 60px
+      &__form
+        padding 0
+        margin 82px 0 0
+  &__inner
+    padding 75px 80px 80px
+    opacity 0
+    @media $lDesktopSmall
+      padding 51px 49px 60px
+    @media $desktopTablet
+      pl 35px
+      pr 35px
+    @media $PortraitMax
+      pt 80px
+      pl 20px
+      pr 20px
   &.show
     pos relative
     opacity 1
     visibility visible
-    transform scale(1)
+    w 100%
+    overflow visible
+    .card__side,
+    .card__content-inner,
+    & ^[0]__inner
+      opacity 1
+      transition .4s .6s opacity
   &__over
-    dfv(center, center)
-    padding 30px 0
+    dfv(flex-end, center)
     t 0
     l 0
     r 0
@@ -44,17 +82,19 @@
   &__bg
     pos fixed
     z-index 0
-    l 0
+    t 0
     r 0
     b 0
-    h 0
+    l 0
     bgc rgba(0, 0, 0, 0.4)
     opacity 0
-    transition .7s opacity, .7s height
+    transition .4s opacity, .4s width ease-in-out
+    /html.no-touchevents &
+      r 17px
   &-show
     oh()
     & ^[0]__bg
-      h 100%
+      // w 100%
       opacity .9
     & ^[0]__over
       overflow-y scroll
@@ -84,6 +124,7 @@
     mt 32px
   &__close
     pos absolute
+    z-index 100
     t 30px
     r 30px
     size 25px 25px

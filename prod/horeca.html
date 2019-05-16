@@ -272,15 +272,103 @@
       </footer>
       <div class="hidden-block">
         <div class="popup__over"><span class="popup__bg js-popbg"></span>
+          <div class="popup popup_card" id="card">
+            <button class="popup__close js-popclose" type="button" title="Закрыть">
+            </button>
+            <section class="card card_popup">
+              <aside class="card__side">
+                <div class="card__side-wrapper"><img class="card__img" src="img/useful6.png" alt="" role="presentation"/>
+                </div>
+              </aside>
+              <div class="card__content">
+                <div class="card__content-inner">
+                  <p class="popup__title">Крупа гречневая</p>
+                  <div class="card__content-scroll js-scroll">
+                    <ul class="card__chars">
+                      <li class="card__char">
+                        <p class="card__type">Формы выпуска
+                        </p>
+                        <p class="card__text">0.75 л / TetraPak, 1.5 л / TetraPak
+                        </p>
+                      </li>
+                      <li class="card__char">
+                        <p class="card__type">Минимальный срок годности
+                        </p>
+                        <p class="card__text">12 мес / 7 суток после вскрытия
+                        </p>
+                      </li>
+                      <li class="card__char">
+                        <p class="card__type">Стандарт
+                        </p>
+                        <p class="card__text">ГОСТ 28188-2014
+                        </p>
+                      </li>
+                    </ul>
+                    <form class="card__form">
+                      <p class="card__form-title">Заказать оптом
+                      </p>
+                      <p class="card__form-subtitle">Обратите внимание, поля со звездочкой<span>*</span> – обязательны для заполнения.
+                      </p>
+                      <div class="common__row">
+                        <div class="common__col">
+                          <label class="common__label">Имя<span>*</span></label>
+                          <input class="common__input" type="text" data-req="req">
+                        </div>
+                        <div class="common__col">
+                          <label class="common__label">E-mail<span>*</span></label>
+                          <input class="common__input" type="text" data-req="req" data-type="email">
+                        </div>
+                      </div>
+                      <div class="common__row">
+                        <div class="common__col">
+                          <label class="common__label">Телефон<span>*</span></label>
+                          <input class="common__input js-phone" type="text" data-req="req" data-type="tel">
+                        </div>
+                        <div class="common__col">
+                          <label class="common__label">Организация</label>
+                          <input class="common__input" type="text">
+                        </div>
+                      </div>
+                      <div class="common__row">
+                        <div class="common__col">
+                          <label class="common__label">Страна<span>*</span></label>
+                          <input class="common__input" type="text" data-req="req">
+                        </div>
+                        <div class="common__col">
+                          <label class="common__label">Город<span>*</span></label>
+                          <input class="common__input" type="text" data-req="req">
+                        </div>
+                      </div>
+                      <div class="common__row">
+                        <label class="common__label">Сообщение</label>
+                        <textarea class="common__textarea"></textarea>
+                      </div>
+                      <div class="common__row">
+                        <div class="fakecheckbox">
+                          <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked data-req="req" data-type="checkbox" id="agreement">
+                          <label class="fakecheckbox__label" for="agreement">Даю согласие на обработку <a href="#">персональных&nbsp;данных</a></label>
+                        </div>
+                      </div>
+                      <div class="common__row">
+                        <button class="common__submit btn" type="submit">Отправить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
           <div class="popup" id="text">
             <button class="popup__close js-popclose" type="button" title="Закрыть">
             </button>
-            <p class="popup__title">Заявка отправлена
-            </p>
-            <p class="popup__subtitle">Спасибо. Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру в самое ближайшее время.
-            </p>
-            <button class="popup__close-btn btn js-popclose" type="button">Закрыть
-            </button>
+            <div class="popup__inner">
+              <p class="popup__title">Заявка отправлена
+              </p>
+              <p class="popup__subtitle">Спасибо. Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру в самое ближайшее время.
+              </p>
+              <button class="popup__close-btn btn js-popclose" type="button">Закрыть
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,71 @@
 .hidden-block
   .popup__over
     span.popup__bg.js-popbg
+    +b.popup._card#card
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +b('section').card._popup
+        +e('aside').side
+          +e.side-wrapper
+            +e.img(src="img/useful6.png")
+        +e.content
+          +e.content-inner
+            p.popup__title Крупа гречневая
+            +e.content-scroll.js-scroll
+              +e('ul').chars
+                +e.char
+                  +e('p').type Формы выпуска
+                  +e('p').text 0.75 л / TetraPak, 1.5 л / TetraPak
+                +e.char
+                  +e('p').type Минимальный срок годности
+                  +e('p').text 12 мес / 7 суток после вскрытия
+                +e.char
+                  +e('p').type Стандарт
+                  +e('p').text ГОСТ 28188-2014
+              +e('form').form
+                +e('p').form-title Заказать оптом
+                +e('p').form-subtitle Обратите внимание, поля со звездочкой
+                  span *
+                  |  – обязательны для заполнения.
+                .common__row
+                  .common__col
+                    label.common__label Имя
+                      span *
+                    input(type="text", data-req="req").common__input
+                  .common__col
+                    label.common__label E-mail
+                      span *
+                    input(type="text", data-req="req", data-type="email").common__input
+                .common__row
+                  .common__col
+                    label.common__label Телефон
+                      span *
+                    input(type="text", data-req="req", data-type="tel").common__input.js-phone
+                  .common__col
+                    label.common__label Организация
+                    input(type="text").common__input
+                .common__row
+                  .common__col
+                    label.common__label Страна
+                      span *
+                    input(type="text", data-req="req").common__input
+                  .common__col
+                    label.common__label Город
+                      span *
+                    input(type="text", data-req="req").common__input
+                .common__row
+                  label.common__label Сообщение
+                  textarea.common__textarea
+                .common__row
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="agreement", checked, data-req="req", data-type="checkbox")#agreement.fakecheckbox__truecheck
+                    label(for="agreement").fakecheckbox__label Даю согласие на обработку 
+                      a(href="#") персональных&nbsp;данных
+                .common__row
+                  button(type="submit").common__submit.btn Отправить
+      
     +b.popup#text
       +e.close.js-popclose(type="button", title="Закрыть")
-      +e('p').title Заявка отправлена
-      +e('p').subtitle Спасибо. Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру в самое ближайшее время.
-      +e.close-btn.btn.js-popclose(type="button") Закрыть
+      +e.inner
+        +e('p').title Заявка отправлена
+        +e('p').subtitle Спасибо. Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру в самое ближайшее время.
+        +e.close-btn.btn.js-popclose(type="button") Закрыть

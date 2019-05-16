@@ -4799,44 +4799,109 @@ body:not(.index) .footer {
 .popup {
   position: absolute;
   z-index: 1;
-  width: 90%;
-  max-width: 640px;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
   background-color: #fff;
-  opacity: 0;
   visibility: hidden;
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
   will-change: transform;
+  -webkit-transition: 0.4s 0.2s opacity, 0.4s 0.2s width ease-in-out;
+  transition: 0.4s 0.2s opacity, 0.4s 0.2s width ease-in-out;
+}
+.popup:not(.popup_card) {
+  max-width: calc(50% - 110px);
+}
+@media (max-width: 1050px) {
+  .popup:not(.popup_card) {
+    max-width: calc(50% - 90px);
+  }
+}
+@media (max-width: 900px) {
+  .popup:not(.popup_card) {
+    max-width: calc(100% - 180px);
+  }
+}
+@media (max-width: 767px) {
+  .popup:not(.popup_card) {
+    max-width: 100%;
+  }
+}
+.popup_card {
+  max-width: calc(100% - 220px);
+  background-color: #f8f8f8;
+  padding: 0;
+}
+@media (max-width: 1050px) {
+  .popup_card {
+    max-width: calc(100% - 180px);
+  }
+}
+@media (max-width: 767px) {
+  .popup_card {
+    max-width: 100%;
+  }
+}
+.popup_card .card__side {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+}
+@media (max-width: 1270px) {
+  .popup_card .card__side {
+    position: static;
+  }
+}
+.popup_card .card__side,
+.popup_card .card__content-inner {
+  opacity: 0;
+}
+.popup_card .card__content {
+  background-color: #fff;
+  padding: 75px 45px 60px;
+}
+.popup_card .card__chars {
+  margin-top: 60px;
+}
+.popup_card .card__form {
+  padding: 0;
+  margin: 82px 0 0;
+}
+.popup__inner {
   padding: 75px 80px 80px;
-  -webkit-transition: 0.7s 0.7s transform, 0.7s 0.7s opacity;
-  transition: 0.7s 0.7s transform, 0.7s 0.7s opacity;
+  opacity: 0;
 }
 @media (max-width: 1600px) {
-  .popup {
+  .popup__inner {
     padding: 51px 49px 60px;
   }
 }
 @media (max-width: 1050px) {
-  .popup {
+  .popup__inner {
     padding-left: 35px;
     padding-right: 35px;
   }
 }
 @media (max-width: 670px) {
-  .popup {
+  .popup__inner {
     padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
-    width: 100%;
-    height: 100%;
   }
 }
 .popup.show {
   position: relative;
   opacity: 1;
   visibility: visible;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  width: 100%;
+  overflow: visible;
+}
+.popup.show .card__side,
+.popup.show .card__content-inner,
+.popup.show .popup__inner {
+  opacity: 1;
+  -webkit-transition: 0.4s 0.6s opacity;
+  transition: 0.4s 0.6s opacity;
 }
 .popup__over {
   display: -webkit-box;
@@ -4846,13 +4911,12 @@ body:not(.index) .footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 30px 0;
   top: 0;
   left: 0;
   right: 0;
@@ -4869,20 +4933,22 @@ body:not(.index) .footer {
 .popup__bg {
   position: fixed;
   z-index: 0;
-  left: 0;
+  top: 0;
   right: 0;
   bottom: 0;
-  height: 0;
+  left: 0;
   background-color: rgba(0,0,0,0.4);
   opacity: 0;
-  -webkit-transition: 0.7s opacity, 0.7s height;
-  transition: 0.7s opacity, 0.7s height;
+  -webkit-transition: 0.4s opacity, 0.4s width ease-in-out;
+  transition: 0.4s opacity, 0.4s width ease-in-out;
+}
+html.no-touchevents .popup__bg {
+  right: 17px;
 }
 .popup-show {
   overflow: hidden;
 }
 .popup-show .popup__bg {
-  height: 100%;
   opacity: 0.9;
 }
 .popup-show .popup__over {
@@ -4937,6 +5003,7 @@ body:not(.index) .footer {
 }
 .popup__close {
   position: absolute;
+  z-index: 100;
   top: 30px;
   right: 30px;
   width: 25px;
@@ -4970,13 +5037,6 @@ body:not(.index) .footer {
   padding-left: 37px;
   margin-top: 20px;
   margin-bottom: 8px;
-}
-@media (max-width: 1600px) {
-  .fakecheckbox__label {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-  }
 }
 .fakecheckbox__label:before {
   content: "";
@@ -7841,8 +7901,6 @@ ymaps.ymaps-2-1-73-copyright {
 .card {
   position: relative;
   z-index: 1;
-  margin-top: -106px;
-  margin-bottom: -71px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7855,7 +7913,6 @@ ymaps.ymaps-2-1-73-copyright {
 }
 @media (max-width: 1270px) {
   .card {
-    margin-top: -106px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -7865,8 +7922,17 @@ ymaps.ymaps-2-1-73-copyright {
     justify-content: flex-start;
   }
 }
+.card:not(.card_popup) {
+  margin-top: -106px;
+  margin-bottom: -71px;
+}
+@media (max-width: 1270px) {
+  .card:not(.card_popup) {
+    margin-top: -106px;
+  }
+}
 @media (max-width: 1000px) {
-  .card {
+  .card:not(.card_popup) {
     margin-top: -120px;
   }
 }

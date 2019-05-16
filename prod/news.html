@@ -1,451 +1,546 @@
 <!DOCTYPE html>
 <html>
-  <head lang="ru">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Главная</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="stylesheet" href="static/css/style.css">
-  </head>
-  <body>
-    <header class="header">
-      <button class="burger js-burger" type="button" aria-label="открыть меню"><span class="burger__meat"></span>
-      </button><span class="header__shadow"></span>
-      <nav class="menu">
-        <ul class="menu__cols">
-          <li class="menu__col">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__href" href="#">Продукция</a>
-                <ul class="menu__sublist">
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Крупы</a>
+
+<head lang="ru">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Главная</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <button class="burger js-burger" type="button" aria-label="открыть меню"><span class="burger__meat"></span>
+    </button><span class="header__shadow"></span>
+    <nav class="menu">
+      <ul class="menu__cols">
+        <li class="menu__col">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__href" href="#">Продукция</a>
+              <ul class="menu__sublist">
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Крупы</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Каши</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Макаронные изделия</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Готовые завтраки</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Снэки</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Мука</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Масло</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Тесто и полуфабрикаты</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Хлебобулочные изделия</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Комбикорм</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Растительные напитки</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__col">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__href" href="#">О компании</a>
+              <ul class="menu__sublist">
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Новости</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Награды</a>
+                </li>
+                <li class="menu__subitem"><a class="menu__subhref" href="#">Сертификаты</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item"><a class="menu__href" href="#">Тендерная площадка</a>
+            </li>
+            <li class="menu__item"><a class="menu__href" href="#">Акции</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__col">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__href" href="#">Корпоративная культура</a>
+            </li>
+            <li class="menu__item"><a class="menu__href" href="#">Интересная информация</a>
+            </li>
+            <li class="menu__item"><a class="menu__href" href="#">Партнерам</a>
+            </li>
+            <li class="menu__item"><a class="menu__href" href="#">Контакты</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <aside class="side">
+    <section class="side__logo-wrapper"><a class="side__logo-href" href="#"><img class="side__logo-img"
+          src="img/logo-upper.png" alt="" role="presentation" /><img class="side__logo-img" src="img/logo-bottom.png"
+          alt="" role="presentation" /></a>
+    </section>
+    <section class="side__tabs">
+      <button class="side__tabs-elem active js-tab" type="button" data-group="side" data-tab="brands">Бренды
+      </button>
+      <button class="side__tabs-elem js-tab" type="button" data-group="side" data-tab="products">Продукты
+      </button>
+    </section>
+    <section class="side__blocks js-side-scroll">
+      <ul class="side__block js-block show" data-tab="brands" data-group="side">
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand1.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand2.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand3.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand4.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand5.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand6.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand7.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand8.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand9.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand10.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand11.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand12.png" alt="" role="presentation" /></a>
+        </li>
+        <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img"
+              src="img/brand13.png" alt="" role="presentation" /></a>
+        </li>
+      </ul>
+      <ul class="side__block js-block" data-tab="products" data-group="side">
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product3.png" alt="" role="presentation" /><span
+              class="side__block-name">Весовые макаронные изделия</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product5.png" alt="" role="presentation" /><span
+              class="side__block-name">Готовые завтраки</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product12.png" alt="" role="presentation" /><span
+              class="side__block-name">Зерновые хлопья</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product2.png" alt="" role="presentation" /><span
+              class="side__block-name">Каши</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product11.png" alt="" role="presentation" /><span
+              class="side__block-name">Комбикорм</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product1.png" alt="" role="presentation" /><span
+              class="side__block-name">Крупы</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product3.png" alt="" role="presentation" /><span
+              class="side__block-name">Макаронные изделия</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product8.png" alt="" role="presentation" /><span
+              class="side__block-name">Масло</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product7.png" alt="" role="presentation" /><span
+              class="side__block-name">Мука</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product9.png" alt="" role="presentation" /><span
+              class="side__block-name">Тесто и полуфабрикаты</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product4.png" alt="" role="presentation" /><span
+              class="side__block-name">Растительные напитки</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product6.png" alt="" role="presentation" /><span
+              class="side__block-name">Снэки и чипсы</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product10.png" alt="" role="presentation" /><span
+              class="side__block-name">Хлеб и хлебобулочные изделия</span></a>
+        </li>
+        <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img
+              class="side__block-icon" src="img/side-product13.png" alt="" role="presentation" /><span
+              class="side__block-name">Хлопья быстрого приготовления</span></a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <main class="main" role="main">
+    <section class="news news_list">
+      <section class="news__top">
+        <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">/
+          </span>
+        </section>
+        <h1>Интересная информация</h1>
+      </section>
+      <section class="news__tabs">
+        <button class="news__tabs-button js-tab active" type="button" data-group="news" data-tab="smi">СМИ о нас
+        </button>
+        <button class="news__tabs-button js-tab" type="button" data-group="news" data-tab="news">Новости компании
+        </button>
+        <button class="news__tabs-button js-tab" type="button" data-group="news" data-tab="news_prof">Новости профсоюза
+        </button>
+      </section>
+      <section class="news__blocks">
+        <ul class="news__block js-block show" data-tab="smi" data-group="news">
+          <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation" />
+            <div class="news__item-content">
+              <p class="news__item-date">25 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию
+                «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
+              <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет
+                Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017».
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">18 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие
+                продукты в России</a>
+              <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная
+                выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8
+                золотых медалей!
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">11 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Александр Берестов награжден Орденом
+                дружбы</a>
+              <p class="news__item-text js-shave" data-height="84">Указом Президента РФ Владимира Путина Президент
+                объединения ООО «СоюзПищепром», Александр Берестов награжден Орденом дружбы за заслуги в развитии
+                агропромышленного комплекса России.
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">08 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Участники фитнес-конвенции выбирают для
+                себя «Здоровое меню»</a>
+              <p class="news__item-text js-shave" data-height="84">7-8 октября в легкоатлетическом комплексе имени Елены
+                Елесиной прошла XVII Международная фитнес-конвенция Fitural.
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">19 / 09 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Молоко в 3D: завод растительного молока
+                "оживет" на «Золотой осени»</a>
+              <p class="news__item-text js-shave" data-height="84">В Москве на ВДНХ с 4 по 7 октября пройдет крупнейшая
+                в стране агропромышленная выставка «Золотая осень-2017». Челябинская область на экспозиции будет
+                представлена отдельным стендом. Одним из южноуральских участников сельскохозяйственной выставки станет
+                челябинское «Объединение «СоюзПищепром».
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">08 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Участники фитнес-конвенции выбирают для
+                себя «Здоровое меню»</a>
+              <p class="news__item-text js-shave" data-height="84">7-8 октября в легкоатлетическом комплексе имени Елены
+                Елесиной прошла XVII Международная фитнес-конвенция Fitural.
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">19 / 09 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Молоко в 3D: завод растительного молока
+                "оживет" на «Золотой осени»</a>
+              <p class="news__item-text js-shave" data-height="84">В Москве на ВДНХ с 4 по 7 октября пройдет крупнейшая
+                в стране агропромышленная выставка «Золотая осень-2017». Челябинская область на экспозиции будет
+                представлена отдельным стендом. Одним из южноуральских участников сельскохозяйственной выставки станет
+                челябинское «Объединение «СоюзПищепром».
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="news__block js-block" data-tab="news" data-group="news">
+          <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation" />
+            <div class="news__item-content">
+              <p class="news__item-date">25 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию
+                «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
+              <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет
+                Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017».
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">18 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие
+                продукты в России</a>
+              <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная
+                выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8
+                золотых медалей!
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="news__block js-block" data-tab="news_prof" data-group="news">
+          <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation" />
+            <div class="news__item-content">
+              <p class="news__item-date">25 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию
+                «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
+              <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет
+                Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017».
+              </p>
+            </div>
+          </li>
+          <li class="news__grid">
+            <div class="news__item-content">
+              <p class="news__item-date">18 / 10 / 2017
+              </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие
+                продукты в России</a>
+              <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная
+                выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8
+                золотых медалей!
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer__list">
+          <li class="footer__col">
+            <nav class="footer__nav">
+              <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">О компании</a>
+              </div>
+              <div class="footer__nav-row"><a class="footer__nav-href footer__nav-href_small" href="#">Новости</a>
+              </div>
+              <div class="footer__nav-row"><a class="footer__nav-href footer__nav-href_small" href="#">Награды</a>
+              </div>
+              <div class="footer__nav-row"><a class="footer__nav-href footer__nav-href_small" href="#">Сертификаты</a>
+              </div>
+            </nav>
+          </li>
+          <li class="footer__col col2">
+            <nav class="footer__nav">
+              <div class="footer__nav-row footer__nav-row_main footer__nav-row_group"><a
+                  class="footer__nav-href footer__nav-href_group" href="#">Продукция </a>
+              </div>
+              <div class="footer__nav-row">
+                <ul class="footer__nav-list">
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Крупы</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Каши</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Каши</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Макаронные изделия</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Макаронные
+                      изделия</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Готовые завтраки</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Готовые
+                      завтраки</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Снэки</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Снэки</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Мука</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Мука</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Масло</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Масло</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Тесто и полуфабрикаты</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Тесто и
+                      полуфабрикаты</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Хлебобулочные изделия</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Хлебобулочные
+                      изделия</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Комбикорм</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Комбикорм</a>
                   </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Растительные напитки</a>
+                  <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Растительные
+                      напитки</a>
                   </li>
                 </ul>
-              </li>
-            </ul>
+              </div>
+            </nav>
           </li>
-          <li class="menu__col">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__href" href="#">О компании</a>
-                <ul class="menu__sublist">
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Новости</a>
-                  </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Награды</a>
-                  </li>
-                  <li class="menu__subitem"><a class="menu__subhref" href="#">Сертификаты</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu__item"><a class="menu__href" href="#">Тендерная площадка</a>
-              </li>
-              <li class="menu__item"><a class="menu__href" href="#">Акции</a>
-              </li>
-            </ul>
+          <li class="footer__col">
+            <nav class="footer__nav">
+              <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Акции</a>
+              </div>
+              <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Партнерам</a>
+              </div>
+              <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Корпоративная
+                  культура</a>
+              </div>
+              <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Интересная
+                  информация</a>
+              </div>
+              <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Тендерная
+                  площадка</a>
+              </div>
+              <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Контакты</a>
+              </div>
+            </nav>
           </li>
-          <li class="menu__col">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__href" href="#">Корпоративная культура</a>
-              </li>
-              <li class="menu__item"><a class="menu__href" href="#">Интересная информация</a>
-              </li>
-              <li class="menu__item"><a class="menu__href" href="#">Партнерам</a>
-              </li>
-              <li class="menu__item"><a class="menu__href" href="#">Контакты</a>
-              </li>
-            </ul>
+          <li class="footer__col footer__col_spacer">
+          </li>
+          <li class="footer__col footer__col_right">
+            <p class="footer__addr">РФ, 454080, г. Челябинск, поселок Мелькомбинат-2, участок 1, дом 37
+            </p><a class="footer__phone" href="tel:+73517421660">(351) 742-16-60</a><a class="footer__mail"
+              href="mailto:director@spp.ru">director@spp.ru</a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <aside class="side">
-      <section class="side__logo-wrapper"><a class="side__logo-href" href="#"><img class="side__logo-img" src="img/logo-upper.png" alt="" role="presentation"/><img class="side__logo-img" src="img/logo-bottom.png" alt="" role="presentation"/></a>
-      </section>
-      <section class="side__tabs">
-        <button class="side__tabs-elem active js-tab" type="button" data-group="side" data-tab="brands">Бренды
-        </button>
-        <button class="side__tabs-elem js-tab" type="button" data-group="side" data-tab="products">Продукты
-        </button>
-      </section>
-      <section class="side__blocks js-side-scroll">
-        <ul class="side__block js-block show" data-tab="brands" data-group="side">
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand1.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand2.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand3.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand4.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand5.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand6.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand7.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand8.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand9.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand10.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand11.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand12.png" alt="" role="presentation"/></a>
-          </li>
-          <li class="side__block-item"><a class="side__block-href" href="#"><img class="side__block-img" src="img/brand13.png" alt="" role="presentation"/></a>
-          </li>
-        </ul>
-        <ul class="side__block js-block" data-tab="products" data-group="side">
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product3.png" alt="" role="presentation"/><span class="side__block-name">Весовые макаронные изделия</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product5.png" alt="" role="presentation"/><span class="side__block-name">Готовые завтраки</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product12.png" alt="" role="presentation"/><span class="side__block-name">Зерновые хлопья</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product2.png" alt="" role="presentation"/><span class="side__block-name">Каши</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product11.png" alt="" role="presentation"/><span class="side__block-name">Комбикорм</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product1.png" alt="" role="presentation"/><span class="side__block-name">Крупы</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product3.png" alt="" role="presentation"/><span class="side__block-name">Макаронные изделия</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product8.png" alt="" role="presentation"/><span class="side__block-name">Масло</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product7.png" alt="" role="presentation"/><span class="side__block-name">Мука</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product9.png" alt="" role="presentation"/><span class="side__block-name">Тесто и полуфабрикаты</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product4.png" alt="" role="presentation"/><span class="side__block-name">Растительные напитки</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product6.png" alt="" role="presentation"/><span class="side__block-name">Снэки и чипсы</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product10.png" alt="" role="presentation"/><span class="side__block-name">Хлеб и хлебобулочные изделия</span></a>
-          </li>
-          <li class="side__block-item side__block-item_products"><a class="side__block-href" href="#"><img class="side__block-icon" src="img/side-product13.png" alt="" role="presentation"/><span class="side__block-name">Хлопья быстрого приготовления</span></a>
-          </li>
-        </ul>
-      </section>
-    </aside>
-    <main class="main" role="main">
-      <section class="news news_list">
-        <section class="news__top">
-          <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">/ </span>
-          </section>
-          <h1>Интересная информация</h1>
-        </section>
-        <section class="news__tabs">
-          <button class="news__tabs-button js-tab active" type="button" data-group="news" data-tab="smi">СМИ о нас
-          </button>
-          <button class="news__tabs-button js-tab" type="button" data-group="news" data-tab="news">Новости компании
-          </button>
-          <button class="news__tabs-button js-tab" type="button" data-group="news" data-tab="news_prof">Новости профсоюза
-          </button>
-        </section>
-        <section class="news__blocks">
-          <ul class="news__block js-block show" data-tab="smi" data-group="news">
-            <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation"/>
-              <div class="news__item-content">
-                <p class="news__item-date">25 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
-                <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017». 
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">18 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие продукты в России</a>
-                <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8 золотых медалей! 
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">11 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Александр Берестов награжден Орденом дружбы</a>
-                <p class="news__item-text js-shave" data-height="84">Указом Президента РФ Владимира Путина Президент объединения ООО «СоюзПищепром»,  Александр Берестов награжден Орденом дружбы за заслуги в развитии агропромышленного комплекса России.
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">08 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Участники фитнес-конвенции выбирают для себя «Здоровое меню»</a>
-                <p class="news__item-text js-shave" data-height="84">7-8 октября в легкоатлетическом комплексе имени Елены Елесиной прошла XVII Международная фитнес-конвенция Fitural.
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">19 / 09 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Молоко в 3D: завод растительного молока "оживет" на «Золотой осени»</a>
-                <p class="news__item-text js-shave" data-height="84">В Москве на ВДНХ с 4 по 7 октября пройдет крупнейшая в стране агропромышленная выставка «Золотая осень-2017». Челябинская область на экспозиции будет представлена отдельным стендом. Одним из южноуральских участников сельскохозяйственной выставки станет челябинское «Объединение «СоюзПищепром».
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">08 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Участники фитнес-конвенции выбирают для себя «Здоровое меню»</a>
-                <p class="news__item-text js-shave" data-height="84">7-8 октября в легкоатлетическом комплексе имени Елены Елесиной прошла XVII Международная фитнес-конвенция Fitural.
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">19 / 09 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Молоко в 3D: завод растительного молока "оживет" на «Золотой осени»</a>
-                <p class="news__item-text js-shave" data-height="84">В Москве на ВДНХ с 4 по 7 октября пройдет крупнейшая в стране агропромышленная выставка «Золотая осень-2017». Челябинская область на экспозиции будет представлена отдельным стендом. Одним из южноуральских участников сельскохозяйственной выставки станет челябинское «Объединение «СоюзПищепром».
-                </p>
-              </div>
-            </li>
-          </ul>
-          <ul class="news__block js-block" data-tab="news" data-group="news">
-            <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation"/>
-              <div class="news__item-content">
-                <p class="news__item-date">25 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
-                <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017». 
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">18 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие продукты в России</a>
-                <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8 золотых медалей! 
-                </p>
-              </div>
-            </li>
-          </ul>
-          <ul class="news__block js-block" data-tab="news_prof" data-group="news">
-            <li class="news__grid height2"><img class="news__item-img" src="img/news1.jpg" alt="" role="presentation"/>
-              <div class="news__item-content">
-                <p class="news__item-date">25 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">Приятные цены на продукцию «Союзпищепром» порадуют посетителей АгроПродЭкспо. Урожай-2017»</a>
-                <p class="news__item-text js-shave" data-height="84">С 20 по 23 октября в ледовой арене «Трактор» пройдет Уральские продовольственный форум «АгроПродЭкспо. Урожай-2017». 
-                </p>
-              </div>
-            </li>
-            <li class="news__grid">
-              <div class="news__item-content">
-                <p class="news__item-date">18 / 10 / 2017
-                </p><a class="news__item-href js-shave" href="#" data-height="96">«Союзпищепром» производит лучшие продукты в России</a>
-                <p class="news__item-text js-shave" data-height="84">Завершилась крупнейшая в стране агропромышленная выставка «Золотая осень-2017» в Москве. По итогам конкурса компания «Союзпищепром» получила сразу 8 золотых медалей! 
-                </p>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </section>
-      <footer class="footer">
+      </div>
+      <section class="footer__bottom">
         <div class="container">
-          <ul class="footer__list">
-            <li class="footer__col">
-              <nav class="footer__nav">
-                <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">О компании</a>
-                </div>
-                <div class="footer__nav-row"><a class="footer__nav-href footer__nav-href_small" href="#">Новости</a>
-                </div>
-                <div class="footer__nav-row"><a class="footer__nav-href footer__nav-href_small" href="#">Награды</a>
-                </div>
-                <div class="footer__nav-row"><a class="footer__nav-href footer__nav-href_small" href="#">Сертификаты</a>
-                </div>
-              </nav>
-            </li>
-            <li class="footer__col col2">
-              <nav class="footer__nav">
-                <div class="footer__nav-row footer__nav-row_main footer__nav-row_group"><a class="footer__nav-href footer__nav-href_group" href="#">Продукция </a>
-                </div>
-                <div class="footer__nav-row">
-                  <ul class="footer__nav-list">
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Крупы</a>
+          <p class="footer__copy"> <span><i>© </i> ООО «Союзпищепром», 2019</span><span class="socials"><a
+                class="socials__href" href="#" data-type="fb"></a><a class="socials__href" href="#"
+                data-type="tw"></a><a class="socials__href" href="#" data-type="yt"></a><a class="socials__href"
+                href="#" data-type="od"></a><a class="socials__href" href="#" data-type="vk"></a></span>
+          </p><a class="footer__dextra" href="https://www.dextra.ru/"
+            target="_blank"><span>dextra</span>Разработка<br>сайта</a>
+        </div>
+      </section>
+    </footer>
+    <div class="hidden-block">
+      <div class="popup__over"><span class="popup__bg js-popbg"></span>
+        <div class="popup popup_card" id="card">
+          <button class="popup__close js-popclose" type="button" title="Закрыть">
+          </button>
+          <section class="card card_popup">
+            <aside class="card__side">
+              <div class="card__side-wrapper"><img class="card__img" src="img/useful6.png" alt="" role="presentation" />
+              </div>
+            </aside>
+            <div class="card__content">
+              <div class="card__content-inner">
+                <p class="popup__title">Крупа гречневая</p>
+                <div class="card__content-scroll js-scroll">
+                  <ul class="card__chars">
+                    <li class="card__char">
+                      <p class="card__type">Формы выпуска
+                      </p>
+                      <p class="card__text">0.75 л / TetraPak, 1.5 л / TetraPak
+                      </p>
                     </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Каши</a>
+                    <li class="card__char">
+                      <p class="card__type">Минимальный срок годности
+                      </p>
+                      <p class="card__text">12 мес / 7 суток после вскрытия
+                      </p>
                     </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Макаронные изделия</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Готовые завтраки</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Снэки</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Мука</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Масло</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Тесто и полуфабрикаты</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Хлебобулочные изделия</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Комбикорм</a>
-                    </li>
-                    <li class="footer__nav-item"><a class="footer__nav-href footer__nav-href_small" href="#">Растительные напитки</a>
+                    <li class="card__char">
+                      <p class="card__type">Стандарт
+                      </p>
+                      <p class="card__text">ГОСТ 28188-2014
+                      </p>
                     </li>
                   </ul>
-                </div>
-              </nav>
-            </li>
-            <li class="footer__col">
-              <nav class="footer__nav">
-                <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Акции</a>
-                </div>
-                <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Партнерам</a>
-                </div>
-                <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Корпоративная культура</a>
-                </div>
-                <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Интересная информация</a>
-                </div>
-                <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Тендерная площадка</a>
-                </div>
-                <div class="footer__nav-row footer__nav-row_main"><a class="footer__nav-href" href="#">Контакты</a>
-                </div>
-              </nav>
-            </li>
-            <li class="footer__col footer__col_spacer">
-            </li>
-            <li class="footer__col footer__col_right">
-              <p class="footer__addr">РФ, 454080, г. Челябинск, поселок Мелькомбинат-2, участок 1, дом 37
-              </p><a class="footer__phone" href="tel:+73517421660">(351) 742-16-60</a><a class="footer__mail" href="mailto:director@spp.ru">director@spp.ru</a>
-            </li>
-          </ul>
-        </div>
-        <section class="footer__bottom">
-          <div class="container">
-            <p class="footer__copy"> <span><i>© </i> ООО «Союзпищепром», 2019</span><span class="socials"><a class="socials__href" href="#" data-type="fb"></a><a class="socials__href" href="#" data-type="tw"></a><a class="socials__href" href="#" data-type="yt"></a><a class="socials__href" href="#" data-type="od"></a><a class="socials__href" href="#" data-type="vk"></a></span>
-            </p><a class="footer__dextra" href="https://www.dextra.ru/" target="_blank"><span>dextra</span>Разработка<br>сайта</a>
-          </div>
-        </section>
-      </footer>
-      <div class="hidden-block">
-        <div class="popup__over"><span class="popup__bg js-popbg"></span>
-          <div class="popup popup_card" id="card">
-            <button class="popup__close js-popclose" type="button" title="Закрыть">
-            </button>
-            <section class="card card_popup">
-              <aside class="card__side">
-                <div class="card__side-wrapper"><img class="card__img" src="img/useful6.png" alt="" role="presentation"/>
-                </div>
-              </aside>
-              <div class="card__content">
-                <div class="card__content-inner">
-                  <p class="popup__title">Крупа гречневая</p>
-                  <div class="card__content-scroll js-scroll">
-                    <ul class="card__chars">
-                      <li class="card__char">
-                        <p class="card__type">Формы выпуска
-                        </p>
-                        <p class="card__text">0.75 л / TetraPak, 1.5 л / TetraPak
-                        </p>
-                      </li>
-                      <li class="card__char">
-                        <p class="card__type">Минимальный срок годности
-                        </p>
-                        <p class="card__text">12 мес / 7 суток после вскрытия
-                        </p>
-                      </li>
-                      <li class="card__char">
-                        <p class="card__type">Стандарт
-                        </p>
-                        <p class="card__text">ГОСТ 28188-2014
-                        </p>
-                      </li>
-                    </ul>
-                    <form class="card__form">
-                      <p class="card__form-title">Заказать оптом
-                      </p>
-                      <p class="card__form-subtitle">Обратите внимание, поля со звездочкой<span>*</span> – обязательны для заполнения.
-                      </p>
-                      <div class="common__row">
-                        <div class="common__col">
-                          <label class="common__label">Имя<span>*</span></label>
-                          <input class="common__input" type="text" data-req="req">
-                        </div>
-                        <div class="common__col">
-                          <label class="common__label">E-mail<span>*</span></label>
-                          <input class="common__input" type="text" data-req="req" data-type="email">
-                        </div>
+                  <form class="card__form">
+                    <p class="card__form-title">Заказать оптом
+                    </p>
+                    <p class="card__form-subtitle">Обратите внимание, поля со звездочкой<span>*</span> – обязательны для
+                      заполнения.
+                    </p>
+                    <div class="common__row">
+                      <div class="common__col">
+                        <label class="common__label">Имя<span>*</span></label>
+                        <input class="common__input" type="text" data-req="req">
                       </div>
-                      <div class="common__row">
-                        <div class="common__col">
-                          <label class="common__label">Телефон<span>*</span></label>
-                          <input class="common__input js-phone" type="text" data-req="req" data-type="tel">
-                        </div>
-                        <div class="common__col">
-                          <label class="common__label">Организация</label>
-                          <input class="common__input" type="text">
-                        </div>
+                      <div class="common__col">
+                        <label class="common__label">E-mail<span>*</span></label>
+                        <input class="common__input" type="text" data-req="req" data-type="email">
                       </div>
-                      <div class="common__row">
-                        <div class="common__col">
-                          <label class="common__label">Страна<span>*</span></label>
-                          <input class="common__input" type="text" data-req="req">
-                        </div>
-                        <div class="common__col">
-                          <label class="common__label">Город<span>*</span></label>
-                          <input class="common__input" type="text" data-req="req">
-                        </div>
+                    </div>
+                    <div class="common__row">
+                      <div class="common__col">
+                        <label class="common__label">Телефон<span>*</span></label>
+                        <input class="common__input js-phone" type="text" data-req="req" data-type="tel">
                       </div>
-                      <div class="common__row">
-                        <label class="common__label">Сообщение</label>
-                        <textarea class="common__textarea"></textarea>
+                      <div class="common__col">
+                        <label class="common__label">Организация</label>
+                        <input class="common__input" type="text">
                       </div>
-                      <div class="common__row">
-                        <div class="fakecheckbox">
-                          <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked data-req="req" data-type="checkbox" id="agreement">
-                          <label class="fakecheckbox__label" for="agreement">Даю согласие на обработку <a href="#">персональных&nbsp;данных</a></label>
-                        </div>
+                    </div>
+                    <div class="common__row">
+                      <div class="common__col">
+                        <label class="common__label">Страна<span>*</span></label>
+                        <input class="common__input" type="text" data-req="req">
                       </div>
-                      <div class="common__row">
-                        <button class="common__submit btn" type="submit">Отправить</button>
+                      <div class="common__col">
+                        <label class="common__label">Город<span>*</span></label>
+                        <input class="common__input" type="text" data-req="req">
                       </div>
-                    </form>
-                  </div>
+                    </div>
+                    <div class="common__row">
+                      <label class="common__label">Сообщение</label>
+                      <textarea class="common__textarea"></textarea>
+                    </div>
+                    <div class="common__row">
+                      <div class="fakecheckbox">
+                        <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked
+                          data-req="req" data-type="checkbox" id="agreement">
+                        <label class="fakecheckbox__label" for="agreement">Даю согласие на обработку <a
+                            href="#">персональных&nbsp;данных</a></label>
+                      </div>
+                    </div>
+                    <div class="common__row">
+                      <button class="common__submit btn" type="submit">Отправить</button>
+                    </div>
+                  </form>
                 </div>
               </div>
-            </section>
-          </div>
-          <div class="popup" id="text">
-            <button class="popup__close js-popclose" type="button" title="Закрыть">
-            </button>
-            <div class="popup__inner">
-              <p class="popup__title">Заявка отправлена
-              </p>
-              <p class="popup__subtitle">Спасибо. Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру в самое ближайшее время.
-              </p>
-              <button class="popup__close-btn btn js-popclose" type="button">Закрыть
-              </button>
             </div>
+          </section>
+        </div>
+        <div class="popup" id="text">
+          <button class="popup__close js-popclose" type="button" title="Закрыть">
+          </button>
+          <div class="popup__inner">
+            <p class="popup__title">Заявка отправлена
+            </p>
+            <p class="popup__subtitle">Спасибо. Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру
+              в самое ближайшее время.
+            </p>
+            <button class="popup__close-btn btn js-popclose" type="button">Закрыть
+            </button>
           </div>
         </div>
       </div>
-    </main>
-    <script type="text/javascript" src="static/js/polyfill.js"></script>
-    <script type="text/javascript" src="static/js/vendor.js"></script>
-    <script type="text/javascript" src="static/js/script.js"></script>
-  </body>
+    </div>
+  </main>
+  <script type="text/javascript" src="static/js/polyfill.js"></script>
+  <script type="text/javascript" src="static/js/vendor.js"></script>
+  <script type="text/javascript" src="static/js/script.js"></script>
+</body>
+
 </html>

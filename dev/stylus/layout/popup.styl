@@ -40,6 +40,11 @@
       &__content
         bgc white
         padding 75px 45px 60px
+        @media $desktopTablet
+          padding 45px 35px 40px
+        @media $PortraitMax
+          pl 20px
+          pr 20px
       &__chars
         mt 60px
       &__form
@@ -57,6 +62,9 @@
       pt 80px
       pl 20px
       pr 20px
+  &:not(.show)
+    @media $ie
+      dn()
   &.show
     pos relative
     opacity 1

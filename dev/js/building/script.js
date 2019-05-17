@@ -49,6 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const contacts = new Contacts('contacts-map');
     contacts.init();
   }
+
+  if (navigator.userAgent.match(/Trident\/7\./)) {
+    document.body.addEventListener('mousewheel', (e) => {
+      if (qsAll('.popup.show').length === 0) {
+        window.scrollTo(0, window.pageYOffset - e.wheelDelta);
+        e.preventDefault();
+      }
+    });
+  }
 });
 
 window.onload = () => {

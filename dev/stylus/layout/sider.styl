@@ -15,6 +15,7 @@
       padding 35px 20px
       text-align center
       mb 5px
+      flex-shrink 0
       @media $LandscapeMin
         pos absolute
         t 0
@@ -22,8 +23,13 @@
         size 97.5px
         bgc white
         padding 5px
+        df(center, center)
       @media $PortraitMax
         size 84.5px
+    &-href
+      @media $LandscapeMin
+        db()
+        size 100%
     &-img
       max-width 100%
       @media $LandscapeMin
@@ -38,6 +44,7 @@
     padding 0 15px
     mb 22px
     pos relative
+    flex-shrink 0
     &-elem
       ib()
       c black

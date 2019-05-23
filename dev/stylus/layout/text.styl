@@ -62,6 +62,11 @@
     t 14px
     size 20px 1px
     bgc $green
+  ul:not([class]) + iframe:not([class]),
+  ul:not([class]) + img:not([class]),
+  ol:not([class]) + iframe:not([class]),
+  ol:not([class]) + img:not([class])
+    mt 20px
   ol:not([class])
     list-style none
     counter-reset myCounter
@@ -112,3 +117,6 @@ div[class\^="table-scroller"]
   margin 33px 0 33px
   @media $desktopMax
     w 100%
+
+.quote
+  mb 25px

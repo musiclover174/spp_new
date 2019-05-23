@@ -14,8 +14,11 @@ import Categories from './modules/categories';
 import Useful from './modules/useful';
 import Contacts from './modules/contacts';
 import Sticky from './modules/sticky';
+import Spacer from './modules/spacer';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const spacer = new Spacer('.main *:not([class])');
+
   const burger = new Burger('.js-burger');
 
   // animation checker

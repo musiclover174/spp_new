@@ -14,6 +14,7 @@
     b -14px
     l 0
     r 0
+    oh()
     @media $desktopMedium
       pos relative
       z-index 0
@@ -76,6 +77,9 @@
     &-title
       fontify 30px 400 34px
       mb 27px
+    &-elem
+      & + &
+        mt 60px
   &__type
     c $grey
     fontify 16px 400 24px

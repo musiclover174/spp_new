@@ -7,6 +7,17 @@ export default class Categories {
     this.init();
   }
 
+  clickReinit(slider) {
+    const listener = ({ target }) => {
+      if (target.parentNode.parentNode.classList.contains('swiper-slide-next')) {
+        slider.slideNext(1500);
+      }
+    };
+
+    qsAll(this.catNameClass).forEach(name => name.removeEventListener('click', listener));
+    qsAll(this.catNameClass).forEach(name => name.addEventListener('click', listener));
+  }
+
   init() {
     const catsSlider = new Swiper(this.sliderClass, {
       speed: 1500,
@@ -35,17 +46,14 @@ export default class Categories {
           spaceBetween: -70,
         },
       },
+      on: {
+        resize: () => {
+          this.clickReinit(catsSlider);
+        },
+      },
       // autoplay: {
       //   delay: 8000,
       // },
-    });
-
-    qsAll(this.catNameClass).forEach((name) => {
-      name.addEventListener('click', () => {
-        if (name.parentNode.parentNode.classList.contains('swiper-slide-next')) {
-          catsSlider.slideNext(1500);
-        }
-      });
     });
   }
 }

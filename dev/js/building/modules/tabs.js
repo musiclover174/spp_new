@@ -33,6 +33,7 @@ export default class Tabs {
       fadeIn(qs(`${this.blockClass}[data-tab="${tab}"][data-group="${group}"]`), 200, () => {
         qs(`${this.blockClass}[data-tab="${tab}"][data-group="${group}"]`).classList.add('show');
         eventsDispatcher();
+        if (window.map) window.map.container.fitToViewport();
       });
     });
   }

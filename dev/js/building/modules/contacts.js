@@ -17,6 +17,8 @@ export default class Contacts {
         zoom: 17,
         controls: ['zoomControl'],
       });
+      
+      window.map = myMap;
 
       const PMitem = new ymaps.Placemark([parseFloat(pinCoord[0]), parseFloat(pinCoord[1])], {}, {
         iconLayout: 'default#image',

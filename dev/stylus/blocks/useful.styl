@@ -7,10 +7,14 @@
   h 980px
   df(center, center)
   oh()
+  @media $lDesktopSmall
+    background-position 43% -145px
   @media $PortraitMin
     background-position top -75px center
   &[data-type="useful"]
     background-position top -80px center
+    @media $PortraitMin
+      background-position 43% -80px
     @media $PortraitMedium
       background-position center
   // @media $LandscapeMedium

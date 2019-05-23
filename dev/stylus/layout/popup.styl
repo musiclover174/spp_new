@@ -97,13 +97,12 @@
     bgc rgba(0, 0, 0, 0.4)
     opacity 0
     transition .4s opacity, .4s width ease-in-out
+    &.show
+      opacity .9
     /html.no-touchevents &
       r 17px
   &-show
     oh()
-    & ^[0]__bg
-      // w 100%
-      opacity .9
     & ^[0]__over
       overflow-y scroll
       z-index 1000

@@ -65,11 +65,15 @@
       w calc(100% + 45px)
       ml -45px
     @media $LandscapeMax
+      border-top 1px solid rgba($grey, .25)
+      pt 36px
       flex-direction column
       w 100%
       ml 0
       & + &
-        mt 30px
+        // mt 30px
+        @media $PortraitMax
+          mt 50px
   &__winners
     df()
     flex-wrap wrap

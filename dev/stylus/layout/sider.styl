@@ -20,12 +20,12 @@
         pos absolute
         t 0
         l 180px
-        size 97.5px
+        size 98px
         bgc white
         padding 5px
         df(center, center)
       @media $PortraitMax
-        size 84.5px
+        size 84px
     &-href
       @media $LandscapeMin
         db()
@@ -49,16 +49,13 @@
       ib()
       c black
       fontify 14px 400 14px
-      bb(1px, dotted, #0d832a)
-      transition .7s border
+      bb(1px, dotted, $green)
+      transition .7s border, .7s color
       & + &
         ml 14px
       &.active
-        c white
-        bgc #0d832a
-        border-radius 15px
+        c $green
         border-color transparent
-        padding 7px 13px 4px
   &__blocks
     pos relative
     flex-grow 1
@@ -73,7 +70,7 @@
       &:not(&_products)
         text-align center
         & + &
-          mt 20px
+          mt 40px
       &_products
         pos relative
         pl 87px
@@ -84,6 +81,7 @@
       opacity .5
       filter grayscale(100%)
       transition .7s filter, .7s opacity
+      ^[-1]-item.active &,
       ^[-1]-item:hover &
         opacity 1
         filter none
@@ -91,15 +89,12 @@
       pos absolute
       l 37px
       t 50%
-      filter grayscale(100%)
       transform translateY(-50%)
-      transition .7s filter
-      ^[-1]-href:hover &
-        filter none
     &-name
       c black
       fontify 14px 400 18px
       text-align left
       transition .7s color
+      ^[-1]-item.active &,
       ^[-1]-href:hover &
         c $green

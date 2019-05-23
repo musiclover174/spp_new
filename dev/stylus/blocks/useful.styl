@@ -7,10 +7,14 @@
   h 980px
   df(center, center)
   oh()
+  @media $PortraitMin
+    background-position top -75px center
   &[data-type="useful"]
-    background-position top 30px center
-  @media $LandscapeMedium
-    background-image none !important
+    background-position top -80px center
+    @media $PortraitMedium
+      background-position center
+  // @media $LandscapeMedium
+  //   background-image none !important
   &__inner
     pos relative
     l -83px
@@ -32,8 +36,8 @@
       fontify 48px 400 52px
     @media $desktopMedium
       fontify 38px 400 42px
-    @media $desktopTablet
-      fontify 30px 400 34px
+    // @media $desktopTablet
+    //   fontify 30px 400 34px
   &__text
     fontify 18px 400 28px
     mt 30px
@@ -59,6 +63,10 @@
     border-radius 50%
     size 222px
     padding 5px 30px 0
+    transform scale(0)
+    transition .7s transform
+    ^[0][visible] &
+      transform scale(1)
     @media $lDesktopSmall
       t 16%
       r 11%
@@ -67,8 +75,19 @@
     @media $desktopMedium
       t 7%
       r 7%
-    @media $LandscapeMedium
+    // @media $LandscapeMedium
+    //   dn()
+    @media $LandscapeMin
+      r 0
+      l 50%
+      ml -92px
+    @media $PortraitMedium
       dn()
+    &-wrapper
+      opacity 0
+      transition .7s .7s opacity
+      ^[0][visible] &
+        opacity 1
     &-title
       font-family $bold
       fontify 30px 400 30px

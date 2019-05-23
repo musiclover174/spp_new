@@ -19,54 +19,65 @@
   transition .7s transform, .3s .7s background-color
   transform-origin top right
   @media $lDesktopSmall
-    transform scale(.9)
+    size 116px
   @media $desktopTablet
-    transform scale(.75)
+    size 98px
   @media $PortraitMax
-    transform scale(.65)
-  &:before
-    content ""
+    size 84px
+  &__sq
     pos absolute
-    l 50px
-    t 50px
-    size 30px 1px
-    bgc black
-    transition .5s width, .5s background, .5s transform, .5s top
+    t 50%
+    l 50%
+    size 30px 29px
+    ml -15px
+    mt -15px
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 0
+      size 30px 1px
+      bgc black
+      will-change transform
+      transition .5s width, .5s background, .5s transform, .5s top
+    &:after
+      content ""
+      pos absolute
+      l 0
+      b 0
+      size 30px 1px
+      bgc black
+      will-change transform
+      transition .5s width, .5s background, .5s transform, .5s bottom
   &__meat
     content ""
     pos absolute
-    l 50px
-    t 64px
+    l 0
+    t 14px
     size 30px 1px
     bgc black
-    transition .5s width, .5s background, .5s transform, .5s top  
-  &:after
-    content ""
-    pos absolute
-    l 50px
-    b 51px
-    size 30px 1px
-    bgc black
-    transition .5s width, .5s background, .5s transform, .5s bottom 
+    transition .5s width, .5s background, .5s transform, .5s top
   &.open
     background-color transparent
     transition .7s transform
-    &:before
-      background-color white
-      animation burger-top 1s ease-in-out forwards
-    &:after
-      background-color white
-      animation burger-bottom 1s ease-in-out forwards
+    & ^[0]__sq
+      &:before
+        background-color white
+        animation burger-top 1s ease-in-out forwards
+      &:after
+        background-color white
+        animation burger-bottom 1s ease-in-out forwards
     & ^[-1]__meat
       background-color white
       opacity 0
     & ~ .header__shadow
       h 100%
   &.open.remove
-    &:before
-      animation burger-top-invert .3s ease-in-out forwards
-    &:after
-      animation burger-bottom-invert .3s ease-in-out forwards
+    & ^[0]__sq
+      &:before
+        animation burger-top-invert .3s ease-in-out forwards
+      &:after
+        animation burger-bottom-invert .3s ease-in-out forwards
     & ^[-1]__meat
       opacity 1
       transition .4s opacity .6s
@@ -81,10 +92,11 @@
       
 html:not(.touchevents) .burger
   &:not(.open):hover
-    &:before
-      t 47px
-    &:after
-      b 48px
+    .burger__sq
+      &:before
+        t -3px
+      &:after
+        b -3px
   &:not(.open):hover &__meat
     animation burger-hover 1s infinite ease-in-out alternate forwards 200ms
 

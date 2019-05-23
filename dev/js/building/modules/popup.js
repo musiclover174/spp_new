@@ -10,6 +10,7 @@ export default class Popup {
     this.open = this.popupOpen;
     this.hide = this.popupHide;
     this.openFlag = false;
+    this.bg = qs('.js-popbg');
 
     this.closeListener();
     if (qs(sel)) {
@@ -40,15 +41,16 @@ export default class Popup {
       });
     });
 
-    // qs('.js-popbg').addEventListener('click', () => {
-    //   that.popupHide();
-    // });
+    qs('.js-popbg').addEventListener('click', () => {
+      that.popupHide();
+    });
   }
 
   popupHide() {
     if (this.openFlag) {
       qsAll('.popup').forEach(item => item.classList.remove('show'));
-      document.body.classList.remove('popup-show');
+      this.bg.classList.remove('show');
+      setTimeout(() => document.body.classList.remove('popup-show'), 400);
       this.openFlag = false;
     }
   }
@@ -61,6 +63,7 @@ export default class Popup {
         document.body.classList.add('popup-show');
         this.openFlag = true;
       }
+      this.bg.classList.add('show');
       qs(id).classList.add('show');
     }
   }

@@ -13,6 +13,8 @@ export default class Categories {
       slidesPerView: 1,
       spaceBetween: -200,
       parallax: true,
+      loop: true,
+      loopedSlides: 2,
       pagination: {
         el: `${this.sliderClass} .swiper-pagination`,
         type: 'bullets',

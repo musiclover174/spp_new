@@ -72,8 +72,8 @@
       span
         h 54px
 
-@media $PortraitMaxFrom
-  .h-anim:not([data-type="custom"])
+@media $LandscapeMinFrom
+  .h-anim:not([data-type="custom"]):not([data-type="useful"])
     pos relative
     opacity 0
     b -20px
@@ -89,51 +89,43 @@
 
 @keyframes burger-top
   0%
-    t 50px
+    transform translateY(0)
   40%
-    t 65px
+    transform translateY(15px)
   60%
-    t 65px
-    transform rotate(0)
+    transform translateY(15px) rotate(0)
   100%
-    t 65px
-    transform rotate(45deg)
+    transform translateY(15px) rotate(45deg)
     
 @keyframes burger-bottom
   0%
-    b 51px
+    transform translateY(0)
   40%
-    b 64px
+    transform translateY(-13px)
   60%
-    b 64px
-    transform rotate(0)
+    transform translateY(-13px) rotate(0) 
   100%
-    b 64px
-    transform rotate(-45deg)
+    transform translateY(-13px) rotate(-45deg) 
 
 @keyframes burger-top-invert
   0%
-    t 65px
-    transform rotate(45deg)
+    transform translateY(15px) rotate(45deg)
   40%
-    t 65px
-    transform rotate(0)
+    transform translateY(15px) rotate(0)
   60%
-    t 65px
+    transform translateY(15px)
   100%
-    t 50px
+    transform translateY(0)
     
 @keyframes burger-bottom-invert
   0%
-    b 64px
-    transform rotate(-45deg)
+    transform translateY(-13px) rotate(-45deg)
   40%
-    b 64px
-    transform rotate(0)
+    transform translateY(-13px) rotate(0)
   60%
-    b 64px
+    transform translateY(-13px)
   100%
-    b 51px
+    transform translateY(0)
 
 @keyframes scrollDown
   0%

@@ -32,7 +32,9 @@
       pl 29px
   &__list
     mt 80px
-    mb 80px
+    mb 200px
+    @media $lDesktopSmall
+      mb 100px
     @media $PortraitMax
       mt 45px
       mb 45px
@@ -65,8 +67,8 @@
         fontify 38px 400 42px
       @media $desktopMedium
         fontify 30px 400 34px
-      @media $desktopTablet
-        fontify 26px 400 30px
+      // @media $desktopTablet
+      //   fontify 26px 400 30px
     &-list
       df(stretch, flex-start)
       flex-wrap wrap

@@ -48,10 +48,9 @@
     df(center, flex-start)
     flex-wrap wrap
     pos relative
-    w calc(100% + 40px)
-    ml -40px
+    w calc(100% + 26px)
+    ml -26px
     mb 38px
-    mt -10px
     @media $LandscapeMedium
       ml -20px
       w calc(100% + 20px)
@@ -60,18 +59,15 @@
       fontify 18px 400 18px
       border-bottom 1px dotted alpha(black, .15)
       mb 22px
-      transition .7s border-color
-      ml 40px
+      transition .7s color
+      ml 26px
       @media $LandscapeMedium
         ml 20px
       &:hover
         border-color transparent
       &.active
-        color white
-        bgc $green
-        border-radius 24px
+        color $green
         border-color transparent
-        padding 15px 27px 12px
         mt 0
   &__block
     dn()

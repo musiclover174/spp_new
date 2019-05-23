@@ -17,10 +17,10 @@
     background-position center 70px
     @media $lDesktopSmall
       pb 136px
+      background-image none !important
     @media $LandscapeMax
       pb 76px
-    @media $desktopMin
-      background-image none !important
+    // @media $desktopMin
     .breadcrumbs
       pl 29px
   &__info
@@ -35,15 +35,13 @@
     @media $desktopMedium
       dn()
     &_img1
-      t -26%
-      r 25%
-      transform rotate(-79deg)
+      t -47px
+      r 14%
       @media $lDesktopSmall
         dn()
     &_img2
-      l -3%
-      b -6%
-      transform rotate(40deg)
+      l -6%
+      b -19%
       @media $lDesktopSmall
         dn()
     &_img3
@@ -156,6 +154,7 @@
         w 100%
         text-align center
         pt 60px
+        pl 0
         transition none !important
         opacity 1 !important
         bottom 0 !important

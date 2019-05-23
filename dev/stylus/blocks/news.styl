@@ -24,10 +24,10 @@
         l 7px
         b 7px
         r 7px
-      @media $LandscapeMin
-        l 0
-        b 0
-        r 0
+      // @media $LandscapeMin
+      //   l 0
+      //   b 0
+      //   r 0
   &__title
     c black
     fontify 60px 400 64px
@@ -37,8 +37,8 @@
       mb 32px
     @media $desktopMedium
       fontify 38px 400 42px
-    @media $desktopTablet
-      fontify 30px 400 34px
+    // @media $desktopTablet
+    //   fontify 30px 400 34px
   &__list
     df()
     ml -60px
@@ -121,8 +121,8 @@
     flex-wrap wrap
     pos relative
     padding 0 15px
-    w calc(100% + 40px)
-    ml -40px
+    w calc(100% + 26px)
+    ml -26px
     mb 23px
     @media $LandscapeMedium
       ml -20px
@@ -133,17 +133,14 @@
       border-bottom 1px dotted alpha(black, .15)
       mb 10px
       transition .7s border-color
-      ml 40px
+      ml 26px
       @media $LandscapeMedium
         ml 20px
       &:hover
         border-color transparent
       &.active
-        color white
-        bgc $green
-        border-radius 24px
+        color $green
         border-color transparent
-        padding 15px 27px 12px
         mt 0
   &__blocks
     pos relative
@@ -154,8 +151,6 @@
       display table
     @media $desktopTablet
       padding 0 7px 7px
-    @media $LandscapeMin
-      padding 0
   &__block
     dn()
     font-size 0
@@ -164,9 +159,6 @@
     @media $desktopTablet
       ml -7px
       w calc(100% + 7px)
-    @media $LandscapeMedium
-      ml 0
-      w 100%
     &.show
       db()
   &__grid
@@ -188,8 +180,7 @@
       ml 7px
       mb 7px
     @media $LandscapeMedium
-      w 100%
-      ml 0
+      w calc(100% - 7px)
     @media $PortraitMax
       padding 25px 20px
       h auto

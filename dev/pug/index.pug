@@ -12,7 +12,7 @@ html
     +b('main').main
       +b('section').banner
         +e.video-wrapper
-          +e('video').video(preload, autoplay, loop, poster="img/video-poster.jpg")
+          +e('video').video(preload, autoplay, muted, loop, poster="img/video-poster.jpg")
             source(src="video/video.mp4", type="video/mp4")
         +e('button').scroll(type="button", data-text="Крутите вниз") Крутите вниз
         .container
@@ -52,19 +52,8 @@ html
                   +e.elem-decor.decor6(src="img/decor6.png", data-swiper-parallax="-100")
                 +e.elem-name-wrapper
                   +e('span').elem-name.js-cat-name Молоко овсяное
-                +e('p').elem-about Молоко овсяное – это уникальный напиток, благодаря своему простому и здоровому составу: в нём только вода и овсяная крупа!
-                +e.elem-topage.btn(href="#") Подробнее о продукте
-              +e.elem.swiper-slide
-                +e.elem-decors
-                  +e.elem-decor.decor1(src="img/decor1.png", data-swiper-parallax="-100")
-                  +e.elem-decor.decor2(src="img/decor2.png", data-swiper-parallax="-800")
-                  +e.elem-decor.decor3(src="img/decor3.png", data-swiper-parallax="-1200")
-                  +e.elem-decor.decor5(src="img/decor5.png", data-swiper-parallax="-400")
-                  +e.elem-decor.decor6(src="img/decor6.png", data-swiper-parallax="-100")
-                +e.elem-name-wrapper
-                  +e('span').elem-name.js-cat-name Печенье из печенегов
                     +e('q').elem-hint Новинка
-                +e('p').elem-about Печенье из печенегов – это уникальный напиток, благодаря своему простому и здоровому составу: в нём только вода и овсяная крупа!
+                +e('p').elem-about Молоко овсяное – это уникальный напиток, благодаря своему простому и здоровому составу: в нём только вода и овсяная крупа!
                 +e.elem-topage.btn(href="#") Подробнее о продукте
             .swiper-pagination
 
@@ -88,39 +77,41 @@ html
 
       +b('section').h-spacer.js-spacer
 
-      +b('section').useful(style="background-image: url('img/useful-bg1.png')")
-        +e.hrefs
-          +e.item.item1.js-useful-hover(src="img/pasta1.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
-          +e.item.item2.js-useful-hover(src="img/pasta2.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
-          +e.item.item3.js-useful-hover(src="img/pasta3.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
-          +e.item.item4.js-useful-hover(src="img/pasta4.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
-          +e.item.item5.js-useful-hover(src="img/pasta5.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
-          +e.item.item6.js-useful-hover(src="img/pasta6.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
+      +b('section').useful.h-anim(style="background-image: url('img/useful-bg1.png')")
+        //- +e.hrefs
+        //-   +e.item.item1.js-useful-hover(src="img/pasta1.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
+        //-   +e.item.item2.js-useful-hover(src="img/pasta2.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
+        //-   +e.item.item3.js-useful-hover(src="img/pasta3.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
+        //-   +e.item.item4.js-useful-hover(src="img/pasta4.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
+        //-   +e.item.item5.js-useful-hover(src="img/pasta5.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
+        //-   +e.item.item6.js-useful-hover(src="img/pasta6.png", data-type="pasta", data-title="Заголовок", data-text="Текст для заголовка. Среднего размера. Такой себе небольшой текстик, пара строк, а может быть даже 3.")
         +e.inner.js-useful-inner(data-type="pasta")
           +e('p').title.js-useful-title(data-type="pasta") Лучшие макаронные и&nbsp;мучные изделия
           +e('p').text.js-useful-text(data-type="pasta") «Союзпищепром» – это мощный технологический комплекс новейшего оборудования ведущих мировых марок. Торговые марки «Царь», «Союзпищепром», «Здоровое меню» знают не только во всех уголках России. Продукция экспортируется в страны СНГ и дальнего зарубежья: США, Германия, ОАЭ, КНР, Израиль, Турция и др..
           +e.toproduct(href="#") Подробнее о продукции
         +e('aside').info
-          +e('p').info-title 117 000 тонн
-          +e('p').info-text макаронных изделий мы произвели за этот год
+          +e.info-wrapper
+            +e('p').info-title 117 000 тонн
+            +e('p').info-text макаронных изделий мы произвели за этот год
 
       +b('section').h-spacer.js-spacer
 
-      +b('section').useful(style="background-image: url('img/useful-bg2.png')", data-type="useful")
-        +e.hrefs
-          +e.item.item7.js-useful-hover(src="img/useful1.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
-          +e.item.item8.js-useful-hover(src="img/useful2.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
-          +e.item.item9.js-useful-hover(src="img/useful3.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
-          +e.item.item10.js-useful-hover(src="img/useful4.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
-          +e.item.item11.js-useful-hover(src="img/useful5.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
-          +e.item.item12.js-useful-hover(src="img/useful6.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
+      +b('section').useful.h-anim(style="background-image: url('img/useful-bg2.png')", data-type="useful")
+        //- +e.hrefs
+        //-   +e.item.item7.js-useful-hover(src="img/useful1.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
+        //-   +e.item.item8.js-useful-hover(src="img/useful2.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
+        //-   +e.item.item9.js-useful-hover(src="img/useful3.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
+        //-   +e.item.item10.js-useful-hover(src="img/useful4.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
+        //-   +e.item.item11.js-useful-hover(src="img/useful5.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
+        //-   +e.item.item12.js-useful-hover(src="img/useful6.png", data-type="useful", data-title="Молоко овсяное", data-text="Напиток создан на растительной основе из высококачественных овсяных хлопьев и имеет нежный, сливочный вкус. Послужит прекрасным дополнением к вашему завтраку.")
         +e.inner.js-useful-inner(data-type="useful")
           +e('p').title.js-useful-title(data-type="useful") Полезные завтраки и&nbsp;обеды
           +e('p').text.js-useful-text(data-type="useful") «Союзпищепром» – это мощный технологический комплекс новейшего оборудования ведущих мировых марок. Торговые марки «Царь», «Союзпищепром», «Здоровое меню» знают не только во всех уголках России. Продукция экспортируется в страны СНГ и дальнего зарубежья: США, Германия, ОАЭ, КНР, Израиль, Турция и др..
           +e.toproduct(href="#") Подробнее о продукции
         +e('aside').info
-          +e('p').info-title 6 000 тонн
-          +e('p').info-text готовых завтраков мы произвели за этот год
+          +e.info-wrapper
+            +e('p').info-title 6 000 тонн
+            +e('p').info-text готовых завтраков мы произвели за этот год
 
       +b('ul').feats
         +e.item
@@ -130,9 +121,13 @@ html
           +e.item-title(href="#") Цены на зерно
           +e('p').item-text Ознакомиться с прейскурантом цен на закупаемое зерновое сырье с 16.05.2018 г.
 
-      +b('section').feed
+      +b('section').feed.h-anim(data-type="custom")
         .container
-          +e('p').title Третий век мы&nbsp;кормим Россию!
+          +e('p').title 
+            span 
+              i Третий век мы
+            span 
+              i кормим Россию!
           +e.text 
             p «Союзпищепром» – это группа компаний, выпускающих полезные и вкусные продукты питания для всей семьи.
             p Торговые марки «Царь», «Союзпищепром», «Здоровое меню» знают не только во всех уголках России. Продукция экспортируется в страны СНГ и дальнего зарубежья: США, Германия, ОАЭ, КНР, Израиль, Турция и др. 

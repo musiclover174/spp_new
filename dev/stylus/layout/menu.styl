@@ -24,6 +24,7 @@
     opacity 1
     visibility visible
     pointer-events all
+    transition-delay .4s
     @media $lDesktopSmall
       overflow auto
   &__cols
@@ -44,7 +45,7 @@
     @media $PortraitMax
       w calc(100% - 45px)
       & + &
-        mt 20px
+        mt 45px
   &__item
     @media $PortraitMax
       text-align center
@@ -52,20 +53,20 @@
       mt 70px
       @media $desktopMedium
         mt 45px
-      @media $PortraitMax
-        mt 20px
+      // @media $PortraitMax
+      //   mt 20px
   &__href
     c white
     fontify 48px 500 52px
     font-family $bold
-    transition .7s color
+    transition .7s opacity
     @media $lDesktopSmall
       fontify 30px 500 34px
     @media $desktopMedium
       fontify 24px 500 28px
     &:hover,
     &.active
-      c $brown
+      opacity .35
   &__sublist
     mt 44px
     @media $desktopMedium
@@ -76,9 +77,9 @@
   &__subhref
     c white
     fontify 24px 400 28px
-    transition .7s color
+    transition .7s opacity
     @media $lDesktopSmall
       fontify 20px 400 24px
     &:hover,
     &.active
-      c $brown
+      opacity .35

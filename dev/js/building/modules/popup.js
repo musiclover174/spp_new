@@ -48,7 +48,14 @@ export default class Popup {
 
   popupHide() {
     if (this.openFlag) {
-      qsAll('.popup').forEach(item => item.classList.remove('show'));
+      qsAll('.popup').forEach(item => {
+        item.classList.remove('show');
+        setTimeout(()=> {
+          if (qs('#card .card__img', item)) {
+            qs('#card .card__img', item).src = '/local/templates/konkurs/img/preloader.gif';
+          }
+        }, 400)
+      });
       this.bg.classList.remove('show');
       setTimeout(() => document.body.classList.remove('popup-show'), 400);
       this.openFlag = false;
